@@ -13,9 +13,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-# Ignore Facebook ENV variables
-/config/facebook.yml
-
-# Ignore Stripe keys
-/config/initializers/stripe.rb
