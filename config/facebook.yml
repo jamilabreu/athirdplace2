@@ -3,9 +3,9 @@ development:
   APP_SECRET: a52ca2301fb63f5c24b397743003f3a6
 
 test:
-  app_id:
-  secret:
+  app_id: 136602699767543
+  secret: a52ca2301fb63f5c24b397743003f3a6
 
 production:
-  app_id:
-  secret:
+  app_id: 212056915493591
+  secret: 5c08d9a843c5103b66995d4c771c427b
