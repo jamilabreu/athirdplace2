@@ -15,7 +15,7 @@
 /tmp
 
 # Ignore Facebook ENV variables
-/config/facebook.yml
+#/config/facebook.yml
 
 # Ignore Stripe keys
-/config/initializers/stripe.rb
+#/config/initializers/stripe.rb
