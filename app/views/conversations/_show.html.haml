@@ -1,0 +1,10 @@
+#conversation-user
+	= render user
+#conversation-messages
+	#conversation-dialog
+		= render messages
+	= form_for Message.new, remote: true do |f|
+		= f.text_area :body
+		= f.hidden_field :conversation_id, { value: conversation.id }
+		= f.submit "Send", :id => "submit_message", :class => "btn btn-primary"
+%div{style:"clear:right"}

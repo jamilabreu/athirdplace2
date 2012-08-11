@@ -1,0 +1,14 @@
+- content_for :javascript do
+	= javascript_include_tag 'autosize.min', 'timeago', 'conversations'
+.row
+	.span2
+		#inbox
+			.filters_title
+				%span Conversations
+			= render @conversations
+	.span10
+		#conversation
+			- if @conversation
+				= render partial: 'conversations/show', locals: { conversation: @conversation, messages: @messages, user: @user }
+			- else
+				= render 'conversations/empty'

@@ -1,0 +1,34 @@
+.user_profile{id:"#{user.id}_profile"}
+	.user_section
+		.user_standing= user.standing.name
+		.user_degree= user.degree.name
+		- user.school.to_a.each do |school|
+			.user_school= school.name
+		.user_city= user.city.filter_name
+	.user_section
+		- user.field.to_a.each do |field|
+			.user_field= field.name
+	- if user.bio?
+		.user_section
+			.user_bio= user.bio
+	- if current_user.mutual_friends(user) || current_user.network_friends(user)
+		.user_section
+			.user_mutual_friends= current_user.mutual_friends(user)
+			.user_network_friends= current_user.network_friends(user)
+	.user_actions
+		- if user.show_facebook_url
+			= link_to user.facebook_url, target: "_blank" do
+				%i.icon-facebook	
+		- unless user == current_user
+			- if conversation_exists?(user)
+				= link_to conversations_path(id: conversation_id(user)) do
+					%i.icon-envelope-alt
+			- else
+				= link_to new_message_path(id: user), remote: true do
+					%i.icon-envelope-alt		
+		- if user.twitter_name?
+			= link_to "http://twitter.com/#{user.twitter_name}", target: "_blank" do
+				%i.icon-twitter
+		- if user.blog_url?
+			= link_to user.blog_url, target: "_blank" do
+				%i.icon-rss

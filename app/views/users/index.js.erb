@@ -1,0 +1,21 @@
+//Layout
+var $container = $('#users');
+$container.isotope('insert', $('<%= j render @users %>'));
+$container.imagesLoaded( function(){
+	$container.isotope('reLayout')
+});
+
+//Filters
+$('#filters').html('<%= j render :partial => "users/filters", :locals => { :filters => @filters } %>');
+$container.css({minHeight: $('#filters').height()});
+
+//Pagination
+<% if @users.current_page == @users.num_pages %>
+  $('.pagination').remove();
+<% else %>
+	if ( !$('.pagination').length ) {
+		$('.span10').append("<div class='pagination'></div>")
+	}
+  $('.pagination').replaceWith('<%= j paginate @users %>');
+	//$('.pagination').css('visibility', 'hidden');
+<% end %>

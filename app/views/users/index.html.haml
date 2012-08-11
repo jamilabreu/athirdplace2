@@ -1,0 +1,12 @@
+- content_for :javascript do
+	= javascript_include_tag 'isotope.min', 'users', 'bootstrap-modal', 'autosize.min'
+	
+.row
+	.span2
+		#filters
+			= render "users/filters"
+	.span10
+		#users
+			= render @users
+			&nbsp;
+		= paginate @users, :remote => true

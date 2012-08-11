@@ -1,0 +1,26 @@
+.navbar.navbar-fixed-top
+	.navbar-inner
+		.logo
+			= link_to "#" do
+				3			
+		.container
+			%ul.nav	
+				%li.community_name
+					= link_to root_path do
+						= community_name
+				%span.right_nav
+					%ul.nav	
+						%li.divider-vertical
+						%li{ :class => users_page ? 'active' : nil }
+							= link_to root_url do
+								%i.icon-user
+						%li.divider-vertical
+						%li{ :class => conversations_page ? 'active' : nil }
+							= link_to conversations_path do
+								%i.icon-envelope-alt				
+						%li.divider-vertical							
+						- if user_signed_in?
+							%li.dropdown{:style => "#{'visibility: hidden' unless user_signed_in?}" }
+								= link_to "#", :class => "dropdown-toggle #{'active' if edit_page || subscriptions_page}", id: "settings-toggle" do
+									%i.icon-caret-down		
+	= render "layouts/login" unless user_signed_in?

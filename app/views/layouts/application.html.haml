@@ -1,0 +1,35 @@
+!!! 5
+%html
+	%head
+		%script{:type => "text/javascript", :src => "http://use.typekit.com/wbv3uxc.js"}
+		:javascript
+			try{Typekit.load();}catch(e){}
+		%meta{:charset => "utf-8"}/
+		%meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}/
+		%title= community_name
+		%meta{:name => "description", :content => "A Third Place"}/
+		%meta{:name => "author", :content => "Jamil Abreu"}
+		%meta{:name => "viewport", :content => "width=device-width"}/
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "https://js.stripe.com/v1/"
+		= javascript_include_tag "application"
+		= javascript_include_tag "login", "facebook", "activity-indicator.min" unless user_signed_in?
+		= yield :javascript
+		= csrf_meta_tags
+		= tag :meta, name: "stripe-key", content: STRIPE_PUBLIC_KEY
+	%body
+		- unless user_signed_in? 
+			#opaque
+		/[if lt IE 7]
+			%p.chromeframe
+				<a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.
+		.container
+			= render "layouts/header"
+			= render "layouts/dashboard" if user_signed_in?
+			- if notice || alert
+				%p.notice= notice
+				%p.alert= alert
+			= yield
+			.modal.hide{id: "myModal"}
+			=# debug(params) if Rails.env.development?
+			%footer

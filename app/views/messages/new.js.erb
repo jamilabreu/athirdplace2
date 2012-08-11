@@ -1,0 +1,4 @@
+$('#myModal').modal({backdrop: 'static'});
+$('#myModal').html("<%= j render partial: 'messages/modal', locals: { conversation: @conversation, user: @user } %>")
+$('.modal-body form textarea').focus();
+$('.modal-body form textarea').autosize();

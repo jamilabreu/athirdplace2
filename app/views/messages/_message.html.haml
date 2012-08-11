@@ -1,0 +1,11 @@
+.message
+	.message_image
+		= image_tag message.user.image
+	.message_contents
+		.message_user
+			= message.user.name
+		.message_body
+			= message.body
+		.message_timeago
+			%abbr.timeago{title: message.created_at.iso8601}
+	%div{style:"clear:left"}

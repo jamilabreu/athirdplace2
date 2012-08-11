@@ -1,0 +1,9 @@
+.row
+	.span2
+		#filters
+			= render "posts/filters"
+	.span10
+		#posts
+			= form_for Post.new do |f|
+				= f.text_area :body, :placeholder => "Type message or paste your Facebook event URL (https://...)"
+			= render @posts

@@ -1,0 +1,7 @@
+.conversation
+	= link_to conversation_path(conversation), remote: true do
+		.conversation_image
+			= image_tag conversation.partner(current_user).image
+		.conversation_user{:id => "#{conversation.id}", :class => conversation == @conversation ? "current" : nil}
+			= conversation.partner(current_user).first_name
+		%div{style:"clear:both"}

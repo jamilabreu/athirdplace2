@@ -1,0 +1,81 @@
+- content_for :javascript do
+	= javascript_include_tag 'chosen.min', 'subscriptions'
+.row
+	.span2
+		#filters
+			&nbsp;
+	.span10
+		#subscriptions
+			#subscriptions-details
+				%h2 Help support the network.
+				Help keep this space ad-free and focused on the community by becoming a supporter.
+				#subscription-plans
+					= check_box_tag 'plan1', 'yes', true
+					%b Supporter ·
+					$20/year ($1.66/month)
+				#subsciption-benefits
+					.benefits-divider
+						%span YOU GET
+					%ul
+						%li
+							%i.icon-filter
+							full list of filters
+						%li
+							%i.icon-user
+							extended profiles
+						%li
+							%i.icon-envelope-alt
+							unlimited messaging
+						%li
+							%i.icon-calendar
+							invites to private events
+						%li
+							%i.icon-asterisk
+							access to upcoming features	
+			= form_for @subscription, html: { :class => "form-vertical" } do |f|
+				- if @subscription.errors.any?
+					.error_messages
+						%h2
+							= pluralize(@subscription.errors.count, "error")
+							prohibited this subscription from being saved:
+						%ul
+							- @subscription.errors.full_messages.each do |msg|
+								%li= msg
+	
+				= f.hidden_field :user_id, { value: current_user.id }
+				= f.hidden_field :stripe_card_token
+	
+				- if @subscription.stripe_card_token.present?
+					Credit card has been provided.
+				- else
+					/
+						.control-group
+							%label.control-label{:for => "card_number"}
+							.controls
+							=# label_tag :card_number, "Accepted Cards"
+							=# image_tag("stripe/visa.png")
+							=# image_tag("stripe/mastercard.png")
+							=# image_tag("stripe/discover.png")
+							=# image_tag("stripe/american_express.png")
+					.control-group
+						%label.control-label{:for => "card_number"}
+						.controls
+							= label_tag :card_number, "Card Number"
+							= text_field_tag :card_number, nil, name: nil
+					.control-group
+						%label.control-label{:for => "card_number"}
+						.controls
+							= label_tag :card_code, "Security Code (CVV)"
+							= text_field_tag :card_code, nil, name: nil
+							= image_tag("stripe/cvv.png", :id => "cvv_image")
+					.control-group
+						%label.control-label{:for => "card_number"}
+						.controls
+							= label_tag :card_month, "Expiration Date"
+							= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}
+							= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"}
+				.actions
+					= f.submit "Submit", :class => "btn btn-primary", :id => "subscribe-button"
+			#stripe_error
+				%noscript JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
+			%div{style: "clear: right"}		

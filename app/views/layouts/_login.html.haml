@@ -1,0 +1,12 @@
+#login
+	.container
+		#login-inner
+			= link_to "#{request.protocol + request.domain}/users/auth/facebook", id: "sign_in" do
+				%i.icon-facebook-sign
+				Sign In with Facebook
+			#login-tagline
+				welcome to
+				%b thirdplace
+				\- a global support network for dominicans
+				%span &nbsp;|
+				%i.icon-caret-right

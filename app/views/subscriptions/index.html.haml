@@ -1,0 +1,12 @@
+.row
+	.span12
+		#subscriptions{style: "text-align: center"}
+			%h2
+				We
+				%i.icon-heart-empty
+				you,
+				= "#{current_user.first_name}!"
+				Thanks for the support!
+				%br
+			You're next billing date will be:
+			%i= @subscription.created_at.advance(years: 1).strftime("%D")
