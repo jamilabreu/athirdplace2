@@ -34,7 +34,7 @@
 						%label.control-label{:for => "user_city"}
 							City
 						.controls
-							= f.collection_select(:city_ids, Community.filtered_by(:city), :id, :dropdown_name, {:include_blank => true, :selected => params[:user] ? params[:user][:city_ids] : (@community ? (current_user.city_ids.blank? ? (request.location.city.present? ? Community.filtered_by(:city).find_by_name(request.location.city).id : @community.id) : current_user.city_ids) : current_user.city_ids)}, {'data-placeholder' => "Select Current City", :class => 'chzn-select', :id => "user_city"})
+							= f.collection_select(:city_ids, Community.filtered_by(:city), :id, :dropdown_name, {:include_blank => true, :selected => params[:user] ? params[:user][:city_ids] : (@community ? (current_user.city_ids.blank? ? (request.location.city.present? ? Community.filtered_by(:city).find_by(name: request.location.city).id : @community.id) : current_user.city_ids) : current_user.city_ids)}, {'data-placeholder' => "Select Current City", :class => 'chzn-select', :id => "user_city"})
 
 					.form-divider 
 						%span optional
