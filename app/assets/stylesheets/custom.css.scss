@@ -175,7 +175,7 @@ ul { list-style: none; margin-left: 0; }
 #form-fields { width: 300px; padding: 15px 15px 0; border: 1px solid #E2E2E2;	@include border-radius(3px); background: #FFF; 
 							 @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.05)); }
 
-.form-horizontal .control-group { margin-bottom: 9px; }
+.form-horizontal .control-group { margin-bottom: 10px; }
 .form-horizontal .control-group.multiple { margin-bottom: 6px; }
 .form-horizontal .control-group.boolean { margin: 6px 0 2px; }
 .form-horizontal .control-label { width: 80px; font-family: "franklin-gothic-urw",sans-serif; color: $blue; font-size: 12px; font-weight: 700; text-align: left; 
