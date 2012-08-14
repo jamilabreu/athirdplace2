@@ -1,0 +1,26 @@
+jQuery ->
+	$('.chzn-select').chosen()
+	$('.chzn-select-optional').chosen({allow_single_deselect: true})
+	$('#user_bio, #user_company').autosize()
+	
+	$('#user_standing').on 'change', () ->
+		if $(this).val() is "<%= Community.find_by(name: 'Alumni').id %>"
+			$('#user_degree').val("<%= Community.find_by(name: 'Bachelor\'s').id %>")
+			$('#alumni_fields').show()
+		else if $(this).val() is "<%= Community.find_by(name: 'Graduate Student').id %>"
+			$('#user_degree').val("<%= Community.find_by(name: 'Persuing Master\'s').id %>")
+			$('#alumni_fields').show()
+		else
+			$('#user_degree').val("<%= Community.find_by(name: 'Persuing Bachelor\'s').id %>")
+			$('#alumni_fields').hide()
+		
+		#if $('#user_standing').val() is '5'
+		#	$('#alumni_fields').hide()
+		#	$('#user_degree').val('11')
+		#else if $('#user_standing').val() is '4'
+		#	$('#alumni_fields').show()
+		#	$('#user_degree').val('8')
+		#else
+		#	$('#alumni_fields').show()
+		#	$('#user_degree').val('7')
+		$('#user_degree').trigger('liszt:updated')	

@@ -83,6 +83,7 @@ ul { list-style: none; margin-left: 0; }
 .user_section { padding: 8px 10px; border-bottom: 1px solid #E2E2E2; }
 
 .user_school { font-weight: bold; }
+.user_company { color: #999; }
 .user_field { color: #999; }
 
 .user_actions { @extend .user_section; padding-bottom: 0; border-bottom: 0; }
@@ -147,7 +148,7 @@ ul { list-style: none; margin-left: 0; }
 .filters_title { font-family: "franklin-gothic-urw", sans-serif; text-transform: uppercase; font-size: 12px; font-weight: 500; color: #CCC; 
 								 border-bottom: 1px solid #EEE; height: 8px; margin-bottom: 10px; span { background: #FFF; padding-right: 5px; } }
 
-.filter { display: block; padding: 1px 5px 1px 0; color: $blue; font-weight: 700; }
+.filter { display: block; padding: 1px 10px 1px 0; color: $blue; font-weight: 700; }
 .filter:hover, .selected a { color: $green; border-right: 2px solid $green; }
 .selected a:hover { color: $red; border-right: 2px solid $red; }
 

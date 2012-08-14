@@ -1,4 +1,28 @@
-CountryID,City,Country,CountryCode,Latitude,Longitude
+CountryID,City,Country,Country Code,Latitude,Longitude,NationalitySingular,NationalityPlural
+1,Herat,Afghanistan,AF,34.333,62.2,Afghan,Afghans
+1,Kabul,Afghanistan,AF,34.517,69.183,Afghan,Afghans
+1,Mazar-e Sharif,Afghanistan,AF,36.7,67.1,Afghan,Afghans
+2,Korce,Albania,AL,40.6162,20.7779,Albanian,Albanians
+2,Tirane,Albania,AL,41.333,19.833,Albanian,Albanians
+3,Algiers,Algeria,DZ,36.763,3.051,Algerian,Algerians
+3,Skikda,Algeria,DZ,36.879,6.907,Algerian,Algerians
+3,Oran,Algeria,DZ,35.691,-0.642,Algerian,Algerians
+3,Ouled Djellal,Algeria,DZ,34.417,5.067,Algerian,Algerians
+3,Mascara,Algeria,DZ,35.394,0.14,Algerian,Algerians
+3,Annaba,Algeria,DZ,36.9,7.767,Algerian,Algerians
+4,Pago Pago,American Samoa,AS,14.27,-170.7,American Samoan,American Samoans
+5,Andorra La Vella,Andorra,AD,42.5,1.517,Andorran,Andorrans
+5,Escaldes,Andorra,AD,42.5,1.533,Andorran,Andorrans
+6,Benguela,Angola,AO,-12.58,13.408,Angolan,Angolans
+6,Sumbe,Angola,AO,-11.2,13.833,Angolan,Angolans
+6,Lubango,Angola,AO,-14.917,13.5,Angolan,Angolans
+6,Luanda,Angola,AO,-8.838,13.234,Angolan,Angolans
+6,Luanda,Angola,AO,-7.05,14.817,Angolan,Angolans
+7,The Valley,Anguilla,AI,18.217,-63.05,Anguillan,Anguillans
+8,Molodesjnaja,Antarctica,AQ,0,0,0,0
+8,Reading,Antarctica,AQ,0,0,0,0
+8,McMurdo Station,Antarctica,AQ,-77.91,166.65,0,0
+9,Saint Johns,Antigua and Barbuda,AG,17.117,-61.85,Antiguan and Barbudan,Antiguans and Barbudans
 254,San Pablo,United States,US,37.1568,-105.29
 254,Sanford,United States,US,37.2401,-105.856
 254,Seibert,United States,US,39.2874,-102.883

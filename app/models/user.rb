@@ -12,14 +12,21 @@ class User
   has_one :subscription
   
   attr_accessible :email, :provider, :uid, :oauth_token, :name, :first_name, :last_name, :image, :normal_image, :large_image, 
-                  :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :gender, :message_ids, :friend_ids, 
+                  :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :company, :gender, :message_ids, :friend_ids, 
                   :community_ids, :gender_ids, :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids, :state_ids, 
-                  :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
+                  :country_ids, :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
                   
-  after_update :add_state_from_user_city
+  after_update :add_state_and_country_from_user_city
   
-  def add_state_from_user_city
-    self.communities << Community.find_by(id: city_ids.first).parent if city_ids.present?
+  def add_state_and_country_from_user_city
+    if city_ids.present?
+      if Community.find_by(id: city_ids.first).parent.present?
+        self.communities << Community.find_by(id: city_ids.first).parent
+      end
+      if Community.find_by(id: city_ids.first).parent.parent.present?
+        self.communities << Community.find_by(id: city_ids.first).parent.parent
+      end      
+    end
   end
     
   %W[ gender standing field school city ].each do |community_type|
@@ -46,6 +53,7 @@ class User
   field :twitter_name, type: String
   field :blog_url, type: String
   field :bio, type: String
+  field :company, type: String
   field :gender, type: String
   field :coordinates, type: Array
   field :friend_ids, type: Array
@@ -83,7 +91,7 @@ class User
   # field :authentication_token, :type => String
 
   # Create custom methods
-  %W[ gender standing field school city state degree relationship orientation ethnicity religion ].each do |community_type|
+  %W[ gender standing field school city state country degree relationship orientation ethnicity religion ].each do |community_type|
     define_method "#{community_type}" do
       array = self.communities.filtered_by(community_type)
       array.length == 1 ? array.first : array

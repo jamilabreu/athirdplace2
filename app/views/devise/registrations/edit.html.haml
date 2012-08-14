@@ -43,7 +43,15 @@
 						%label.control-label{:for => "user_bio"}
 							I AM...
 						.controls
-							= f.text_area :bio, :placeholder => "Introduce Yourself  ( 280 chars )", :id => "user_bio", :maxlength => 280, :value => params[:user] ? params[:user][:bio] : nil							
+							= f.text_area :bio, :placeholder => "Introduce Yourself  ( 280 chars )", :id => "user_bio", :maxlength => 280, :value => params[:user] ? params[:user][:bio] : nil
+					
+					
+					#alumni_fields{:class => current_user.company? || current_user.standing.name == "Graduate Student" || current_user.standing.name == "Alumni" ? nil : "hide"}
+						.control-group
+							%label.control-label{:for => "user_company"}
+								Company
+							.controls
+								= f.text_area :company, :placeholder => "Company Name", :id => "user_company", :maxlength => 75, :value => params[:user] ? params[:user][:company] : nil
 	
 					- %W[ relationship orientation religion ].each do |type|
 						.control-group

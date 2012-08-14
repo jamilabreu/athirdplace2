@@ -8,6 +8,9 @@
 	.user_section
 		- user.field.to_a.each do |field|
 			.user_field= field.name
+	- if user.company
+		.user_section
+			.user_company= user.company	
 	- if user.bio?
 		.user_section
 			.user_bio= user.bio

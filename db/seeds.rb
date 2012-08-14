@@ -54,8 +54,28 @@ ethnicity = {
   "European" => %W[ Italian Irish French German British Dutch Russian Spaniard Greek Scottish ],
   "Native American" => []}
 ethnicity.each do |key, value|
-  c = Community.create(name: key, subdomain: key.delete(" ").delete("-").parameterize, display_name: "#{key} Student + Professional Network", community_type: "Ethnicity")
-  value.each { |v| c.children.create(name: v, subdomain: v.delete(" ").delete("-").parameterize, display_name: "#{v} Student + Professional Network", community_type: "Ethnicity") }
+  c = Community.create(name: key, subdomain: key.delete(" ").delete("-").parameterize, display_name: "#{key} Student + Professional Network", community_type: "Ethnicity",
+  name_singular: key, name_plural: key.pluralize)
+  value.each { |v| c.children.create(name: v, subdomain: v.delete(" ").delete("-").parameterize, display_name: "#{v} Student + Professional Network", community_type: "Ethnicity", 
+  name_singular: v, name_plural: v.pluralize ) }
+end
+
+puts 'Countries...'
+require 'csv'
+CSV.foreach('db/data/world_cities_test.csv', {:headers => true}) do |row|
+  country = row[2]
+  unless country == nil || Community.where(name: country, community_type: "Country").exists?
+    Community.create!(
+      name: country, 
+      subdomain: country.delete(" ").parameterize, 
+      display_name: "#{country} Student + Professional Network",
+      community_type: "Country", 
+      country: country,
+      country_code: row[3],
+      name_singular: row[6],
+      name_plural: row[7]
+    )
+  end
 end
 
 puts 'States...'
@@ -66,33 +86,42 @@ state = %W[ Alabama Alaska #{'American Samoa'} Arizona Arkansas California Color
   #{'Rhode Island'} #{'South Carolina'} #{'South Dakota'} Tennessee Texas Utah Vermont Virginia #{'Virgin Islands'} 
   Washington #{'West Virginia'} Wisconsin Wyoming ]
 state.each do |state|
-  geocoder = 
-  Community.create(name: state, subdomain: state.delete(" ").parameterize, display_name: "#{state} Student + Professional Network", community_type: "State",
-  state: state, state_code: Geocoder.search(state).first.state_code, country: "United States", country_code: "US", 
-  country_id: 254, coordinates: Geocoder.coordinates(state) )
+  community = Community.find_by(name: "United States", community_type: "Country")
+  community.children.create!(name: state, subdomain: state.delete(" ").parameterize, display_name: "#{state} Student + Professional Network", 
+  community_type: "State", state: state, state_code: Geocoder.search(state).first.state_code, country: "United States", 
+  country_code: "US", coordinates: Geocoder.coordinates(state + ", United States") )
   sleep 1.2
 end
 
 puts 'Cities...'
-require 'csv'
 CSV.foreach('db/data/world_cities_test.csv', {:headers => true}) do |row|
   geocoder = Geocoder.search([row[4].to_f, row[5].to_f])
-  state = geocoder.map(&:state).first
-  community = Community.find_by(name: state)
-  community.children.create!(
-    name: row[1],
-    subdomain: row[1].to_s.delete(" ").delete("-").parameterize,
-    display_name: "#{row[1]} Student + Professional Network",
-    community_type: "City",
-    state: state,
-    state_code: geocoder.map(&:state_code).first,
-    country: row[2],
-    country_code: row[3],
-    country_id: row[0],
-    latitude: row[4].to_f,
-    longitude: row[5].to_f
-  )
-  sleep 1.5
+  if row[2] == "United States"
+    state = Community.find_by(name: geocoder.map(&:state).first, community_type: "State")
+    state.children.create!(
+      name: row[1],
+      subdomain: row[1].to_s.delete(" ").delete("-").parameterize,
+      display_name: "#{row[1]} Student + Professional Network",
+      community_type: "City",
+      state: state.name,
+      state_code: state.state_code,
+      country: row[2],
+      country_code: row[3],
+      coordinates: [row[4].to_f, row[5].to_f] 
+    )
+  else
+    country = Community.find_by(name: row[2], community_type: "Country")
+    country.children.create!(
+      name: row[1],
+      subdomain: row[1].to_s.delete(" ").delete("-").parameterize,
+      display_name: "#{row[1]} Student + Professional Network",
+      community_type: "City",
+      country: row[2],
+      country_code: row[3],
+      coordinates: [row[4].to_f, row[5].to_f] 
+    )
+  end
+  sleep 1.2
 end
 
 puts 'Schools...'
@@ -107,9 +136,7 @@ CSV.foreach('db/data/schools_test.csv', {:headers => true}) do |row|
     state_code: geocoder.state_code,
     country: geocoder.country,
     country_code: "US",
-    country_id: 254,
-    latitude: geocoder.latitude,
-    longitude: geocoder.longitude
+    coordinates: geocoder.coordinates
   )
   sleep 1.5
 end
