@@ -89,6 +89,19 @@
 				= f.submit "Update Profile", :class => "btn btn-primary", :id => "submit-button"
 			%div{:style => "clear:both"}
 
+:javascript
+	$('#user_standing').on('change', function() {
+		if ( $(this).val() === "#{Community.find_by(name: 'Alumni').id}" ) {
+			$('#user_degree').val("#{Community.find_by(name: 'Bachelor\'s').id}");
+			$('#alumni_fields').show();
+		} else if ( $(this).val() === "#{Community.find_by(name: 'Graduate Student').id}" ) {
+			$('#user_degree').val("#{Community.find_by(name: 'Persuing Master\'s').id}");
+			$('#alumni_fields').show();
+		} else {
+			$('#user_degree').val("#{Community.find_by(name: 'Persuing Bachelor\'s').id}");
+			$('#alumni_fields').hide();
+		}
+		$('#user_degree').trigger('liszt:updated');
+	});
 
-
-	=# link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete
+=# link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete
