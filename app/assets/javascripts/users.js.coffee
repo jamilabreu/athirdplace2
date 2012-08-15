@@ -9,7 +9,7 @@ jQuery ->
 		if $('.pagination').length
 			$(window).scroll ->
 				url = $('.pagination .next_page a').attr('href')
-				if url && $(window).scrollTop() > $(document).height() - $(window).height() - 600
+				if url && $(window).scrollTop() > container.height() - 800
 					$('.pagination').text('Fetching more...')
 					$.getScript(url)
 			$(window).scroll()
@@ -18,7 +18,6 @@ jQuery ->
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
 		container.isotope('remove', container.children())
-		container.css({minHeight: $('#filters').height()});
 		$.getScript($(this).attr('href'))
 
 	# Other

@@ -25,7 +25,7 @@
 							extended profiles
 						%li
 							%i.icon-envelope-alt
-							unlimited messaging
+							unlimited conversations
 						%li
 							%i.icon-calendar
 							invites to private events
@@ -33,14 +33,8 @@
 							%i.icon-asterisk
 							access to upcoming features	
 			= form_for @subscription, html: { :class => "form-vertical" } do |f|
-				- if @subscription.errors.any?
-					.error_messages
-						%h2
-							= pluralize(@subscription.errors.count, "error")
-							prohibited this subscription from being saved:
-						%ul
-							- @subscription.errors.full_messages.each do |msg|
-								%li= msg
+				#stripe_error
+					%noscript JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
 	
 				= f.hidden_field :user_id, { value: current_user.id }
 				= f.hidden_field :stripe_card_token
@@ -76,6 +70,4 @@
 							= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"}
 				.actions
 					= f.submit "Submit", :class => "btn btn-primary", :id => "subscribe-button"
-			#stripe_error
-				%noscript JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
 			%div{style: "clear: right"}		

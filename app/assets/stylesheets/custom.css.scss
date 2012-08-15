@@ -21,6 +21,7 @@ ul { list-style: none; margin-left: 0; }
 
 #opaque { background: rgba(255,255,255,0.5); position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; }
 
+.alert { font-weight: bold; }
 
 /* Navigation */
 .navbar .nav { width: 100%; margin: 0; }
@@ -201,7 +202,7 @@ ul { list-style: none; margin-left: 0; }
 #error_explanation { margin: 0 0 12px; }
 #error_explanation h2 { display: none; }
 #error_explanation ul { list-style: none; }
-#error_explanation li { display: inline-block; background: $green; color: #FFF; padding: 1px 5px; margin-right: 2px; font-weight: bold; 
+#error_explanation li, #stripe_error li { display: inline-block; background: $green; color: #FFF; padding: 1px 5px; margin-right: 2px; font-weight: bold; 
 												border: 2px solid #FFF; @include border-radius(3px); }
 
 /* Subscription Form */

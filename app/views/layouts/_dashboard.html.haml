@@ -11,6 +11,11 @@
 					%i.icon-tasks
 					Update
 			%li.dash_nav
-				= link_to current_user.subscribed? ? subscriptions_path : new_subscription_path do
-					%i.icon-heart
-					= current_user.subscribed? ? "Account" : "Support"
+				- if current_user.subscribed?
+					= link_to subscriptions_path do
+						%i.icon-heart
+						Account				
+				- else
+					= link_to new_subscription_path do
+						%i.icon-heart
+						Support

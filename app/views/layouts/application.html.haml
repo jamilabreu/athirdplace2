@@ -27,9 +27,11 @@
 			= render "layouts/header"
 			= render "layouts/dashboard" if user_signed_in?
 			- if notice || alert
-				%p.notice= notice
-				%p.alert= alert
+				%p.alert.alert-info
+					%a.close{ "data-dismiss" => "alert", :href => "#" }
+						×
+					= notice || alert
 			= yield
 			.modal.hide{id: "myModal"}
-			= debug(params) if Rails.env.development?
+			=# debug(params) if Rails.env.development?
 			%footer

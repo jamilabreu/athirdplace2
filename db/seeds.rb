@@ -62,7 +62,7 @@ end
 
 puts 'Countries...'
 require 'csv'
-CSV.foreach('db/data/world_cities_test.csv', {:headers => true}) do |row|
+CSV.foreach('db/data/world_cities_MASTER.csv', {:headers => true}) do |row|
   country = row[2]
   unless country == nil || Community.where(name: country, community_type: "Country").exists?
     Community.create!(
@@ -125,7 +125,7 @@ CSV.foreach('db/data/world_cities_test.csv', {:headers => true}) do |row|
 end
 
 puts 'Schools...'
-CSV.foreach('db/data/schools_test.csv', {:headers => true}) do |row|
+CSV.foreach('db/data/schools.csv', {:headers => true}) do |row|
   geocoder = Geocoder.search(row[1].to_s).first
   Community.create!(
     name: row[0],
@@ -140,7 +140,7 @@ CSV.foreach('db/data/schools_test.csv', {:headers => true}) do |row|
   )
   sleep 1.5
 end
-
+=begin
 20.times do
   uid = Random.new.rand(300000..302714)
   first = Faker::Name.first_name
@@ -175,3 +175,4 @@ end
   Message.create!(body: Faker::Lorem.paragraph, user_ids: [ User.all.sample.id.to_s, User.last.id.to_s ])
   Post.create!(body: Faker::Lorem.paragraph, user_id: User.last.id.to_s, community_ids: [ Community.find_by(name: "Dominican").id.to_s, Community.all.sample.id.to_s ])
 end
+=end
