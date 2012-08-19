@@ -7,8 +7,11 @@
 			#login-tagline
 				welcome to
 				%b thirdplace
-				\- a global support network for 
-				= community_name.pluralize.downcase
-				
+				- if @community
+					\- a global support network for
+					= @community.name.pluralize.downcase
+				- else
+					\- the global support networks you care about
+				 
 				%span &nbsp;|
 				%i.icon-caret-right
