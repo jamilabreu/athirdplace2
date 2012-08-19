@@ -11,21 +11,30 @@ class User
   has_many :messages
   has_one :subscription
   
-  attr_accessible :email, :provider, :uid, :oauth_token, :name, :first_name, :last_name, :image, :normal_image, :large_image, 
-                  :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :company, :gender, :message_ids, :friend_ids, 
-                  :community_ids, :gender_ids, :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids, :state_ids, 
-                  :country_ids, :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
+  attr_accessible :email, :provider, :uid, :oauth_token, :name, :first_name, :last_name, :image, :normal_image, 
+                  :large_image, :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :profession, 
+                  :company, :gender, :message_ids, :friend_ids, :coordinates, :community_ids, :gender_ids, 
+                  :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids, :state_ids, :country_ids, 
+                  :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
                   
-  after_update :add_state_and_country_from_user_city
+  after_update :add_geo_from_user_city
   
-  def add_state_and_country_from_user_city
+  def add_geo_from_user_city
     if city_ids.present?
+      # Add state or country
       if Community.find_by(id: city_ids.first).parent.present?
         self.communities << Community.find_by(id: city_ids.first).parent
       end
+      
+      # Add country if state
       if Community.find_by(id: city_ids.first).parent.parent.present?
         self.communities << Community.find_by(id: city_ids.first).parent.parent
-      end      
+      end
+      
+      # Add coordinates
+      if Community.find_by(id: city_ids.first).coordinates.present? 
+        self.coordinates =  Community.find_by(id: city_ids.first).coordinates
+      end
     end
   end
     
@@ -53,11 +62,14 @@ class User
   field :twitter_name, type: String
   field :blog_url, type: String
   field :bio, type: String
+  field :profession, type: String
   field :company, type: String
   field :gender, type: String
   field :coordinates, type: Array
   field :friend_ids, type: Array
+  field :coordinates, type: Array
   
+  index({ coordinates: "2d" }, { min: -200, max: 200 })  
   ## Database authenticatable
   # field :email,              :type => String, :null => false, :default => ""
   # field :encrypted_password, :type => String, :null => false, :default => ""
@@ -101,18 +113,29 @@ class User
     end
     define_method "#{community_type}_ids=" do |val| 
       self.communities.clear if community_type == "gender"
-      if val.class == Array
-        val.each do |id|
-          self.communities << Community.find_by(id: id) if id.present?
+      if community_type == "school" # Schools hack
+        val.split(",").each do |school_id|
+          self.communities << Community.find_by(id: school_id)
         end
-      else
-        self.communities << Community.find_by(id: val) if val.present?
+      else  
+        if val.class == Array
+          val.each do |id|
+            self.communities << Community.find_by(id: id) if id.present?
+          end
+        else
+          self.communities << Community.find_by(id: val) if val.present? && val != "[]" # Cities hack
+        end
       end
     end
   end
   
   # Omniauth authentication
   def self.from_omniauth(auth)
+    # If user exists, renew oauth_token
+    if user = User.find_by(provider: auth.provider, uid: auth.uid)
+      user.update_attribute(:oauth_token, auth.credentials.token)
+    end
+    
     find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
       user.provider = auth.provider
       user.uid = auth.uid

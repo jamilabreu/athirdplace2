@@ -4,7 +4,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
       user.update_attribute(:friend_ids, user.facebook.get_connections("me", "friends").map{|item|item["id"]}.uniq)
-      flash.notice = "Signed in!"
+      #flash.notice = "Signed in!"
       sign_in user
       redirect_to request.env["omniauth.origin"] || "/"
     else

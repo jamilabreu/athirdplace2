@@ -1,5 +1,5 @@
 - content_for :javascript do
-	= javascript_include_tag 'chosen.min', 'autosize.min', 'users-edit'
+	= javascript_include_tag 'chosen.min', 'select2.min', 'autosize.min', 'users-edit'
 
 .row
 	.span3
@@ -23,7 +23,7 @@
 							.controls
 								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type).ne(name: "High School"), :id, :name, {:include_blank => true, :selected => params[:user] ? params[:user]["#{type}_ids".to_sym] : (@community ? (current_user.send("#{type}_ids").blank? ? [Community.find_by(name: "Undergraduate").id, Community.find_by(name: "Persuing Bachelor's").id] : current_user.send("#{type}_ids")) : current_user.send("#{type}_ids"))}, {'data-placeholder' => "Select #{type.titlecase}", :class => 'chzn-select', :id => "user_#{type}"})
 				
-					- %W[ field school ].each do |type|
+					- %W[ field ].each do |type|
 						.control-group.multiple
 							%label.control-label{:for => "user_#{type}"}
 								= "#{type.titlecase}(s)"
@@ -31,10 +31,17 @@
 								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type), :id, :name, {:include_blank => true, :selected => params[:user] ? params[:user]["#{type}_ids".to_sym] : (@community ? (current_user.send("#{type}_ids").blank? ? @community.id : current_user.send("#{type}_ids")) : current_user.send("#{type}_ids"))}, {'data-placeholder' => "Select #{type.titlecase}(s) #{'of Experience' if type == 'field'}", :class => 'chzn-select', :id => "user_#{type}", :multiple => true})
 			
 					.control-group
+						%label.control-label{:for => "user_school"}
+							School(s)
+						.controls
+							= f.hidden_field :school_ids, :class => "school-select2", :style => "width: 220px" 
+
+					.control-group
 						%label.control-label{:for => "user_city"}
 							City
 						.controls
-							= f.collection_select(:city_ids, Community.filtered_by(:city), :id, :dropdown_name, {:include_blank => true, :selected => params[:user] ? params[:user][:city_ids] : (@community ? (current_user.city_ids.blank? ? @community.id : current_user.city_ids) : current_user.city_ids)}, {'data-placeholder' => "Select Current City", :class => 'chzn-select', :id => "user_city"})
+							= f.hidden_field :city_ids, :class => "city-select2", :style => "width: 220px" 
+							=# f.collection_select(:city_ids, Community.filtered_by(:city), :id, :dropdown_name, {:include_blank => true, :selected => params[:user] ? params[:user][:city_ids] : (@community ? (current_user.city_ids.blank? ? @community.id : current_user.city_ids) : current_user.city_ids)}, {'data-placeholder' => "Select Current City", :class => 'chzn-select2', :id => "user_city"})
 
 					.form-divider 
 						%span optional
@@ -46,10 +53,16 @@
 							= f.text_area :bio, :placeholder => "Introduce Yourself  ( 280 chars )", :id => "user_bio", :maxlength => 280, :value => params[:user] ? params[:user][:bio] : nil
 					
 					
-					#alumni_fields{:class => current_user.company? || current_user.standing.name == "Graduate Student" || current_user.standing.name == "Alumni" ? nil : "hide"}
+					#alumni_fields{:class => current_user.company? || current_user.profession? || current_user.standing.name == "Graduate Student" || current_user.standing.name == "Alumni" ? nil : "hide"}
+						.control-group
+							%label.control-label{:for => "user_profession"}
+								Profession
+							.controls
+								= f.text_area :profession, :placeholder => "Profession", :id => "user_profession", :maxlength => 75, :value => params[:user] ? params[:user][:profession] : nil						
+						
 						.control-group
 							%label.control-label{:for => "user_company"}
-								Company
+								Employer
 							.controls
 								= f.text_area :company, :placeholder => "Company Name", :id => "user_company", :maxlength => 75, :value => params[:user] ? params[:user][:company] : nil
 	

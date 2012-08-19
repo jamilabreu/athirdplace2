@@ -15,19 +15,38 @@ class Community
   field :state_code, type: String
   field :country, type: String
   field :country_code, type: String
+  field :address, type: String
   field :coordinates, type: Array
-  field :name_singular, type: String
-  field :name_plural, type: String
+  
+  index({ coordinates: "2d" }, { min: -200, max: 200 })
   
   scope :filtered_by, lambda { |community_type| where(community_type: community_type.to_s.titleize).asc(:name) }
 
-  def name_and_country(x)
-    country == "United States" ? "#{name}, #{x == :filter ? state_code : state}" : "#{name}, #{country}"
+  def as_json(options={})
+    { :id => self._id, :name => self.dropdown_name }
   end
-  def filter_name
-    community_type == "City" ? name_and_country(:filter) : name
+
+  def name_and_parent(type)
+    if community_type == "City"
+      if parent.parent.name == "United States"
+        type == :dropdown ? "#{name}, #{parent.name}" : "#{name}, #{parent.mod_state_code}"
+      else
+        type == :dropdown ? "#{name}, #{parent.parent.name}" : "#{name}, #{parent.parent.country_code}"
+      end
+    else
+      name
+    end
   end
+  
+  def mod_state_code
+    state_code.include?("US-") ? state_code.delete("US-") : state_code
+  end
+  
   def dropdown_name
-    community_type == "City" ? name_and_country(:dropdown) : name
+    name_and_parent(:dropdown)
+  end
+
+  def filter_name
+    name_and_parent(:filter)
   end  
 end

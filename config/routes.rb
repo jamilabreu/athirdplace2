@@ -1,6 +1,7 @@
 Athirdplace::Application.routes.draw do 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks", registrations: "registrations", sessions: "sessions"}
   resources :users, only: [:index, :show]
+  resources :communities, only: [:index]
   resources :conversations, only: [:index, :show]
   resources :messages, only: [:new, :create]
   #match 'support', to: "subscriptions#new", as: "subscriptions"

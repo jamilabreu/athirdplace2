@@ -62,53 +62,69 @@ end
 
 puts 'Countries...'
 require 'csv'
-CSV.foreach('db/data/world_cities_MASTER.csv', {:headers => true}) do |row|
-  country = row[2]
-  unless country == nil || Community.where(name: country, community_type: "Country").exists?
-    Community.create!(
-      name: country, 
-      subdomain: country.delete(" ").parameterize, 
-      display_name: "#{country} Student + Professional Network",
-      community_type: "Country", 
-      country: country,
-      country_code: row[3],
-      name_singular: row[6],
-      name_plural: row[7]
-    )
-  end
+CSV.foreach('db/data/countrycodes.csv', {encoding: "ISO-3166-1:UTF-8", headers: true}) do |row|
+  Community.create!(
+    name: row[0],
+    subdomain: row[0].delete(" ").parameterize,
+    display_name: "#{row[0]} Student + Professional Network",
+    community_type: "Country",
+    country_code: row[1]
+  )
+  puts row[0] 
 end
 
 puts 'States...'
-state = %W[ Alabama Alaska #{'American Samoa'} Arizona Arkansas California Colorado Connecticut Delaware #{'District of Columbia'} 
-  Florida Georgia Guam Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan 
-  Minnesota Mississippi Missouri Montana Nebraska Nevada #{'New Hampshire'} #{'New Jersey'} #{'New Mexico'} #{'New York'} 
-  #{'North Carolina'} #{'North Dakota'} #{'Northern Marianas Islands'} Ohio Oklahoma Oregon Pennsylvania #{'Puerto Rico'} 
-  #{'Rhode Island'} #{'South Carolina'} #{'South Dakota'} Tennessee Texas Utah Vermont Virginia #{'Virgin Islands'} 
-  Washington #{'West Virginia'} Wisconsin Wyoming ]
-state.each do |state|
-  community = Community.find_by(name: "United States", community_type: "Country")
-  community.children.create!(name: state, subdomain: state.delete(" ").parameterize, display_name: "#{state} Student + Professional Network", 
-  community_type: "State", state: state, state_code: Geocoder.search(state).first.state_code, country: "United States", 
-  country_code: "US", coordinates: Geocoder.coordinates(state + ", United States") )
-  sleep 1.2
+CSV.foreach('db/data/provincecodes.csv', {encoding: "ISO-3166-1:UTF-8", headers: true}) do |row|
+  country = Community.find_by(country_code: row[3], community_type: "Country")
+  country.children.create!(
+    name: row[0],
+    subdomain: row[0].delete(" ").parameterize,
+    display_name: "#{row[0]} Student + Professional Network",
+    community_type: "State",
+    state_code: row[1]
+  )
+  puts row[0] 
 end
 
 puts 'Cities...'
-CSV.foreach('db/data/world_cities_test.csv', {:headers => true}) do |row|
-  geocoder = Geocoder.search([row[4].to_f, row[5].to_f])
+CSV.foreach('db/data/cities_MASTER.csv', {encoding: "ISO-8859-1:UTF-8", headers: true}) do |row|
+  state = Community.find_by(state_code: row[4], community_type: "State")
+  state.children.create!(
+    name: row[2],
+    subdomain: row[2].delete(" ").parameterize,
+    display_name: "#{row[2]} Student + Professional Network",
+    community_type: "City"
+  )
+  puts row[2] + row[1] + row[0] 
+end
+
+puts 'Schools...'
+CSV.foreach('db/data/colleges.csv', {encoding: "ISO-8859-1:UTF-8", headers: true}) do |row|
+  Community.create!(
+    name: row[0],
+    subdomain: row[0].to_s.delete(" ").delete("-").parameterize,
+    display_name: "#{row[0]} Student + Alumni Network",
+    community_type: "School",
+    address: row[1]
+  )
+  puts row[0]
+end
+=begin
+puts 'Cities...'
+CSV.foreach('db/data/world_cities_MASTER.csv', {encoding: "ISO-8859-1:UTF-8", headers: true}) do |row| 
   if row[2] == "United States"
+    geocoder = Geocoder.search([row[4].to_f, row[5].to_f])
     state = Community.find_by(name: geocoder.map(&:state).first, community_type: "State")
     state.children.create!(
       name: row[1],
       subdomain: row[1].to_s.delete(" ").delete("-").parameterize,
       display_name: "#{row[1]} Student + Professional Network",
       community_type: "City",
-      state: state.name,
-      state_code: state.state_code,
       country: row[2],
       country_code: row[3],
       coordinates: [row[4].to_f, row[5].to_f] 
     )
+    sleep 1.5
   else
     country = Community.find_by(name: row[2], community_type: "Country")
     country.children.create!(
@@ -121,26 +137,10 @@ CSV.foreach('db/data/world_cities_test.csv', {:headers => true}) do |row|
       coordinates: [row[4].to_f, row[5].to_f] 
     )
   end
-  sleep 1.2
+  puts row[1]
 end
 
-puts 'Schools...'
-CSV.foreach('db/data/schools.csv', {:headers => true}) do |row|
-  geocoder = Geocoder.search(row[1].to_s).first
-  Community.create!(
-    name: row[0],
-    subdomain: row[0].to_s.delete(" ").delete("-").parameterize,
-    display_name: "#{row[0]} Student + Alumni Network",
-    community_type: "School",
-    state: geocoder.state,
-    state_code: geocoder.state_code,
-    country: geocoder.country,
-    country_code: "US",
-    coordinates: geocoder.coordinates
-  )
-  sleep 1.5
-end
-=begin
+
 20.times do
   uid = Random.new.rand(300000..302714)
   first = Faker::Name.first_name

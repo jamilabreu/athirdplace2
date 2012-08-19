@@ -1,0 +1,1109 @@
+Province,ProvinceCode,CriteriaId,CountryCode,Country
+Buenos Aires,AR-B,20009,AR,Argentina
+Capital Federal,AR-C,20010,AR,Argentina
+Catamarca,AR-K,20015,AR,Argentina
+Chaco,AR-H,20013,AR,Argentina
+Chubut,AR-U,20023,AR,Argentina
+Cordoba,AR-X,20026,AR,Argentina
+Corrientes,AR-W,20025,AR,Argentina
+Entre Rios,AR-E,20011,AR,Argentina
+Formosa,AR-P,21299,AR,Argentina
+Jujuy,AR-Y,20027,AR,Argentina
+La Pampa,AR-L,20016,AR,Argentina
+La Rioja,AR-F,20012,AR,Argentina
+Mendoza,AR-M,20017,AR,Argentina
+Misiones,AR-N,20018,AR,Argentina
+Neuquen,AR-Q,20019,AR,Argentina
+Rio Negro,AR-R,20020,AR,Argentina
+Salta,AR-A,20008,AR,Argentina
+San Juan,AR-J,20014,AR,Argentina
+San Luis,AR-D,21297,AR,Argentina
+Santa Cruz,AR-Z,20028,AR,Argentina
+Santa Fe,AR-S,20021,AR,Argentina
+Santiago del Estero,AR-G,21298,AR,Argentina
+Tierra del Fuego,AR-V,20024,AR,Argentina
+Tucuman,AR-T,20022,AR,Argentina
+Australian Capital Territory,AU-ACT,20034,AU,Australia
+New South Wales,AU-NSW,20035,AU,Australia
+Northern Territory,AU-NT,20036,AU,Australia
+Queensland,AU-QLD,20037,AU,Australia
+South Australia,AU-SA,20038,AU,Australia
+Tasmania,AU-TAS,20039,AU,Australia
+Victoria,AU-VIC,20040,AU,Australia
+Western Australia,AU-WA,20041,AU,Australia
+Burgenland,AT-1,20042,AT,Austria
+Carinthia,AT-2,20043,AT,Austria
+Lower Austria,AT-3,20044,AT,Austria
+Salzburg,AT-5,20046,AT,Austria
+Styria,AT-6,20047,AT,Austria
+Tyrol,AT-7,20048,AT,Austria
+Upper Austria,AT-4,20045,AT,Austria
+Vienna,AT-9,20050,AT,Austria
+Vorarlberg,AT-8,20049,AT,Austria
+Antwerp,BE-VAN,20053,BE,Belgium
+Brussels,BE-BRX,20052,BE,Belgium
+East Flanders,BE-VOV,20056,BE,Belgium
+Flemish Brabant,BE-VBR,20054,BE,Belgium
+Hainaut,BE-WHT,20059,BE,Belgium
+Liege,BE-WLG,20060,BE,Belgium
+Limburg,BE-VLI,20055,BE,Belgium
+Luxembourg,BE-WLX,20061,BE,Belgium
+Namur,BE-WNA,20062,BE,Belgium
+Walloon Brabant,BE-WBR,20058,BE,Belgium
+West Flanders,BE-VWV,20057,BE,Belgium
+Acre,BR-AC,21232,BR,Brazil
+Alagoas,BR-AL,20086,BR,Brazil
+Amapa,BR-AP,21226,BR,Brazil
+Amazonas,BR-AM,20087,BR,Brazil
+Bahia,BR-BA,20088,BR,Brazil
+Ceara,BR-CE,20089,BR,Brazil
+Espirito Santo,BR-ES,20091,BR,Brazil
+Federal District,BR-DF,20090,BR,Brazil
+Goias,BR-GO,20092,BR,Brazil
+Maranhao,BR-MA,20093,BR,Brazil
+Mato Grosso,BR-MT,20096,BR,Brazil
+Mato Grosso do Sul,BR-MS,20095,BR,Brazil
+Minas Gerais,BR-MG,20094,BR,Brazil
+Para,BR-PA,20097,BR,Brazil
+Paraiba,BR-PB,20098,BR,Brazil
+Parana,BR-PR,20101,BR,Brazil
+Pernambuco,BR-PE,20099,BR,Brazil
+Piaui,BR-PI,20100,BR,Brazil
+Rio de Janeiro,BR-RJ,20102,BR,Brazil
+Rio Grande do Norte,BR-RN,20103,BR,Brazil
+Rio Grande do Sul,BR-RS,20104,BR,Brazil
+Rondonia,BR-RO,21227,BR,Brazil
+Roraima,BR-RR,21228,BR,Brazil
+Santa Catarina,BR-SC,20105,BR,Brazil
+Sao Paulo,BR-SP,20106,BR,Brazil
+Sergipe,BR-SE,21229,BR,Brazil
+Tocantins,BR-TO,21230,BR,Brazil
+Alberta,CA-AB,20113,CA,Canada
+British Columbia,CA-BC,20114,CA,Canada
+Manitoba,CA-MB,20115,CA,Canada
+New Brunswick,CA-NB,20116,CA,Canada
+Newfoundland,CA-NF,20117,CA,Canada
+Northwest Territories,CA-NT,20119,CA,Canada
+Nova Scotia,CA-NS,20118,CA,Canada
+Nunavut,CA-NU,20120,CA,Canada
+Ontario,CA-ON,20121,CA,Canada
+Prince Edward Island,CA-PE,20122,CA,Canada
+Quebec,CA-QC,20123,CA,Canada
+Saskatchewan,CA-SK,20124,CA,Canada
+Yukon Territory,CA-YT,20125,CA,Canada
+Antofagasta,CL-AN,20152,CL,Chile
+Araucanía,CL-AR,20153,CL,Chile
+Bío-Bío,CL-BI,20154,CL,Chile
+Coquimbo,CL-CO,20155,CL,Chile
+Libertador General Bernardo O'Higgins,CL-LI,20156,CL,Chile
+Los Lagos,CL-LL,20157,CL,Chile
+Magallanes,CL-MA,20158,CL,Chile
+Maule,CL-ML,20159,CL,Chile
+Region Metropolitana de Santiago,CL-RM,20160,CL,Chile
+Tarapacá,CL-TA,20161,CL,Chile
+Valparaíso,CL-VS,20162,CL,Chile
+Anhui,CN-34,20174,CN,China
+Beijing,CN-11,20163,CN,China
+Chongqing,CN-50,20184,CN,China
+Fujian,CN-35,20175,CN,China
+Gansu,CN-62,20190,CN,China
+Guangdong,CN-44,20181,CN,China
+Guangxi,CN-45,20182,CN,China
+Guizhou,CN-52,20186,CN,China
+Hainan,CN-46,20183,CN,China
+Hebei,CN-13,20165,CN,China
+Heilongjiang,CN-23,20170,CN,China
+Henan,CN-41,20178,CN,China
+Hubei,CN-42,20179,CN,China
+Hunan,CN-43,20180,CN,China
+Jiangsu,CN-32,20172,CN,China
+Jiangxi,CN-36,20176,CN,China
+Jilin,CN-22,20169,CN,China
+Liaoning,CN-21,20168,CN,China
+Nei Monggol,CN-15,20167,CN,China
+Ningxia,CN-64,20192,CN,China
+Qinghai,CN-63,20191,CN,China
+Shaanxi,CN-61,20189,CN,China
+Shandong,CN-37,20177,CN,China
+Shanghai,CN-31,20171,CN,China
+Shanxi,CN-14,20166,CN,China
+Sichuan,CN-51,20185,CN,China
+Tianjin,CN-12,20164,CN,China
+Xinjiang,CN-65,20193,CN,China
+Xizang,CN-54,20188,CN,China
+Yunnan,CN-53,20187,CN,China
+Zhejiang,CN-33,20173,CN,China
+Amazonas,CO-AMA,21506,CO,Colombia
+Antioquia,CO-ANT,20198,CO,Colombia
+Arauca,CO-ARA,21507,CO,Colombia
+Atlantico,CO-ATL,20199,CO,Colombia
+Bogota,CO-DC,20203,CO,Colombia
+Bolivar,CO-BOL,20200,CO,Colombia
+Boyaca,CO-BOY,21508,CO,Colombia
+Caldas,CO-CAL,20201,CO,Colombia
+Caqueta,CO-CAQ,21509,CO,Colombia
+Casanare,CO-CAS,21510,CO,Colombia
+Cauca,CO-CAU,21511,CO,Colombia
+Cesar,CO-CES,21512,CO,Colombia
+Choco,CO-CHO,21513,CO,Colombia
+Cordoba,CO-COR,21514,CO,Colombia
+Cundinamarca,CO-CUN,20202,CO,Colombia
+Guainia,CO-GUA,21515,CO,Colombia
+Guaviare,CO-GUV,21516,CO,Colombia
+Huila,CO-HUI,20204,CO,Colombia
+La Guajira,CO-LAG,21517,CO,Colombia
+Magdalena,CO-MAG,21290,CO,Colombia
+Meta,CO-MET,20205,CO,Colombia
+Narino,CO-NAR,20206,CO,Colombia
+Norte de Santander,CO-NSA,21518,CO,Colombia
+Putumayo,CO-PUT,20207,CO,Colombia
+Quindio,CO-QUI,21519,CO,Colombia
+Risaralda,CO-RIS,20208,CO,Colombia
+San Andres y Providencia,CO-SAP,21520,CO,Colombia
+Santander,CO-SAN,20209,CO,Colombia
+Sucre,CO-SUC,21521,CO,Colombia
+Tolima,CO-TOL,20210,CO,Colombia
+Valle del Cauca,CO-VAC,20211,CO,Colombia
+Vaupes,CO-VAU,21522,CO,Colombia
+Vichada,CO-VID,21523,CO,Colombia
+Bjelovar and Bilogora,HR-07,21440,HR,Croatia
+Dubrovnik and Neretva,HR-19,20413,HR,Croatia
+Grad Zagreb,HR-21,21493,HR,Croatia
+Istria,HR-18,21443,HR,Croatia
+Karlovac,HR-04,21441,HR,Croatia
+Koprivnica and Krizevaci,HR-06,21274,HR,Croatia
+Krapina and Zagorje,HR-02,21489,HR,Croatia
+Lika and Senj,HR-09,21490,HR,Croatia
+Medjimurje,HR-20,21492,HR,Croatia
+Osijek and Baranja,HR-14,20410,HR,Croatia
+Pozega and Slavonia,HR-11,21442,HR,Croatia
+Sibenik and Knin,HR-15,21444,HR,Croatia
+Sisak and Moslavina,HR-03,21445,HR,Croatia
+Slavonski Brod and Posavina,HR-12,21446,HR,Croatia
+Split and Dalmatia,HR-17,20412,HR,Croatia
+The Coast and Gorski Kotar,HR-08,20408,HR,Croatia
+Varazdin,HR-05,21447,HR,Croatia
+Virovitica and Podravina,HR-10,21491,HR,Croatia
+Vukovar and Srijem,HR-16,20411,HR,Croatia
+Zadar,HR-13,20409,HR,Croatia
+Zagreb,HR-01,20407,HR,Croatia
+Central Bohemia,CZ-ST,21494,CZ,Czech Republic
+Hradec Kralove,CZ-KR,21495,CZ,Czech Republic
+Karlovy Vary,CZ-KA,21496,CZ,Czech Republic
+Liberec,CZ-LI,21497,CZ,Czech Republic
+Moravian-Silesia,CZ-MO,21498,CZ,Czech Republic
+Olomouc,CZ-OL,21499,CZ,Czech Republic
+Pardubice,CZ-PA,21500,CZ,Czech Republic
+Pilsen,CZ-PL,21501,CZ,Czech Republic
+Prague,CZ-PR,21502,CZ,Czech Republic
+South Bohemia,CZ-JC,20218,CZ,Czech Republic
+South Moravia,CZ-JM,20219,CZ,Czech Republic
+Usti nad Labem,CZ-US,21503,CZ,Czech Republic
+Vysocina,CZ-VY,21504,CZ,Czech Republic
+Zlinsky,CZ-ZL,21505,CZ,Czech Republic
+Aarhus,DK-070,20254,DK,Denmark
+Bornholm,DK-040,20248,DK,Denmark
+Copenhagen,DK-015,20243,DK,Denmark
+Frederiksberg,DK-147,20257,DK,Denmark
+Frederiksborg,DK-020,20244,DK,Denmark
+Fyn,DK-042,20249,DK,Denmark
+Nordjylland,DK-080,20256,DK,Denmark
+Ribe,DK-055,20251,DK,Denmark
+Ringkoebing,DK-065,20253,DK,Denmark
+Roskilde,DK-025,20245,DK,Denmark
+Soenderjylland,DK-050,20250,DK,Denmark
+Storstroem,DK-035,20247,DK,Denmark
+Vejle,DK-060,20252,DK,Denmark
+Vestsjaelland,DK-030,20246,DK,Denmark
+Viborg,DK-076,20255,DK,Denmark
+Ad Daqahliyah,EG-DK,21458,EG,Egypt
+Al Bahr al Ahmar,EG-BA,21459,EG,Egypt
+Al Buhayrah,EG-BH,21460,EG,Egypt
+Al Fayyum,EG-FYM,21461,EG,Egypt
+Al Gharbiyah,EG-GH,21462,EG,Egypt
+Al Iskandariyah,EG-ALX,21463,EG,Egypt
+Al Ismailiyah,EG-IS,21464,EG,Egypt
+Al Jizah,EG-GZ,21465,EG,Egypt
+Al Minufiyah,EG-MNF,21466,EG,Egypt
+Al Minya,EG-MN,21467,EG,Egypt
+Al Qahirah,EG-C,21468,EG,Egypt
+Al Qalyubiyah,EG-KB,21469,EG,Egypt
+Al Uqsur,EG-LX,21470,EG,Egypt
+Al Wadi al Jadid,EG-WAD,21472,EG,Egypt
+As Suways,EG-SUZ,21473,EG,Egypt
+Ash Sharqiyah,EG-SHR,21474,EG,Egypt
+Aswan,EG-ASN,21475,EG,Egypt
+Asyut,EG-AST,21476,EG,Egypt
+Bani Suwayf,EG-BNS,21477,EG,Egypt
+Bur Said,EG-PTS,21478,EG,Egypt
+Dumyat,EG-DT,21479,EG,Egypt
+Janub Sina,EG-JS,21480,EG,Egypt
+Kafr ash Shaykh,EG-KFS,21481,EG,Egypt
+Matruh,EG-MT,21482,EG,Egypt
+Qina,EG-KN,21483,EG,Egypt
+Shamal Sina,EG-SIN,21484,EG,Egypt
+Suhaj,EG-SHG,21485,EG,Egypt
+The Province of Åland,FI-AL,20304,FI,Finland
+The Province of Eastern Finland,FI-IS,20306,FI,Finland
+The Province of Lapland,FI-LL,20307,FI,Finland
+The Province of Oulu,FI-OL,20309,FI,Finland
+The Province of Southern Finland,FI-ES,20305,FI,Finland
+The Province of Western Finland,FI-LS,20308,FI,Finland
+Alsace,FR-A,20311,FR,France
+Aquitaine,FR-B,20313,FR,France
+Auvergne,FR-C,20314,FR,France
+Brittany,FR-E,20316,FR,France
+Burgundy,FR-D,20315,FR,France
+Centre,FR-F,20317,FR,France
+Champagne-Ardenne,FR-G,20318,FR,France
+Corsica,FR-H,20319,FR,France
+Franche-Comte,FR-I,20320,FR,France
+Ile-de-France,FR-J,20321,FR,France
+Languedoc-Roussillon,FR-K,20322,FR,France
+Limousin,FR-L,20323,FR,France
+Lorraine,FR-M,20324,FR,France
+Midi-Pyrenees,FR-N,20325,FR,France
+Nord-Pas-de-Calais,FR-O,20326,FR,France
+Normandy - Lower,FR-P,20327,FR,France
+Normandy - Upper,FR-Q,20328,FR,France
+Pays de la Loire,FR-R,20329,FR,France
+Picardie,FR-S,20330,FR,France
+Poitou-Charentes,FR-T,20331,FR,France
+Provence-Alpes-Cote d'Azur,FR-U,20332,FR,France
+Rhône-Alpes,FR-V,20333,FR,France
+Baden-Württemberg,DE-BW,20228,DE,Germany
+Bayern,DE-BY,20229,DE,Germany
+Berlin,DE-BE,20226,DE,Germany
+Brandenburg,DE-BR,20227,DE,Germany
+Bremen,DE-HB,20230,DE,Germany
+Hamburg,DE-HH,20232,DE,Germany
+Hessen,DE-HE,20231,DE,Germany
+Mecklenburg-Vorpommern,DE-MV,20233,DE,Germany
+Niedersachsen,DE-NI,20234,DE,Germany
+Nordrhein-Westfalen,DE-NW,20235,DE,Germany
+Rheinland-Pfalz,DE-RP,20236,DE,Germany
+Saarland,DE-SL,20238,DE,Germany
+Sachsen,DE-SN,20239,DE,Germany
+Sachsen-Anhalt,DE-ST,20240,DE,Germany
+Schleswig-Holstein,DE-SH,20237,DE,Germany
+Thüringen,DE-TH,20241,DE,Germany
+Bacs-Kiskun,HU-BK,20417,HU,Hungary
+Baranya,HU-BA,20415,HU,Hungary
+Bekes,HU-BE,20416,HU,Hungary
+Borsod-Abauj-Zemplen,HU-BZ,20419,HU,Hungary
+Budapest,HU-BU,20418,HU,Hungary
+Csongrad,HU-CS,20420,HU,Hungary
+Fejer,HU-FE,20421,HU,Hungary
+Gyor-Moson-Sopron,HU-GS,20422,HU,Hungary
+Hajdu-Bihar,HU-HB,20424,HU,Hungary
+Heves,HU-HE,20425,HU,Hungary
+Jasz-Nagykun-Szolnok,HU-JN,20426,HU,Hungary
+Komarom-Esztergom,HU-KE,20427,HU,Hungary
+Nograd,HU-NO,20428,HU,Hungary
+Pest,HU-PE,20429,HU,Hungary
+Somogy,HU-SO,20430,HU,Hungary
+Szabolcs-Szatmar-Bereg,HU-SZ,20431,HU,Hungary
+Tolna,HU-TO,20432,HU,Hungary
+Vas,HU-VA,20433,HU,Hungary
+Veszprem,HU-VE,20434,HU,Hungary
+Zala,HU-ZA,20435,HU,Hungary
+Andaman and Nicobar Islands,IN-AN,20452,IN,India
+Andhra Pradesh,IN-AP,20453,IN,India
+Arunachal Pradesh,IN-AR,21289,IN,India
+Assam,IN-AS,20454,IN,India
+Bihar,IN-BR,20455,IN,India
+Chandigarh,IN-CH,21342,IN,India
+Chhattisgarh,IN-CT,21334,IN,India
+Dadar and Nagar Haveli,IN-DN,21343,IN,India
+Daman and Diu,IN-DD,21344,IN,India
+Delhi,IN-DL,20456,IN,India
+Goa,IN-GA,21268,IN,India
+Gujarat,IN-GJ,20457,IN,India
+Haryana,IN-HR,20458,IN,India
+Himachal Pradesh,IN-HP,21335,IN,India
+Jammu and Kashmir,IN-JK,20459,IN,India
+Jharkhand,IN-JH,21336,IN,India
+Karnataka,IN-KA,20460,IN,India
+Kerala,IN-KL,20461,IN,India
+Lakshadweep,IN-LD,21345,IN,India
+Madhya Pradesh,IN-MP,20464,IN,India
+Maharashtra,IN-MH,20462,IN,India
+Manipur,IN-MN,21337,IN,India
+Meghalaya,IN-ML,20463,IN,India
+Mizoram,IN-MZ,21338,IN,India
+Nagaland,IN-NL,21339,IN,India
+Orissa,IN-OR,20465,IN,India
+Pondicherry,IN-PY,20467,IN,India
+Punjab,IN-PB,20466,IN,India
+Rajasthan,IN-RJ,20468,IN,India
+Sikkim,IN-SK,21340,IN,India
+Tamil Nadu,IN-TN,20469,IN,India
+Tripura,IN-TR,20470,IN,India
+Uttar Pradesh,IN-UP,20471,IN,India
+Uttaranchal,IN-UL,21341,IN,India
+West Bengal,IN-WB,20472,IN,India
+Carlow,IE-CW,20477,IE,Ireland
+Cavan,IE-CN,20476,IE,Ireland
+Clare,IE-CE,20475,IE,Ireland
+Cork,IE-C,20474,IE,Ireland
+Donegal,IE-DL,20479,IE,Ireland
+Dublin,IE-D,20478,IE,Ireland
+Galway,IE-G,20480,IE,Ireland
+Kerry,IE-KY,20483,IE,Ireland
+Kildare,IE-KE,20481,IE,Ireland
+Kilkenny,IE-KK,20482,IE,Ireland
+Laois,IE-LS,20486,IE,Ireland
+Leitrim,IE-LM,21317,IE,Ireland
+Limerick,IE-LK,20485,IE,Ireland
+Longford,IE-LD,21316,IE,Ireland
+Louth,IE-LH,20484,IE,Ireland
+Mayo,IE-MO,20489,IE,Ireland
+Meath,IE-MH,20487,IE,Ireland
+Monaghan,IE-MN,20488,IE,Ireland
+Offaly,IE-OY,20490,IE,Ireland
+Roscommon,IE-RN,20491,IE,Ireland
+Sligo,IE-SO,20492,IE,Ireland
+Tipperary,IE-TA,20493,IE,Ireland
+Waterford,IE-WD,20494,IE,Ireland
+Westmeath,IE-WH,20495,IE,Ireland
+Wexford,IE-WX,20497,IE,Ireland
+Wicklow,IE-WW,20496,IE,Ireland
+HaDarom,IL-D,20514,IL,Israel
+HaMerkaz,IL-M,20517,IL,Israel
+HaZafon,IL-Z,20519,IL,Israel
+Hefa,IL-HA,20515,IL,Israel
+Tel-Aviv,IL-TA,20518,IL,Israel
+Yerushalayim Al Quds,IL-JM,20516,IL,Israel
+Agrigento,IT-AG,20520,IT,Italy
+Alessandria,IT-AL,20521,IT,Italy
+Ancona,IT-AN,20522,IT,Italy
+Aosta,IT-AO,20523,IT,Italy
+Arezzo,IT-AR,20526,IT,Italy
+Ascoli Piceno,IT-AP,20524,IT,Italy
+Asti,IT-AT,20527,IT,Italy
+Avellino,IT-AV,20528,IT,Italy
+Bari,IT-BA,20529,IT,Italy
+Belluno,IT-BL,20532,IT,Italy
+Benevento,IT-BN,20533,IT,Italy
+Bergamo,IT-BG,20530,IT,Italy
+Biella,IT-BI,20531,IT,Italy
+Bologna,IT-BO,20534,IT,Italy
+Bolzano,IT-BZ,20537,IT,Italy
+Brescia,IT-BS,20536,IT,Italy
+Brindisi,IT-BR,20535,IT,Italy
+Cagliari,IT-CA,20538,IT,Italy
+Caltanissetta,IT-CL,20542,IT,Italy
+Campobasso,IT-CB,20539,IT,Italy
+Caserta,IT-CE,20540,IT,Italy
+Catania,IT-CT,20547,IT,Italy
+Catanzaro,IT-CZ,20548,IT,Italy
+Chieti,IT-CH,20541,IT,Italy
+Como,IT-CO,20544,IT,Italy
+Cosenza,IT-CS,20546,IT,Italy
+Cremona,IT-CR,20545,IT,Italy
+Crotone,IT-KR,20560,IT,Italy
+Cuneo,IT-CN,20543,IT,Italy
+Enna,IT-EN,20549,IT,Italy
+Ferrara,IT-FE,20550,IT,Italy
+Florence,IT-FI,20552,IT,Italy
+Foggia,IT-FG,20551,IT,Italy
+Forlì-Cesena,IT-FO,20553,IT,Italy
+Frosinone,IT-FR,20554,IT,Italy
+Genoa,IT-GE,20555,IT,Italy
+Gorizia,IT-GO,20556,IT,Italy
+Grosseto,IT-GR,20557,IT,Italy
+Imperia,IT-IM,20558,IT,Italy
+Isernia,IT-IS,20559,IT,Italy
+L'Aquila,IT-AQ,20525,IT,Italy
+La Spezia,IT-SP,20602,IT,Italy
+Latina,IT-LT,20565,IT,Italy
+Lecce,IT-LE,20562,IT,Italy
+Lecco,IT-LC,20561,IT,Italy
+Livorno,IT-LI,20563,IT,Italy
+Lodi,IT-LO,20564,IT,Italy
+Lucca,IT-LU,20566,IT,Italy
+Macerata,IT-MC,20567,IT,Italy
+Mantua,IT-MN,20570,IT,Italy
+Massa,IT-MS,20572,IT,Italy
+Matera,IT-MT,20573,IT,Italy
+Messina,IT-ME,20568,IT,Italy
+Milan,IT-MI,20569,IT,Italy
+Modena,IT-MO,20571,IT,Italy
+Naples,IT-NA,20574,IT,Italy
+Novara,IT-NO,20575,IT,Italy
+Nuoro,IT-NU,20576,IT,Italy
+Oristano,IT-OR,20577,IT,Italy
+Padua,IT-PD,20580,IT,Italy
+Palermo,IT-PA,20578,IT,Italy
+Parma,IT-PR,20586,IT,Italy
+Pavia,IT-PV,20589,IT,Italy
+Perugia,IT-PG,20582,IT,Italy
+Pesaro,IT-PS,20587,IT,Italy
+Pescara,IT-PE,20581,IT,Italy
+Piacenza,IT-PC,20579,IT,Italy
+Pisa,IT-PI,20583,IT,Italy
+Pistoia,IT-PT,20588,IT,Italy
+Pordenone,IT-PN,20584,IT,Italy
+Potenza,IT-PZ,20590,IT,Italy
+Prato,IT-PO,20585,IT,Italy
+Ragusa,IT-RG,20594,IT,Italy
+Ravenna,IT-RA,20591,IT,Italy
+Reggio Calabria,IT-RC,20592,IT,Italy
+Reggio Emilia,IT-RE,20593,IT,Italy
+Rieti,IT-RI,20595,IT,Italy
+Rimini,IT-RN,20597,IT,Italy
+Rome,IT-RM,20596,IT,Italy
+Rovigo,IT-RO,20598,IT,Italy
+Salerno,IT-SA,20599,IT,Italy
+Sassari,IT-SS,20604,IT,Italy
+Savona,IT-SV,20605,IT,Italy
+Siena,IT-SI,20600,IT,Italy
+Siracusa,IT-SR,20603,IT,Italy
+Sondrio,IT-SO,20601,IT,Italy
+Taranto,IT-TA,20606,IT,Italy
+Teramo,IT-TE,20607,IT,Italy
+Terni,IT-TR,20611,IT,Italy
+Torino,IT-TO,20609,IT,Italy
+Trapani,IT-TP,20610,IT,Italy
+Trento,IT-TN,20608,IT,Italy
+Treviso,IT-TV,20613,IT,Italy
+Trieste,IT-TS,20612,IT,Italy
+Udine,IT-UD,20614,IT,Italy
+Varese,IT-VA,20615,IT,Italy
+Venice,IT-VE,20618,IT,Italy
+Verbano-Cusio-Ossola,IT-VB,20616,IT,Italy
+Vercelli,IT-VC,20617,IT,Italy
+Verona,IT-VR,20620,IT,Italy
+Vibo Valentia,IT-VV,21233,IT,Italy
+Vicenza,IT-VI,20619,IT,Italy
+Viterbo,IT-VT,20621,IT,Italy
+Aichi,JP-23,20646,JP,Japan
+Akita,JP-05,20628,JP,Japan
+Aomori,JP-02,20625,JP,Japan
+Chiba,JP-12,20635,JP,Japan
+Ehime,JP-38,20661,JP,Japan
+Fukui,JP-18,20641,JP,Japan
+Fukuoka,JP-40,20663,JP,Japan
+Fukushima,JP-07,20630,JP,Japan
+Gifu,JP-21,20644,JP,Japan
+Gunma,JP-10,20633,JP,Japan
+Hiroshima,JP-34,20657,JP,Japan
+Hokkaido,JP-01,20624,JP,Japan
+Hyogo,JP-28,20651,JP,Japan
+Ibaraki,JP-08,20631,JP,Japan
+Ishikawa,JP-17,20640,JP,Japan
+Iwate,JP-03,20626,JP,Japan
+Kagawa,JP-37,20660,JP,Japan
+Kagoshima,JP-46,20669,JP,Japan
+Kanagawa,JP-14,20637,JP,Japan
+Kochi,JP-39,20662,JP,Japan
+Kumamoto,JP-43,20666,JP,Japan
+Kyoto,JP-26,20649,JP,Japan
+Mie,JP-24,20647,JP,Japan
+Miyagi,JP-04,20627,JP,Japan
+Miyazaki,JP-45,20668,JP,Japan
+Nagano,JP-20,20643,JP,Japan
+Nagasaki,JP-42,20665,JP,Japan
+Nara,JP-29,20652,JP,Japan
+Niigata,JP-15,20638,JP,Japan
+Oita,JP-44,20667,JP,Japan
+Okayama,JP-33,20656,JP,Japan
+Okinawa,JP-47,20670,JP,Japan
+Osaka,JP-27,20650,JP,Japan
+Saga,JP-41,20664,JP,Japan
+Saitama,JP-11,20634,JP,Japan
+Shiga,JP-25,20648,JP,Japan
+Shimane,JP-32,20655,JP,Japan
+Shizuoka,JP-22,20645,JP,Japan
+Tochigi,JP-09,20632,JP,Japan
+Tokushima,JP-36,20659,JP,Japan
+Tokyo,JP-13,20636,JP,Japan
+Tottori,JP-31,20654,JP,Japan
+Toyama,JP-16,20639,JP,Japan
+Wakayama,JP-30,20653,JP,Japan
+Yamagata,JP-06,20629,JP,Japan
+Yamaguchi,JP-35,20658,JP,Japan
+Yamanashi,JP-19,20642,JP,Japan
+Federal Territory of Kuala Lumpur,MY-14,20751,MY,Malaysia
+Federal Territory of Putrajaya,MY-16,21539,MY,Malaysia
+Johor,MY-01,20741,MY,Malaysia
+Kedah,MY-02,20742,MY,Malaysia
+Kelantan,MY-03,20740,MY,Malaysia
+Melaka,MY-04,20744,MY,Malaysia
+Negeri Sembilan,MY-05,20745,MY,Malaysia
+Pahang,MY-06,20739,MY,Malaysia
+Perak,MY-08,20737,MY,Malaysia
+Perlis,MY-09,20747,MY,Malaysia
+Pulau Pinang,MY-07,20746,MY,Malaysia
+Sabah,MY-12,20748,MY,Malaysia
+Sarawak,MY-13,20749,MY,Malaysia
+Selangor,MY-10,20738,MY,Malaysia
+Terengganu,MY-11,20750,MY,Malaysia
+Wilayah Persekutuan Labuan,MY-15,20743,MY,Malaysia
+Aguascalientes,MX-AGU,20694,MX,Mexico
+Baja California,MX-BCN,20696,MX,Mexico
+Baja California Sur,MX-BCS,20697,MX,Mexico
+Campeche,MX-CAM,20698,MX,Mexico
+Chiapas,MX-CHP,20700,MX,Mexico
+Chihuahua,MX-CHH,20699,MX,Mexico
+Coahuila,MX-COA,20701,MX,Mexico
+Colima,MX-COL,20702,MX,Mexico
+Distrito Federal,MX-DF,20703,MX,Mexico
+Durango,MX-DUR,20704,MX,Mexico
+Estado de México,MX-MEX,20709,MX,Mexico
+Guanajuato,MX-GUA,20706,MX,Mexico
+Guerrero,MX-GRO,20705,MX,Mexico
+Hidalgo,MX-HID,20707,MX,Mexico
+Jalisco,MX-JAL,20708,MX,Mexico
+Michoacán,MX-MIC,20710,MX,Mexico
+Morelos  ,MX-MOR,20711,MX,Mexico
+Nayarit,MX-NAY,20712,MX,Mexico
+Nuevo León,MX-NLE,20713,MX,Mexico
+Oaxaca,MX-OAX,20714,MX,Mexico
+Puebla,MX-PUE,20715,MX,Mexico
+Querétaro ,MX-QUE,20716,MX,Mexico
+Quintana Roo,MX-ROO,20717,MX,Mexico
+San Luis Potosí,MX-SLP,20719,MX,Mexico
+Sinaloa,MX-SIN,20718,MX,Mexico
+Sonora,MX-SON,20720,MX,Mexico
+Tabasco,MX-TAB,20721,MX,Mexico
+Tamaulipas,MX-TAM,20722,MX,Mexico
+Tlaxcala,MX-TLA,20723,MX,Mexico
+Veracruz,MX-VER,20724,MX,Mexico
+Yucatán,MX-YUC,20725,MX,Mexico
+Zacatecas,MX-ZAC,20726,MX,Mexico
+Chaouia-Ouardigha,MA-09,21524,MA,Morocco
+Doukkala-Abda,MA-10,21525,MA,Morocco
+Fes-Boulemane,MA-05,21526,MA,Morocco
+Gharb-Chrarda-Beni Hssen,MA-02,21527,MA,Morocco
+Grand Casablanca,MA-08,21528,MA,Morocco
+Guelmim-Es Semara,MA-14,21529,MA,Morocco
+Laayoune-Boujdour-Sakia El Hamra,MA-15,21530,MA,Morocco
+Marrakech-Tensift-El Haouz,MA-11,21531,MA,Morocco
+Meknes-Tafilalet,MA-06,21532,MA,Morocco
+Oriental,MA-04,21533,MA,Morocco
+Rabat-Sale-Zemmour-Zaer,MA-07,21534,MA,Morocco
+Souss-Massa-Draa,MA-13,21535,MA,Morocco
+Tadla-Azilal,MA-12,21536,MA,Morocco
+Tanger-Tetouan,MA-01,21537,MA,Morocco
+Taza-Al Hoceima-Taounate,MA-03,21538,MA,Morocco
+Drenthe,NL-DR,20759,NL,Netherlands
+Flevopolder,NL-FL,20760,NL,Netherlands
+Friesland,NL-FR,20761,NL,Netherlands
+Gelderland,NL-GE,20762,NL,Netherlands
+Groningen,NL-GR,20763,NL,Netherlands
+Limburg,NL-LI,20764,NL,Netherlands
+Noord-Brabant,NL-NB,20765,NL,Netherlands
+Noord-Holland,NL-NH,20766,NL,Netherlands
+Overijssel,NL-OV,20767,NL,Netherlands
+Utrecht,NL-UT,20768,NL,Netherlands
+Zeeland,NL-ZE,20769,NL,Netherlands
+Zuid-Holland,NL-ZH,20770,NL,Netherlands
+Auckland,NZ-AUK,20791,NZ,New Zealand
+Bay of Plenty,NZ-BOP,20792,NZ,New Zealand
+Canterbury,NZ-CAN,21302,NZ,New Zealand
+Gisborne,NZ-GIS,21303,NZ,New Zealand
+Hawke's Bay,NZ-HKB,21304,NZ,New Zealand
+Manawatu-Wanganui,NZ-MWT,21305,NZ,New Zealand
+Marlborough,NZ-MBH,21306,NZ,New Zealand
+Nelson,NZ-NSN,21307,NZ,New Zealand
+Northland,NZ-NTL,21308,NZ,New Zealand
+Otago,NZ-OTA,21309,NZ,New Zealand
+Southland,NZ-STL,21310,NZ,New Zealand
+Taranaki,NZ-TKI,21311,NZ,New Zealand
+Tasman,NZ-TAS,21312,NZ,New Zealand
+Waikato,NZ-WKO,21313,NZ,New Zealand
+Wellington,NZ-WGN,21314,NZ,New Zealand
+West Coast,NZ-WTC,21315,NZ,New Zealand
+Abia,NG-AB,21540,NG,Nigeria
+Abuja Capital Territory,NG-FC,21541,NG,Nigeria
+Adamawa,NG-AD,21542,NG,Nigeria
+Akwa Ibom,NG-AK,21543,NG,Nigeria
+Anambra,NG-AN,21544,NG,Nigeria
+Bauchi,NG-BA,21545,NG,Nigeria
+Bayelsa,NG-BY,21546,NG,Nigeria
+Benue,NG-BE,21547,NG,Nigeria
+Borno,NG-BO,21548,NG,Nigeria
+Cross River,NG-CR,21549,NG,Nigeria
+Delta,NG-DE,21550,NG,Nigeria
+Ebonyi,NG-EB,21551,NG,Nigeria
+Edo,NG-ED,21552,NG,Nigeria
+Ekiti,NG-EK,21553,NG,Nigeria
+Enugu,NG-EN,21554,NG,Nigeria
+Gombe,NG-GO,21555,NG,Nigeria
+Imo,NG-IM,21556,NG,Nigeria
+Jigawa,NG-JI,21557,NG,Nigeria
+Kaduna,NG-KD,21558,NG,Nigeria
+Kano,NG-KN,21559,NG,Nigeria
+Katsina,NG-KT,21560,NG,Nigeria
+Kebbi,NG-KB,21561,NG,Nigeria
+Kogi,NG-KO,21562,NG,Nigeria
+Kwara,NG-KW,21563,NG,Nigeria
+Lagos,NG-LA,21564,NG,Nigeria
+Nasarawa,NG-NA,21565,NG,Nigeria
+Niger,NG-NI,21566,NG,Nigeria
+Ogun,NG-OG,21567,NG,Nigeria
+Ondo,NG-ON,21568,NG,Nigeria
+Osun,NG-OS,21569,NG,Nigeria
+Oyo,NG-OY,21570,NG,Nigeria
+Plateau,NG-PL,21571,NG,Nigeria
+Rivers,NG-RI,21572,NG,Nigeria
+Sokoto,NG-SO,21573,NG,Nigeria
+Taraba,NG-TA,21574,NG,Nigeria
+Yobe,NG-YO,21575,NG,Nigeria
+Zamfara,NG-ZA,21576,NG,Nigeria
+Akershus,NO-02,20772,NO,Norway
+Aust-Agder,NO-09,20779,NO,Norway
+Buskerud,NO-06,20776,NO,Norway
+Finnmark,NO-20,20789,NO,Norway
+Hedmark,NO-04,20774,NO,Norway
+Hordaland,NO-12,20782,NO,Norway
+Moere og Romsdal,NO-15,20784,NO,Norway
+Nord-Troendelag,NO-17,20786,NO,Norway
+Nordland,NO-18,20787,NO,Norway
+Oestfold,NO-01,20771,NO,Norway
+Oppland,NO-05,20775,NO,Norway
+Oslo,NO-03,20773,NO,Norway
+Rogaland,NO-11,20781,NO,Norway
+Soer-Troendelag,NO-16,20785,NO,Norway
+Sogn og Fjordane,NO-14,20783,NO,Norway
+Telemark,NO-08,20778,NO,Norway
+Troms,NO-19,20788,NO,Norway
+Vest-Agder,NO-10,20780,NO,Norway
+Vestfold,NO-07,20777,NO,Norway
+Dolnoslaskie,PL-DS,20847,PL,Poland
+Kujawsko-Pomorskie,PL-KP,20848,PL,Poland
+Lodzkie,PL-LD,20850,PL,Poland
+Lubelskie,PL-LU,20851,PL,Poland
+Lubuskie,PL-LB,20849,PL,Poland
+Malopolskie,PL-MA,20852,PL,Poland
+Mazowieckie,PL-MZ,20853,PL,Poland
+Opolskie,PL-OP,20854,PL,Poland
+Podkarpackie,PL-PK,20856,PL,Poland
+Podlaskie,PL-PD,20855,PL,Poland
+Pomorskie,PL-PM,20857,PL,Poland
+Slaskie,PL-SL,20859,PL,Poland
+Swietokrzyskie,PL-SK,20858,PL,Poland
+Warminsko-Mazurskie,PL-WN,20860,PL,Poland
+Wielkopolskie,PL-WP,20861,PL,Poland
+Zachodnio-Pomorskie,PL-ZP,20862,PL,Poland
+Aveiro,PT-01,20865,PT,Portugal
+Évora,PT-07,20870,PT,Portugal
+Beja,PT-02,21255,PT,Portugal
+Braga,PT-03,20866,PT,Portugal
+Bragança,PT-04,20867,PT,Portugal
+Castelo Branco,PT-05,20868,PT,Portugal
+Colmbra,PT-06,20869,PT,Portugal
+Faro,PT-08,20871,PT,Portugal
+Guarda,PT-09,20872,PT,Portugal
+Leiria,PT-10,20873,PT,Portugal
+Lisboa,PT-11,20874,PT,Portugal
+Portalegre,PT-12,20875,PT,Portugal
+Porto,PT-13,20876,PT,Portugal
+Regiao AutOnoma da Madeira,PT-30,20882,PT,Portugal
+Regiao Autonoma dos Açores,PT-20,20881,PT,Portugal
+Santarém,PT-14,20877,PT,Portugal
+Setúbal,PT-15,20878,PT,Portugal
+Viana do Castelo,PT-16,20879,PT,Portugal
+Viseu,PT-18,20880,PT,Portugal
+"Adygeya, Republic",RU-AD,21250,RU,Russian Federation
+Aginskiy Buryatskiy avtonomnyy okrug,RU-AGB,21349,RU,Russian Federation
+"Altay, Republic",RU-AL,20914,RU,Russian Federation
+Altayskiy kray,RU-ALT,21385,RU,Russian Federation
+Amurskaya oblast,RU-AMU,20915,RU,Russian Federation
+Arkhangel'skaya oblast,RU-ARK,20916,RU,Russian Federation
+Astrakhanskaya oblast,RU-AST,20917,RU,Russian Federation
+"Bashkortostan, Republic",RU-BA,20918,RU,Russian Federation
+Belgorodskaya oblast,RU-BEL,20919,RU,Russian Federation
+Bryanskaya oblast,RU-BRY,20920,RU,Russian Federation
+"Buryatiya, Republic",RU-BU,20921,RU,Russian Federation
+"Chechnya, Republic",RU-CE,21347,RU,Russian Federation
+Chelyabinskaya oblast,RU-CHE,20922,RU,Russian Federation
+Chitinskaya oblast,RU-CHI,20923,RU,Russian Federation
+Chukotskiy avtonomnyy okrug,RU-CHU,20924,RU,Russian Federation
+"Chuvashiya, Republic",RU-CU,21348,RU,Russian Federation
+"Dagestan, Republic",RU-DA,20925,RU,Russian Federation
+Evenkiyskiy avtonomniy okrug,RU-EVE,21353,RU,Russian Federation
+"Ingushetiya, Republic",RU-IN,21251,RU,Russian Federation
+Irkutskaya oblast,RU-IRK,20926,RU,Russian Federation
+Ivanovskaya oblast,RU-IVA,20927,RU,Russian Federation
+"Kabardino-Balkariya, Republic",RU-KB,20929,RU,Russian Federation
+Kaliningradskaya oblast,RU-KGD,20933,RU,Russian Federation
+"Kalmykiya, Republic",RU-KL,21243,RU,Russian Federation
+Kaluzhskaya oblast,RU-KLU,20939,RU,Russian Federation
+Kamchatskaya oblast,RU-KAM,20928,RU,Russian Federation
+"Karachayevo-Cherkessiya, Republic",RU-KC,20930,RU,Russian Federation
+"Kareliya, Republic",RU-KR,20942,RU,Russian Federation
+Kemerovskaya oblast,RU-KEM,20932,RU,Russian Federation
+Khabarovskiy kray,RU-KHA,20935,RU,Russian Federation
+"Khakasiya, Republic",RU-KK,20938,RU,Russian Federation
+Khanty-Mansiyskiy avtonomnyy okrug,RU-KHM,20936,RU,Russian Federation
+Kirovskaya oblast,RU-KIR,20937,RU,Russian Federation
+"Komi, Republic",RU-KO,20940,RU,Russian Federation
+Koryakskiy avtonomniy okrug,RU-KOR,21350,RU,Russian Federation
+Kostromskaya oblast,RU-KOS,20941,RU,Russian Federation
+Krasnodarskiy kray,RU-KDA,20931,RU,Russian Federation
+Krasnoyarskiy kray,RU-KYA,20944,RU,Russian Federation
+Kurganskaya oblast,RU-KGN,20934,RU,Russian Federation
+Kurskaya oblast,RU-KRS,20943,RU,Russian Federation
+Leningradskaya oblast,RU-LEN,20945,RU,Russian Federation
+Lipetskaya oblast,RU-LIP,20946,RU,Russian Federation
+Magadanskaya oblast,RU-MAG,20947,RU,Russian Federation
+"Mariy El, Republic",RU-ME,21234,RU,Russian Federation
+"Mordoviya, Republic",RU-MO,20948,RU,Russian Federation
+Moscow,RU-MOW,20950,RU,Russian Federation
+Moskovskaya oblast,RU-MOS,20949,RU,Russian Federation
+Murmanskaya oblast,RU-MUR,20951,RU,Russian Federation
+Nenetskiy avtonomniy okrug,RU-NEN,21351,RU,Russian Federation
+Nizhegorodskaya oblast,RU-NIZ,20953,RU,Russian Federation
+Novgorodskaya oblast,RU-NGR,20952,RU,Russian Federation
+Novosibirskaya oblast,RU-NVS,20954,RU,Russian Federation
+Omskaya oblast,RU-OMS,20955,RU,Russian Federation
+Orenburgskaya oblast,RU-ORE,20956,RU,Russian Federation
+Orlovskaya oblast,RU-ORL,21256,RU,Russian Federation
+Penzenskaya oblast,RU-PNZ,20958,RU,Russian Federation
+Permskaya oblast,RU-PER,20957,RU,Russian Federation
+Primorskiy kray,RU-PRI,20959,RU,Russian Federation
+Pskovskaya oblast,RU-PSK,20960,RU,Russian Federation
+Rostovskaya oblast,RU-ROS,20961,RU,Russian Federation
+Ryazanskaya oblast,RU-RYA,20962,RU,Russian Federation
+"Sakha, Republic",RU-SA,20963,RU,Russian Federation
+Sakhalinskaya oblast,RU-SAK,20964,RU,Russian Federation
+Samarskaya oblast,RU-SAM,20965,RU,Russian Federation
+Sankt-Petersburg,RU-SPE,20968,RU,Russian Federation
+Saratovskaya oblast,RU-SAR,20966,RU,Russian Federation
+"Severnaya Osetiya, Republic",RU-SE,21252,RU,Russian Federation
+Smolenskaya oblast,RU-SMO,20967,RU,Russian Federation
+Stavropol'skiy kray,RU-STA,20969,RU,Russian Federation
+Sverdlovskaya oblast,RU-SVE,20970,RU,Russian Federation
+Tambovskaya oblast,RU-TAM,20972,RU,Russian Federation
+"Tatarstan, Republic",RU-TA,20971,RU,Russian Federation
+Taymyrskiy (Dolgano-Nenetskiy) avtonomnyy okrug,RU-TAY,20973,RU,Russian Federation
+Tomskaya oblast,RU-TOM,20974,RU,Russian Federation
+Tul'skaya oblast,RU-TUL,20975,RU,Russian Federation
+Tverskaya oblast,RU-TVE,20976,RU,Russian Federation
+Tyumenskaya oblast,RU-TYU,20977,RU,Russian Federation
+"Tyva, Republic",RU-TY,21346,RU,Russian Federation
+"Udmurtiya, Republic",RU-UD,20978,RU,Russian Federation
+Ulyanovskaya oblast,RU-ULY,20979,RU,Russian Federation
+Ust'-Ordyniskiy Buryatskiy avtonomnyy okrug,RU-UOB,21352,RU,Russian Federation
+Vladimirskaya oblast,RU-VLA,20981,RU,Russian Federation
+Volgogradskaya oblast,RU-VGG,20980,RU,Russian Federation
+Vologodskaya oblast,RU-VLG,20982,RU,Russian Federation
+Voronezhskaya oblast,RU-VOR,20983,RU,Russian Federation
+Yamalo-Nenetskiy avtonomnyy okrug,RU-YAN,20984,RU,Russian Federation
+Yaroslavskaya oblast,RU-YAR,20985,RU,Russian Federation
+Yevreyskaya avtonomnaya oblast,RU-YEV,21277,RU,Russian Federation
+Al Bahah,SA-11,21455,SA,Saudi Arabia
+Al Hudud ash Shamaliyah,SA-08,21452,SA,Saudi Arabia
+Al Jawf,SA-12,21456,SA,Saudi Arabia
+Al Madinah,SA-03,21448,SA,Saudi Arabia
+Al Qasim,SA-05,21449,SA,Saudi Arabia
+Ar Riyad,SA-01,20987,SA,Saudi Arabia
+Ash Sharqiyah,SA-04,20989,SA,Saudi Arabia
+Asir,SA-14,21457,SA,Saudi Arabia
+Hail,SA-06,21450,SA,Saudi Arabia
+Jizan,SA-09,21453,SA,Saudi Arabia
+Makkah,SA-02,20988,SA,Saudi Arabia
+Najran,SA-10,21454,SA,Saudi Arabia
+Tabuk,SA-07,21451,SA,Saudi Arabia
+Eastern Cape,ZA-EC,21214,ZA,South Africa
+Free State,ZA-FS,21215,ZA,South Africa
+Gauteng,ZA-GT,21216,ZA,South Africa
+Kwazulu-Natal,ZA-NL,21219,ZA,South Africa
+Mpumalanga,ZA-MP,21217,ZA,South Africa
+North-West,ZA-NW,21221,ZA,South Africa
+Northern Cape,ZA-NC,21218,ZA,South Africa
+Northern Province,ZA-NP,21220,ZA,South Africa
+Western Cape,ZA-WC,21222,ZA,South Africa
+Busan Metropolitan City,KR-26,21319,KR,South Korea
+Chungcheongbuk-do,KR-43,21327,KR,South Korea
+Chungcheongnam-do,KR-44,21328,KR,South Korea
+Daegu Metropolitan City,KR-27,21320,KR,South Korea
+Daejeon Metropolitan City,KR-30,21323,KR,South Korea
+Gangwon-do,KR-42,21326,KR,South Korea
+Gwangju Metropolitan City,KR-29,21322,KR,South Korea
+Gyeonggi-do,KR-41,21325,KR,South Korea
+Gyeongsangbuk-do,KR-47,21331,KR,South Korea
+Gyeongsangnam-do,KR-48,21332,KR,South Korea
+Incheon Metropolitan City,KR-28,21321,KR,South Korea
+Jeju-do,KR-49,21333,KR,South Korea
+Jeollabuk-do,KR-45,21329,KR,South Korea
+Jeollanam-do,KR-46,21330,KR,South Korea
+Seoul City,KR-11,21318,KR,South Korea
+Ulsan Metropolitan City,KR-31,21324,KR,South Korea
+Alava,ES-VI,20299,ES,Spain
+Alicante,ES-A,20267,ES,Spain
+Almería,ES-AL,20268,ES,Spain
+Andalucía,ES-AN,20269,ES,Spain
+Aragón,ES-AR,21386,ES,Spain
+Asturias,ES-O,20286,ES,Spain
+Balearic Islands,ES-PM,20287,ES,Spain
+Barcelona,ES-B,20270,ES,Spain
+Cadiz,ES-CA,20273,ES,Spain
+Canary Islands,ES-CN,20277,ES,Spain
+Cantabria,ES-S,20290,ES,Spain
+Castilla y León,ES-CL,20275,ES,Spain
+Castilla-La Mancha,ES-CM,20276,ES,Spain
+Cataluña,ES-CT,20278,ES,Spain
+Ceuta,ES-CE,20274,ES,Spain
+Extremadura,ES-EX,20279,ES,Spain
+Galicia,ES-GA,20280,ES,Spain
+Guipuzcoa,ES-SS,20293,ES,Spain
+Illes Balears,ES-IB,21387,ES,Spain
+La Coruna,ES-C,20272,ES,Spain
+La Rioja,ES-LO,20281,ES,Spain
+Madrid,ES-M,20282,ES,Spain
+Melilla,ES-ML,20283,ES,Spain
+Murcia,ES-MU,20284,ES,Spain
+Navarra,ES-NA,20285,ES,Spain
+País Vasco (Basque Country),ES-PV,20289,ES,Spain
+Pontevedra,ES-PO,20288,ES,Spain
+Salamanca,ES-SA,20291,ES,Spain
+Santa Cruz De Tenerife,ES-TF,20295,ES,Spain
+Segovia,ES-SG,20292,ES,Spain
+Tarragona,ES-T,20294,ES,Spain
+Toledo,ES-TO,20296,ES,Spain
+Valencia,ES-V,20297,ES,Spain
+"Valenciana, Comunidad",ES-VC,21388,ES,Spain
+Valladolid,ES-VA,20298,ES,Spain
+Vizcaya,ES-BI,20271,ES,Spain
+Zaragoza,ES-Z,20300,ES,Spain
+Blekinge lan,SE-K,21010,SE,Sweden
+Dalarnas lan,SE-W,21017,SE,Sweden
+Gavleborgs lan,SE-X,21018,SE,Sweden
+Gotlands lan,SE-I,21009,SE,Sweden
+Hallands lan,SE-N,21012,SE,Sweden
+Jamtlands lan,SE-Z,21020,SE,Sweden
+Jonkopings lan,SE-F,21006,SE,Sweden
+Kalmar lan,SE-H,21008,SE,Sweden
+Kronobergs lan,SE-G,21007,SE,Sweden
+Norrbottens lan,SE-BD,21002,SE,Sweden
+Orebro lan,SE-T,21015,SE,Sweden
+Ostergotlands lan,SE-E,21005,SE,Sweden
+Skane lan,SE-M,21011,SE,Sweden
+Sodermanlands lan,SE-D,21004,SE,Sweden
+Stockholms lan,SE-AB,21000,SE,Sweden
+Uppsala lan,SE-C,21003,SE,Sweden
+Varmlands lan,SE-S,21014,SE,Sweden
+Vasterbottens lan,SE-AC,21001,SE,Sweden
+Vasternorrlands lan,SE-Y,21019,SE,Sweden
+Vastmanlands lan,SE-U,21016,SE,Sweden
+Vastra Gotalands lan,SE-O,21013,SE,Sweden
+Aargau,CH-AG,20126,CH,Switzerland
+Appenzell Inner Rhodes,CH-AI,20127,CH,Switzerland
+Appenzell Outer Rhodes,CH-AR,20128,CH,Switzerland
+Basel-City,CH-BS,20131,CH,Switzerland
+Basel-Country,CH-BL,20130,CH,Switzerland
+Bern,CH-BE,20129,CH,Switzerland
+Fribourg,CH-FR,20132,CH,Switzerland
+Geneva,CH-GE,20133,CH,Switzerland
+Glarus,CH-GL,20134,CH,Switzerland
+Grisons,CH-GR,20135,CH,Switzerland
+Jura,CH-JU,20136,CH,Switzerland
+Lucerne,CH-LU,20137,CH,Switzerland
+Neuchatel,CH-NE,20138,CH,Switzerland
+Nidwalden,CH-NW,20139,CH,Switzerland
+Obwalden,CH-OW,20140,CH,Switzerland
+Schaffhausen,CH-SH,20142,CH,Switzerland
+Schwyz,CH-SZ,20144,CH,Switzerland
+Solothurn,CH-SO,20143,CH,Switzerland
+St. Gallen,CH-SG,20141,CH,Switzerland
+Thurgau,CH-TG,20145,CH,Switzerland
+Ticino,CH-TI,20146,CH,Switzerland
+Uri,CH-UR,20147,CH,Switzerland
+Valais,CH-VS,20149,CH,Switzerland
+Vaud,CH-VD,20148,CH,Switzerland
+Zug,CH-ZG,20150,CH,Switzerland
+Zurich,CH-ZH,20151,CH,Switzerland
+Chachoengsao,TH-24,21031,TH,Thailand
+Chiang Mai,TH-50,21036,TH,Thailand
+Chiang Rai,TH-57,21039,TH,Thailand
+Chon Buri,TH-20,21030,TH,Thailand
+Khon Kaen,TH-40,21035,TH,Thailand
+Krung Thep Maha Nakhon Bangkok,TH-10,21025,TH,Thailand
+Lampang,TH-52,21037,TH,Thailand
+Nakhon Pathom,TH-73,21488,TH,Thailand
+Nakhon Ratchasima,TH-30,21032,TH,Thailand
+Nakhon Si Thammarat,TH-80,21041,TH,Thailand
+Nonthaburi,TH-12,21026,TH,Thailand
+Pathum Thani,TH-13,21027,TH,Thailand
+Pattani,TH-94,21046,TH,Thailand
+Phaket,TH-83,21042,TH,Thailand
+Phitsanulok,TH-65,21040,TH,Thailand
+Phra Nakhon Si Ayutthaya,TH-14,21028,TH,Thailand
+Phrae,TH-54,21038,TH,Thailand
+Prachuap Khiri Khan,TH-77,21486,TH,Thailand
+Ranong,TH-85,21043,TH,Thailand
+Samut Sakhon,TH-74,21487,TH,Thailand
+Saraburi,TH-19,21029,TH,Thailand
+Songkhla,TH-90,21044,TH,Thailand
+Trang,TH-92,21045,TH,Thailand
+Ubon Ratchathani,TH-34,21033,TH,Thailand
+Yala,TH-95,21047,TH,Thailand
+Yasothon,TH-35,21034,TH,Thailand
+Adana,TR-01,21052,TR,Turkey
+Adıyaman,TR-02,21354,TR,Turkey
+Afyon,TR-03,21053,TR,Turkey
+Aksaray,TR-68,21377,TR,Turkey
+Amasya,TR-05,21355,TR,Turkey
+Ankara,TR-06,21055,TR,Turkey
+Antalya,TR-07,21056,TR,Turkey
+Ardahan,TR-75,21382,TR,Turkey
+Artvin,TR-08,21356,TR,Turkey
+Aydın,TR-09,21057,TR,Turkey
+Ağrı,TR-04,21054,TR,Turkey
+Çanakkale,TR-17,21061,TR,Turkey
+Çankırı,TR-18,21361,TR,Turkey
+Çorum,TR-19,21362,TR,Turkey
+Balıkesir,TR-10,21058,TR,Turkey
+Bartın,TR-74,21381,TR,Turkey
+Batman,TR-72,21379,TR,Turkey
+Bayburt,TR-69,21378,TR,Turkey
+Bilecik,TR-11,21357,TR,Turkey
+Bingöl,TR-12,21358,TR,Turkey
+Bitlis,TR-13,21359,TR,Turkey
+Bolu,TR-14,21059,TR,Turkey
+Burdur,TR-15,21360,TR,Turkey
+Bursa,TR-16,21060,TR,Turkey
+Denizli,TR-20,21363,TR,Turkey
+Diyarbakır,TR-21,21062,TR,Turkey
+Duzce,TR-81,21577,TR,Turkey
+Edirne,TR-22,21364,TR,Turkey
+Elazığ,TR-23,21063,TR,Turkey
+Erzincan,TR-24,21287,TR,Turkey
+Erzurum,TR-25,21064,TR,Turkey
+Eskişehir,TR-26,21065,TR,Turkey
+Gaziantep,TR-27,21066,TR,Turkey
+Gümüşhane,TR-29,21366,TR,Turkey
+Giresun,TR-28,21365,TR,Turkey
+Hakkari,TR-30,21367,TR,Turkey
+Hatay,TR-31,21067,TR,Turkey
+Içel,TR-33,21068,TR,Turkey
+Isparta,TR-32,21248,TR,Turkey
+Istanbul,TR-34,21069,TR,Turkey
+Izmir,TR-35,21070,TR,Turkey
+Iğdır,TR-76,21383,TR,Turkey
+Kahramanmaraş,TR-46,21079,TR,Turkey
+Karabuk,TR-78,21578,TR,Turkey
+Karaman,TR-70,21092,TR,Turkey
+Kars,TR-36,21071,TR,Turkey
+Kastamonu,TR-37,21072,TR,Turkey
+Kayseri,TR-38,21073,TR,Turkey
+Kütahya,TR-43,21076,TR,Turkey
+Kilis,TR-79,21579,TR,Turkey
+Kocaeli,TR-41,21074,TR,Turkey
+Konya,TR-42,21075,TR,Turkey
+Kırklareli,TR-39,21368,TR,Turkey
+Kırşehir,TR-40,21369,TR,Turkey
+Kırıkkale,TR-71,21093,TR,Turkey
+Malatya,TR-44,21077,TR,Turkey
+Manisa,TR-45,21078,TR,Turkey
+Mardin,TR-47,21370,TR,Turkey
+Muş,TR-49,21081,TR,Turkey
+Muğla,TR-48,21080,TR,Turkey
+Nevşehir,TR-50,21082,TR,Turkey
+Niğde,TR-51,21083,TR,Turkey
+Ordu,TR-52,21371,TR,Turkey
+Osmaniye,TR-80,21384,TR,Turkey
+Rize,TR-53,21372,TR,Turkey
+Sakarya,TR-54,21084,TR,Turkey
+Samsun,TR-55,21085,TR,Turkey
+Sinop,TR-57,21374,TR,Turkey
+Sivas,TR-58,21086,TR,Turkey
+Tekirdağ,TR-59,21087,TR,Turkey
+Tokat,TR-60,21249,TR,Turkey
+Trabzon,TR-61,21088,TR,Turkey
+Tunceli,TR-62,21375,TR,Turkey
+Uşak,TR-64,21376,TR,Turkey
+Van,TR-65,21090,TR,Turkey
+Yalova,TR-77,21094,TR,Turkey
+Yozgat,TR-66,21257,TR,Turkey
+Zonguldak,TR-67,21091,TR,Turkey
+Şanlıurfa,TR-63,21089,TR,Turkey
+Şiirt,TR-56,21373,TR,Turkey
+Şırnak,TR-73,21380,TR,Turkey
+Cherkas'ka Oblast',UA-71,21128,UA,Ukraine
+Chernihivs'ka Oblast',UA-74,21129,UA,Ukraine
+Chernivets'ka Oblast',UA-77,21130,UA,Ukraine
+Dnipropetrovs'ka Oblast',UA-12,21112,UA,Ukraine
+Donets'ka Oblast',UA-14,21113,UA,Ukraine
+Ivano-Frankivs'ka Oblast',UA-26,21117,UA,Ukraine
+Kharkivs'ka Oblast',UA-63,21125,UA,Ukraine
+Khersons'ka Oblast',UA-65,21126,UA,Ukraine
+Khmel'nyts'ka Oblast',UA-68,21127,UA,Ukraine
+Kievs'ka oblast,UA-32,21580,UA,Ukraine
+Kirovohrads'ka Oblast',UA-35,21119,UA,Ukraine
+Kyiv,UA-30,21118,UA,Ukraine
+L'vivs'ka Oblast',UA-46,21121,UA,Ukraine
+Luhans'ka Oblast',UA-09,21111,UA,Ukraine
+Mykolaivs'ka oblast,UA-48,21581,UA,Ukraine
+Odes 'ka Oblast',UA-51,21122,UA,Ukraine
+Poltavs'ka Oblast',UA-53,21123,UA,Ukraine
+Respublika Krym,UA-43,21120,UA,Ukraine
+Rivnens'ka,UA-56,21582,UA,Ukraine
+Sevastopol,UA-40,21583,UA,Ukraine
+Sums 'ka Oblast',UA-59,21124,UA,Ukraine
+Ternopil's'ka Oblast',UA-61,21292,UA,Ukraine
+Vinnyts'ka Oblast',UA-05,21109,UA,Ukraine
+Volyos'ka Oblast',UA-07,21110,UA,Ukraine
+Zakarpats'ka Oblast',UA-21,21115,UA,Ukraine
+Zaporiz'ka Oblast',UA-23,21116,UA,Ukraine
+Zhytomyrs'ka Oblast',UA-18,21114,UA,Ukraine
+Channel Islands,GB-CHA,20338,GB,United Kingdom
+England,GB-ENG,20339,GB,United Kingdom
+Isle Of Man,GB-IOM,20340,GB,United Kingdom
+Northern Ireland,GB-NIR,20341,GB,United Kingdom
+Scotland,GB-SCT,20342,GB,United Kingdom
+Wales,GB-WLS,20343,GB,United Kingdom
+Alabama,US-AL,21133,US,United States
+Alaska,US-AK,21132,US,United States
+Arizona,US-AZ,21136,US,United States
+Arkansas,US-AR,21135,US,United States
+California,US-CA,21137,US,United States
+Colorado,US-CO,21138,US,United States
+Connecticut,US-CT,21139,US,United States
+Delaware,US-DE,21141,US,United States
+District of Columbia,US-DC,21140,US,United States
+Florida,US-FL,21142,US,United States
+Georgia,US-GA,21143,US,United States
+Hawaii,US-HI,21144,US,United States
+Idaho,US-ID,21146,US,United States
+Illinois,US-IL,21147,US,United States
+Indiana,US-IN,21148,US,United States
+Iowa,US-IA,21145,US,United States
+Kansas,US-KS,21149,US,United States
+Kentucky,US-KY,21150,US,United States
+Louisiana,US-LA,21151,US,United States
+Maine,US-ME,21154,US,United States
+Maryland,US-MD,21153,US,United States
+Massachusetts,US-MA,21152,US,United States
+Michigan,US-MI,21155,US,United States
+Minnesota,US-MN,21156,US,United States
+Mississippi,US-MS,21158,US,United States
+Missouri,US-MO,21157,US,United States
+Montana,US-MT,21159,US,United States
+Nebraska,US-NE,21162,US,United States
+Nevada,US-NV,21166,US,United States
+New Hampshire,US-NH,21163,US,United States
+New Jersey,US-NJ,21164,US,United States
+New Mexico,US-NM,21165,US,United States
+New York,US-NY,21167,US,United States
+North Carolina,US-NC,21160,US,United States
+North Dakota,US-ND,21161,US,United States
+Ohio,US-OH,21168,US,United States
+Oklahoma,US-OK,21169,US,United States
+Oregon,US-OR,21170,US,United States
+Pennsylvania,US-PA,21171,US,United States
+Rhode Island,US-RI,21172,US,United States
+South Carolina,US-SC,21173,US,United States
+South Dakota,US-SD,21174,US,United States
+Tennessee,US-TN,21175,US,United States
+Texas,US-TX,21176,US,United States
+Utah,US-UT,21177,US,United States
+Vermont,US-VT,21179,US,United States
+Virginia,US-VA,21178,US,United States
+Washington,US-WA,21180,US,United States
+West Virginia,US-WV,21183,US,United States
+Wisconsin,US-WI,21182,US,United States
+Wyoming,US-WY,21184,US,United States

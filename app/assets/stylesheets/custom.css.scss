@@ -84,7 +84,8 @@ ul { list-style: none; margin-left: 0; }
 .user_section { padding: 8px 10px; border-bottom: 1px solid #E2E2E2; }
 
 .user_school { font-weight: bold; }
-.user_company { color: #999; }
+.user_profession { color: #999; }
+.user_company { color: #999; font-weight: bold; }
 .user_field { color: #999; }
 
 .user_actions { @extend .user_section; padding-bottom: 0; border-bottom: 0; }
@@ -189,7 +190,7 @@ ul { list-style: none; margin-left: 0; }
 .form-horizontal textarea { height: 20px; @extend .textarea-style; }
 #user_bio { }
 
-.chzn-container span { font-weight: bold; }
+.chzn-container span, .select2-container span, .select2-container div { font-weight: bold; }
 
 .form-divider { @extend .filters_title; margin: 20px 0; }
 
