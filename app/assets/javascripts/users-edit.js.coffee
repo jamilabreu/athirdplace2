@@ -9,7 +9,7 @@ jQuery ->
 		multiple: true
 		minimumInputLength: 3
 		ajax:
-			url: "http://athirdplace.dev/communities.json"
+			url: "/communities.json"
 			dataType: 'jsonp'
 			data: (term) ->
 				schools: term
@@ -24,7 +24,7 @@ jQuery ->
 		placeholder: "Select Current City"
 		minimumInputLength: 3
 		ajax:
-			url: "http://athirdplace.dev/communities.json"
+			url: "/communities.json"
 			dataType: 'jsonp'
 			data: (term) ->
 				cities: term
@@ -35,14 +35,14 @@ jQuery ->
 		formatSelection: (city) ->
 			city.name
 	
-	#if $('.school-select2').val().length > 2
-	$.ajax "http://athirdplace.dev/communities.json?school=true",
-		dataType: 'jsonp'
-		success: (response) ->
-			$('.school-select2').select2 'data', response
+	if $('#user_school_ids').val().length > 2
+		$.ajax "/communities.json?school=true",
+			dataType: 'jsonp'
+			success: (response) ->
+				$('.school-select2').select2 'data', response
 
-	#if $('.city-select2').val().length > 2
-	$.ajax "http://athirdplace.dev/communities.json?city=true",
-		dataType: 'jsonp'
-		success: (response) ->
-			$('.city-select2').select2 'data', response
+	if $('#user_city_ids').val().length > 2
+		$.ajax "/communities.json?city=true",
+			dataType: 'jsonp'
+			success: (response) ->
+				$('.city-select2').select2 'data', response
