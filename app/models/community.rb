@@ -32,7 +32,7 @@ class Community
       if parent.parent.name == "United States"
         type == :dropdown ? "#{name}, #{parent.name}" : "#{name}, #{parent.mod_state_code}"
       else
-        type == :dropdown ? "#{name}, #{parent.parent.name}" : "#{name}, #{parent.parent.country_code}"
+        type == :dropdown ? "#{name}, #{parent.parent.name}" : "#{name}, #{parent.parent.name}"
       end
     else
       name
