@@ -67,6 +67,13 @@ ul { list-style: none; margin-left: 0; }
 #dashboard-inner li.dash_nav a { display: block; padding: 6px 0 9px; margin-left: 15px; color: $blue; font-weight: bold; }
 #dashboard-inner li.dash_nav a:hover { color: $green; border-bottom: 2px solid $green; }
 
+/* Home */
+#home {}
+.home_title { padding: 10px 0; color: #AAA; font-size: 24px; text-align: center; display: block; }
+.home_title i { margin-left: 5px; font-size: 16px; color: #DDD; }
+.home_communities { width: 300px; margin: 10px auto; padding: 30px 0; text-align: center; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
+.home_communities a { display: block; color: #3D89C8; padding: 1px 0 1px 1px; font-weight: bold; font-size: 18px; line-height: 24px; }
+.home_communities a:hover { color: $blue; }
 
 /* Users */
 #users { padding: 10px 0 0 10px; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
@@ -174,6 +181,8 @@ ul { list-style: none; margin-left: 0; }
 
 /* Edit User Form */
 .form-horizontal { margin: 0; padding: 10px; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
+
+#edit_page_message { margin-bottom: -8px; }
 
 #form-fields { width: 300px; padding: 15px 15px 0; border: 1px solid #E2E2E2;	@include border-radius(3px); background: #FFF; 
 							 @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.05)); }

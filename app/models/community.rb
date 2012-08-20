@@ -10,6 +10,7 @@ class Community
   field :name, type: String
   field :subdomain, type: String
   field :display_name, type: String
+  field :nickname, type: String
   field :community_type, type: String
   field :state, type: String
   field :state_code, type: String

@@ -35,14 +35,12 @@ jQuery ->
 		formatSelection: (city) ->
 			city.name
 	
-	if $('#user_school_ids').val().length > 2
-		$.ajax "/communities.json?school=true",
-			dataType: 'jsonp'
-			success: (response) ->
-				$('.school-select2').select2 'data', response
+	$.ajax "/communities.json?school=true",
+		dataType: 'jsonp'
+		success: (response) ->
+			$('.school-select2').select2 'data', response
 
-	if $('#user_city_ids').val().length > 2
-		$.ajax "/communities.json?city=true",
-			dataType: 'jsonp'
-			success: (response) ->
-				$('.city-select2').select2 'data', response
+	$.ajax "/communities.json?city=true",
+		dataType: 'jsonp'
+		success: (response) ->
+			$('.city-select2').select2 'data', response

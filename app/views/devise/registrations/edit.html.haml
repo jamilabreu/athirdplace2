@@ -10,6 +10,11 @@
 					.user_name= current_user.first_name
 			%div{style: "clear: both"}
 	.span9
+		- if current_user.invalid?
+			#edit_page_message
+				%p.alert.alert-info
+					= "#{current_user.first_name} - "
+					please share a bit about yourself with the community before entering.	
 		#edit_page_middle
 			= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f|
 				

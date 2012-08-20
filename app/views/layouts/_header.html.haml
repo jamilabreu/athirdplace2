@@ -23,4 +23,4 @@
 							%li.dropdown{:style => "#{'visibility: hidden' unless user_signed_in?}" }
 								= link_to "#", :class => "dropdown-toggle #{'active' if edit_page || subscriptions_page}", id: "settings-toggle" do
 									%i.icon-caret-down		
-	= render "layouts/login" unless user_signed_in?
+	= render "layouts/login" unless user_signed_in? || home_page

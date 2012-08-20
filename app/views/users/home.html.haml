@@ -1,0 +1,10 @@
+
+.row
+	.span12
+		#home
+			.home_title
+				select a network
+				%i.icon-caret-down
+			.home_communities
+				- @communities.each do |community|
+					%div= link_to community.name, root_url(subdomain: community.subdomain)

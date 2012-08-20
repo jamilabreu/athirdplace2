@@ -7,7 +7,7 @@ Athirdplace::Application.routes.draw do
   #match 'support', to: "subscriptions#new", as: "subscriptions"
   resources :subscriptions, only: [:index, :new, :create]
   match "", to: "users#index", constraints: lambda { |r| r.subdomain.present? && r.subdomain != "www" }
-  root to: "users#frontpage"
+  root to: "users#home"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

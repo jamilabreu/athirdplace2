@@ -4,6 +4,9 @@ module ApplicationHelper
   end
   
   # Page Helper
+  def home_page
+    params[:controller] == "users" && params[:action] == "home"
+  end
   def users_page
     params[:controller] == "users" && params[:action] == "index"
   end

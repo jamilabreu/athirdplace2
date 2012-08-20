@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  def frontpage
+  def home
+    @communities = Community.any_in(id: User.all.flat_map(&:community_ids).uniq.compact, community_type: ["School", "Ethnicity"])
   end
   
   def index

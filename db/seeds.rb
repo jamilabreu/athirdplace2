@@ -1,19 +1,19 @@
 # 1 - 2
 genders = %W[ Female Male ]
 genders.each do |gender|
-  Community.create name: gender, subdomain: gender.parameterize, display_name: "#{gender} Student + Professional Network", community_type: "Gender"
+  Community.create name: gender, subdomain: gender.parameterize, display_name: "#{gender} Student + Professional Network", nickname: gender, community_type: "Gender"
 end
 
 # 3 - 5
 standing = %W[ Alumni #{'Graduate Student'} Undergraduate ]
 standing.each do |standing|
-  Community.create name: standing, subdomain: standing.delete(" ").parameterize, display_name: "#{standing} Network", community_type: "Standing"
+  Community.create name: standing, subdomain: standing.delete(" ").parameterize, display_name: "#{standing} Network", nickname: standing, community_type: "Standing"
 end
 
 # 6 - 13
 degree = %W[ Associate's Bachelor's Master's Doctoral #{"Pursuing Associate's"} #{"Persuing Bachelor's"} #{"Persuing Master's"} #{"Pursuing Doctoral"} #{"High School"} ]
 degree.each do |degree|
-  Community.create name: degree, subdomain: degree.delete(" ").delete("'").parameterize, display_name: "#{degree} Network", community_type: "Degree"
+  Community.create name: degree, subdomain: degree.delete(" ").delete("'").parameterize, display_name: "#{degree} Network", nickname: degree, community_type: "Degree"
 end
 
 # 14 - 56
@@ -22,25 +22,25 @@ field = %W[ Agriculture Anthropology Architecture #{'Area Studies'} Archaeology 
   Geography History Journalism Law Linguistics Literature Marketing Mathematics Medicine Military #{'Performing Arts'} Philosophy Physics #{'Political Science'}
   #{'Public Health'} Psychology Religion #{'Sexuality Studies'} #{'Social Work'} Sociology Sports Technology Transportation #{'Visual Arts'} Writing ]
 field.each do |field|
-  Community.create(name: field, subdomain: field.delete(" ").parameterize, display_name: "#{field} Student + Professional Network", community_type: "Field")
+  Community.create(name: field, subdomain: field.delete(" ").parameterize, display_name: "#{field} Student + Professional Network", nickname: field, community_type: "Field")
 end
 
 # 57 - 58
 relationship = %W[ Single #{'In a Relationship'} Married ]
 relationship.each do |relationship|
-  Community.create(name: relationship, subdomain: relationship.delete(" ").parameterize, display_name: "#{relationship} Network", community_type: "Relationship")
+  Community.create(name: relationship, subdomain: relationship.delete(" ").parameterize, display_name: "#{relationship} Network", nickname: relationship, community_type: "Relationship")
 end
 
 orientation = { "Heterosexual" => [], "LGBT" => %W[ Lesbian Gay Bisexual Transgender ] }
 orientation.each do |key, value|
-  c = Community.create(name: key, subdomain: key.delete(" ").delete("-").parameterize, display_name: "#{key} Student + Professional Network", community_type: "Orientation")
-  value.each { |v| c.children.create(name: v, subdomain: v.delete(" ").delete("-").parameterize, display_name: "#{v} Student + Professional Network", community_type: "Orientation") }
+  c = Community.create(name: key, subdomain: key.delete(" ").delete("-").parameterize, display_name: "#{key} Student + Professional Network", nickname: key, community_type: "Orientation")
+  value.each { |v| c.children.create(name: v, subdomain: v.delete(" ").delete("-").parameterize, display_name: "#{v} Student + Professional Network", nickname: v, community_type: "Orientation") }
 end
 
 # 70 - 84
 religion = %W[ Agnostic Athiest Bahai Buddhist Christian Confucianist Hindu Jain Jewish Muslim Rasta Shintoist Sikh Taoist Wicca ]
 religion.each do |religion|
-  Community.create(name: religion, subdomain: religion.delete(" ").parameterize, display_name: "#{religion} Student + Professional Network", community_type: "Religion")
+  Community.create(name: religion, subdomain: religion.delete(" ").parameterize, display_name: "#{religion} Student + Professional Network", nickname: religion, community_type: "Religion")
 end
 
 # 84 - 104
@@ -54,9 +54,9 @@ ethnicity = {
   "European" => %W[ Italian Irish French German British Dutch Russian Spaniard Greek Scottish ],
   "Native American" => []}
 ethnicity.each do |key, value|
-  c = Community.create(name: key, subdomain: key.delete(" ").delete("-").parameterize, display_name: "#{key} Student + Professional Network", community_type: "Ethnicity",
+  c = Community.create(name: key, subdomain: key.delete(" ").delete("-").parameterize, display_name: "#{key} Student + Professional Network", nickname: key, community_type: "Ethnicity",
   name_singular: key, name_plural: key.pluralize)
-  value.each { |v| c.children.create(name: v, subdomain: v.delete(" ").delete("-").parameterize, display_name: "#{v} Student + Professional Network", community_type: "Ethnicity", 
+  value.each { |v| c.children.create(name: v, subdomain: v.delete(" ").delete("-").parameterize, display_name: "#{v} Student + Professional Network", nickname: v, community_type: "Ethnicity", 
   name_singular: v, name_plural: v.pluralize ) }
 end
 
@@ -67,6 +67,7 @@ CSV.foreach('db/data/countrycodes.csv', {encoding: "ISO-3166-1:UTF-8", headers: 
     name: row[0],
     subdomain: row[0].delete(" ").parameterize,
     display_name: "#{row[0]} Student + Professional Network",
+    nickname: row[0],
     community_type: "Country",
     country_code: row[1]
   )
@@ -80,6 +81,7 @@ CSV.foreach('db/data/provincecodes.csv', {encoding: "ISO-3166-1:UTF-8", headers:
     name: row[0],
     subdomain: row[0].delete(" ").parameterize,
     display_name: "#{row[0]} Student + Professional Network",
+    nickname: row[0],
     community_type: "State",
     state_code: row[1]
   )
@@ -93,6 +95,7 @@ CSV.foreach('db/data/cities_MASTER.csv', {encoding: "ISO-8859-1:UTF-8", headers:
     name: row[2],
     subdomain: row[2].delete(" ").parameterize,
     display_name: "#{row[2]} Student + Professional Network",
+    nickname: row[2],
     community_type: "City"
   )
   puts row[2] + row[1] + row[0] 
@@ -104,6 +107,7 @@ CSV.foreach('db/data/colleges.csv', {encoding: "ISO-8859-1:UTF-8", headers: true
     name: row[0],
     subdomain: row[0].to_s.delete(" ").delete("-").parameterize,
     display_name: "#{row[0]} Student + Alumni Network",
+    nickname: row[0],
     community_type: "School",
     address: row[1]
   )
