@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
       flash.delete(:notice) if flash.keys.include?(:notice)
       icon = %Q[<i class="icon-caret-right"></i>]
       link = %Q[<a href="/#{current_user.subscribed? ? 'subscriptions' : 'subscriptions/new' }">becoming a supporter</a>] 
-      flash.alert = "#{icon} &nbsp;Welcome to the network! &nbsp;Help keep the servers running and the pages ad-free by #{link}.".html_safe
+      flash.alert = "#{icon} &nbsp;Welcome to the network! &nbsp;Help keep the servers running and the space ad-free by #{link}.".html_safe
       root_path
     end
 end
