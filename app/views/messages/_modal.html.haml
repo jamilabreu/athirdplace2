@@ -11,3 +11,9 @@
 				= f.submit "Send", :id => "submit_message", :class => "btn btn-primary"
 				%a{ :href => "#", :class =>"btn", "data-dismiss" => "modal"}
 					Cancel
+:javascript
+	$("#new_message").submit(function(e){
+		if ( $.trim($('#message_body').val()).length == 0 ) {
+			e.preventDefault()
+		}
+	});

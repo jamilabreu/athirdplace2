@@ -6,6 +6,8 @@ class Message
   belongs_to :user
   belongs_to :conversation
   
+  validates :body, :presence => true
+  
   field :body, type: String
   field :read_by, type: Array
 end
