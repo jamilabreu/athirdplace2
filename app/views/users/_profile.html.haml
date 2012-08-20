@@ -20,9 +20,6 @@
 			.user_mutual_friends= current_user.mutual_friends(user)
 			.user_network_friends= current_user.network_friends(user)
 	.user_actions
-		- if user.show_facebook_url
-			= link_to user.facebook_url, target: "_blank" do
-				%i.icon-facebook	
 		- unless user == current_user
 			- if conversation_exists?(user)
 				= link_to conversations_path(id: conversation_id(user)) do
@@ -30,6 +27,9 @@
 			- else
 				= link_to new_message_path(id: user), remote: true do
 					%i.icon-envelope-alt		
+		- if user.show_facebook_url
+			= link_to user.facebook_url, target: "_blank" do
+				%i.icon-facebook	
 		- if user.twitter_name?
 			= link_to "http://twitter.com/#{user.twitter_name}", target: "_blank" do
 				%i.icon-twitter
