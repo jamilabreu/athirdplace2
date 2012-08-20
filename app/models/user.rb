@@ -17,16 +17,9 @@ class User
                   :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids, :state_ids, :country_ids, 
                   :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
   
-  validates :blog_url, allow_blank: true, url: true            
+  validates :blog_url, allow_blank: true, url: true
   
-  before_validation :check_blog_url
   after_update :add_geo_from_user_city
-  
-  def check_blog_url
-    if blog_url.present?
-      self.blog_url = blog_url.include?('http://') || blog_url.include?('https://') ? blog_url : "http://" + blog_url
-    end
-  end
   
   def add_geo_from_user_city
     if city_ids.present?
