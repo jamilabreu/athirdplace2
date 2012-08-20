@@ -1,3 +1,3 @@
 jQuery ->
-	$("abbr.timeago").timeago();
+	$("abbr.timeago").timeago()
 	$("#message_body").autosize()

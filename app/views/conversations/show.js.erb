@@ -1,4 +1,5 @@
 $("#conversation").html("<%= j render partial: 'conversations/show', locals: { conversation: @conversation, messages: @messages, user: @user } %>");
 $("abbr.timeago").timeago();
+$("#message_body").autosize()
 $(".current").removeClass("current")
 $("#<%= @conversation.id %>").addClass("current");
