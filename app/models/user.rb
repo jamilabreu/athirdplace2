@@ -115,7 +115,7 @@ class User
       self.communities.clear if community_type == "gender"
       if community_type == "school" # Schools hack
         val.split(",").each do |school_id|
-          self.communities << Community.find_by(id: school_id)
+          self.communities << Community.find_by(id: school_id) if school_id != "[]" # Schools hack
         end
       else  
         if val.class == Array

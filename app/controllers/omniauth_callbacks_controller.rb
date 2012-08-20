@@ -1,13 +1,13 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def all
     # raise request.env["omniauth.auth"].to_yaml
-    user = User.from_omniauth(request.env["omniauth.auth"])
+    auth = request.env["omniauth.auth"]
+    user = User.from_omniauth(auth)
     if user.persisted?
       # Renew oauth_token
-      user.update_attribute(:oauth_token, request.env["omniauth.auth"].credentials.token)
+      user.update_attribute(:oauth_token, auth.credentials.token)
       # Update friends
       user.update_attribute(:friend_ids, user.facebook.get_connections("me", "friends").map{|item|item["id"]}.uniq)
-      
       #flash.notice = "Signed in!"
       sign_in user
       redirect_to request.env["omniauth.origin"] || "/"
