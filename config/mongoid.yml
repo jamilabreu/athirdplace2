@@ -5,6 +5,7 @@ production:
       options:
         skip_version_check: true
         safe: true
+        raise_not_found_error: false
 development:
   # Configure available database sessions. (required)
   sessions:
