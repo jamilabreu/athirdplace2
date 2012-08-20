@@ -131,11 +131,6 @@ class User
   
   # Omniauth authentication
   def self.from_omniauth(auth)
-    # If user exists, renew oauth_token
-    if user = User.find_by(provider: auth.provider, uid: auth.uid)
-      user.update_attribute(:oauth_token, auth.credentials.token)
-    end
-    
     find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
       user.provider = auth.provider
       user.uid = auth.uid

@@ -21,7 +21,7 @@
 							%label.control-label{:for => "user_#{type}"}
 								= type.titlecase
 							.controls
-								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type).ne(name: "High School"), :id, :name, {:include_blank => true, :selected => params[:user] ? params[:user]["#{type}_ids".to_sym] : (@community ? (current_user.send("#{type}_ids").blank? ? [Community.find_by(name: "Undergraduate").id, Community.find_by(name: "Persuing Bachelor's").id] : current_user.send("#{type}_ids")) : current_user.send("#{type}_ids"))}, {'data-placeholder' => "Select #{type.titlecase}", :class => 'chzn-select', :id => "user_#{type}"})
+								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type).ne(name: "High School"), :id, :name, {:include_blank => true, :selected => params[:user] ? params[:user]["#{type}_ids".to_sym] : (current_user.send("#{type}_ids").blank? ? [Community.find_by(name: "Undergraduate").id, Community.find_by(name: "Persuing Bachelor's").id] : current_user.send("#{type}_ids"))}, {'data-placeholder' => "Select #{type.titlecase}", :class => 'chzn-select', :id => "user_#{type}"})
 				
 					- %W[ field ].each do |type|
 						.control-group.multiple
