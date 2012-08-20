@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
     @community = Community.find_by(subdomain: request.subdomain) if request.subdomain.present?
   end
   def validate_user
-    redirect_to edit_user_registration_path if user_signed_in? && current_user.invalid?
+    if user_signed_in? && current_user.invalid?
+      redirect_to edit_user_registration_path, notice: "#{current_user.first_name} - please share a bit about yourself with the community before entering."
+    end
   end
 end
