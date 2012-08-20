@@ -2,7 +2,7 @@ jQuery ->
 	$('.chzn-select').chosen()
 	$('.chzn-select-optional').chosen
 		allow_single_deselect: true
-	$('#user_bio, #user_profession, #user_company').autosize()
+	$('#user_bio, #user_profession, #user_company, #user_blog_url').autosize()
 
 	$('.school-select2').select2
 		placeholder: "Select School(s)"

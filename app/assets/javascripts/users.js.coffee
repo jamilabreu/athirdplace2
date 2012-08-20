@@ -23,5 +23,5 @@ jQuery ->
 	# Other
 	$('.user_name').hide().fadeIn 1400
 	$('.pagination').css 'visibility', 'hidden'
-	container.css
-		minHeight: $('#filters').height()
+	#container.css
+	#	minHeight: $('#filters').height()
