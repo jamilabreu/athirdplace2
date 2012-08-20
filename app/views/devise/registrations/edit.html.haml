@@ -113,10 +113,10 @@
 			$('#user_degree').val("#{Community.find_by(name: 'Bachelor\'s').id}");
 			$('#alumni_fields').show();
 		} else if ( $(this).val() === "#{Community.find_by(name: 'Graduate Student').id}" ) {
-			$('#user_degree').val("#{Community.find_by(name: 'Persuing Master\'s').id}");
+			$('#user_degree').val("#{Community.find_by(name: 'Pursuing Master\'s').id}");
 			$('#alumni_fields').show();
 		} else {
-			$('#user_degree').val("#{Community.find_by(name: 'Persuing Bachelor\'s').id}");
+			$('#user_degree').val("#{Community.find_by(name: 'Pursuing Bachelor\'s').id}");
 			$('#alumni_fields').hide();
 		}
 		$('#user_degree').trigger('liszt:updated');
