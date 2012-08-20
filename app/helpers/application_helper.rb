@@ -2,6 +2,9 @@ module ApplicationHelper
   def community_name
     @community ? @community.display_name : "thirdplace"
   end
+  def tagline
+    @community ? "a global support network for #{@community.name.pluralize.downcase}" : "a global support network for the communities you care about"
+  end
   
   # Page Helper
   def home_page
