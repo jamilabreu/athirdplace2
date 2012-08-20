@@ -25,7 +25,7 @@ footer a:hover { color: $blue; }
 
 #opaque { background: rgba(255,255,255,0.5); position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; }
 
-.alert { font-weight: bold; }
+.alert { font-weight: bold; text-align: center; }
 .alert a { color: #3b5998; text-decoration: underline; }
 .alert a:hover { color: #3D358C; text-decoration: underline; }
 
