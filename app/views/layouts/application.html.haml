@@ -35,3 +35,4 @@
 					%i.icon-envelope
 					contact
 				= mail_to "jamil@athirdplace.com", mail_content, encode: "hex", target: "_blank"
+			= render "layouts/analytics" if Rails.env.production?
