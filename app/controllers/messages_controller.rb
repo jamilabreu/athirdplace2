@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   end
   def create
     @message = Message.new(params[:message])
+    
     if params[:message][:conversation_id]
       @message.conversation = Conversation.find_by(id: params[:message][:conversation_id])
     else
@@ -15,6 +16,13 @@ class MessagesController < ApplicationController
     
     if @message.save!
       @message.conversation.touch
+      
+      # Send email
+      if @message.conversation.messages.length == 1
+        @recipient = @message.conversation.partner(current_user)
+        UserMailer.delay.start_conversation(current_user, @recipient, @community)
+      end
+      
       respond_to do |format|
         format.html { redirect_to conversations_path }
         format.js

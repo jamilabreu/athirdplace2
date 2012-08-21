@@ -15,10 +15,10 @@
 	- if user.bio?
 		.user_section
 			.user_bio= user.bio
-	- if current_user.mutual_friends(user) || current_user.network_friends(user)
+	- if current_user.mutual_friends(user) || user.network_friends(@community)
 		.user_section
 			.user_mutual_friends= current_user.mutual_friends(user)
-			.user_network_friends= current_user.network_friends(user)
+			.user_network_friends= user.network_friends(@community)
 	.user_actions
 		- unless user == current_user
 			- if conversation_exists?(user)

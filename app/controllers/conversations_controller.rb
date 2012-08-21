@@ -10,7 +10,7 @@ class ConversationsController < ApplicationController
       @user = @conversation.partner(current_user)
       
       # Update read status
-      @messages.first.add_to_set(:read_by, current_user.id) if @messages.present?
+      @conversation.messages.last.add_to_set(:read_by, current_user.id) if @messages.present?
     end
   end
   
@@ -18,5 +18,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.find(params[:id])
     @messages = @conversation.messages.asc(:created_at)
     @user = @conversation.partner(current_user)
+    # Update read status
+    @conversation.messages.last.add_to_set(:read_by, current_user.id) if @messages.present?    
   end
 end

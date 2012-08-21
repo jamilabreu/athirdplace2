@@ -42,6 +42,7 @@ footer a:hover { color: $blue; }
 .right_nav { float: right; }
 .navbar .nav > li > a { color: #BBB; padding: 6px 25px 5px; text-shadow: 0 0 0 #000; }
 .navbar .nav .active > a, .navbar .nav .active > a:hover { background: #FFF; color: #666; }
+.navbar .nav .has_unread > a, .navbar .nav .has_unread > a:hover { color: #CCFF00; }
 .navbar .nav > li > a i { position: relative; top: 1px; }
 .navbar .divider-vertical { height: 20px; background: #444; margin: 0; margin-top: 6px; border: 0; }
 
@@ -120,6 +121,7 @@ footer a:hover { color: $blue; }
 .conversation { margin: 1px 0 0; }
 .conversation_image { float: left; width: 25px; }
 .conversation_user { height: 20px; margin-left: 35px; padding-top: 5px; font-weight: bold; color: $blue; }
+.conversation_user i { position: relative; top: 1px; margin-left: 5px; }
 .current { color: $green; border-right: 2px solid $green; }
 .conversation:hover .conversation_user { color: $green; }
 

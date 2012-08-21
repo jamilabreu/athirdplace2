@@ -154,7 +154,12 @@ class User
   def subscribed?
     Subscription.where(user_id: id).exists?
   end
-
+  
+  # Check for unread messages
+  def has_unread?
+    Message.any_in(conversation_id: conversations.map(&:id)).ne(read_by: id).present?
+  end
+  
   # Koala
   def facebook
     @facebook ||= Koala::Facebook::API.new(oauth_token)
@@ -173,8 +178,8 @@ class User
   end
 
   # Network friends
-  def network_friends(user)
-    network_friends_count = (user.friend_ids & User.all.flat_map(&:uid).uniq).length
+  def network_friends(community)
+    network_friends_count = (friend_ids & community.users.flat_map(&:uid).uniq).length
     pluralize(network_friends_count, "friend") + " in this network" if network_friends_count > 0
   end
   

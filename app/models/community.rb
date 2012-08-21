@@ -49,5 +49,5 @@ class Community
 
   def filter_name
     name_and_parent(:filter)
-  end  
+  end
 end

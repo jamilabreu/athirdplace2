@@ -4,4 +4,6 @@
 			= image_tag conversation.partner(current_user).image
 		.conversation_user{:id => "#{conversation.id}", :class => conversation == @conversation ? "current" : nil}
 			= conversation.partner(current_user).first_name
+			- if conversation.has_unread_by(current_user)
+				%i.icon-envelope
 		%div{style:"clear:both"}

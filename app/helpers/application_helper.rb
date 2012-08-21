@@ -6,7 +6,7 @@ module ApplicationHelper
     @community ? "a global support network for #{@community.name.pluralize.downcase}" : "a global support network for the communities you care about"
   end
   
-  # Page Helper
+  # Page helper
   def home_page
     params[:controller] == "users" && params[:action] == "home"
   end
@@ -23,7 +23,7 @@ module ApplicationHelper
     params[:controller] == "subscriptions"
   end
   
-  # Filter Helpers
+  # Filter helpers
   def selected?(community)
     params[:ids].present? && params[:ids].include?(community.id)
   end

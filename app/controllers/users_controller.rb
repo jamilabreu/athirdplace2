@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def home
-    @communities = Community.any_in(id: User.all.flat_map(&:community_ids).uniq.compact, community_type: ["School", "Ethnicity"])
+    @communities = Community.any_in(id: User.all.flat_map(&:community_ids).uniq.compact, community_type: ["School", "Ethnicity"]).asc(:name)
   end
   
   def index
