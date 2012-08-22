@@ -15,7 +15,7 @@
 							= link_to root_url do
 								%i.icon-user
 						%li.divider-vertical
-						%li{ :class => conversations_page ? 'active' : (current_user.has_unread? ? 'has_unread' : nil) }
+						%li{ :class => conversations_page ? 'active' : (user_signed_in? && current_user.has_unread? ? 'has_unread' : nil) }
 							= link_to conversations_path do
 								%i.icon-envelope-alt				
 						%li.divider-vertical							
