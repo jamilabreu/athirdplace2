@@ -1,6 +1,5 @@
 jQuery ->
-	$('#login').hide().delay(800).slideDown(800)
-	$('body').delay(800).animate({marginTop:'73px'}, 800)
+	$('.jumbotron').hide().delay(800).slideDown(800)
 	$('#opaque').hide().fadeIn(2000)
 
 	# Activity Indicator on Signin
