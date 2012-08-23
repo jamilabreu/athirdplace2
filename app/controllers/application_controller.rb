@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :load_community
   before_filter :validate_user
+  before_filter :load_community
+  
   
   private
   def load_community
