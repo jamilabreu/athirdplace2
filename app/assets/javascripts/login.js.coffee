@@ -4,7 +4,7 @@ jQuery ->
 
 	# Activity Indicator on Signin
 	$('#sign_in').click ->
-		$('#sign_in').html("<i class='icon-facebook-sign'></i> Signing In...<div class='activity-indicator'></div>")
+		$('#sign_in').html("<i class='icon-facebook-sign'></i> Signing In...<div class='activity-indicator hidden-phone'></div>")
 		$('.activity-indicator').activity(
 			segments: 8
 			width: 2

@@ -4,7 +4,7 @@ jQuery ->
 	container.imagesLoaded ->
 		container.isotope
 			itemSelector: '.user'
-	###
+
 		# Infinite Scroll
 		if $('.pagination').length
 			$(window).scroll ->
@@ -19,7 +19,7 @@ jQuery ->
 		e.preventDefault()
 		container.isotope 'remove', container.children()
 		$.getScript $(this).attr 'href'
-	###
+
 	# Other
 	$('.user_name').hide().fadeIn 1400
 	$('.pagination').css 'visibility', 'hidden'

@@ -90,7 +90,7 @@
     display: none !important;
   }
 }
-/*
+
 @media (min-width: 1200px) {
   .row {
     margin-left: -30px;
@@ -773,8 +773,7 @@
     width: 28px;
   }
 }
-*/
-/*
+
 @media (max-width: 767px) {
   body {
     padding-right: 20px;
@@ -813,12 +812,10 @@
   }
   [class*="span"],
   .row-fluid [class*="span"] {
-    margin-left: 0;
-		/*
-		display: block;
+    display: block;
     float: none;
     width: auto;
-		
+    margin-left: 0;
   }
   .span12,
   .row-fluid .span12 {
@@ -860,53 +857,8 @@
     top: auto;
   }
 }
-*/
-@media (max-width: 480px) {
-	/* Custom */
-	body { padding: 0 15px; }
-	
-	.container { width: auto; }
-	
-	.span2 { width: 128px; }
-	.span10 { width: 158px; margin: 0; }
-	.span12 { display: block; float: none; width: auto; }
 
-	/* Home */
-	.home_communities { display: block; float: none; width: auto; }
-	
-	/* Users Page */
-	#users { padding: 2px 0 0 2px; }
-	.user { margin: 0 0 2px 0; width: 140px; }
-			
-	/* Edit Page */
-	.span3 {  }
-	.span9 { width: 355px; }
-	
-	/* Conversations Page */
-	.span4 { width: 155px; display: block; float: none; width: auto; }
-	.span8 { width: 200px; margin: 15px 0 0 20px; display: block; float: none; width: auto; }
-	#conversation-messages { margin: 0 4px 4px 0; }
-	#message_body { width: 95%; }
-	#submit_message { width: 100%; }
-		
-	/* New Subscriptions */
-	.span11 { width: 355px; display: block; float: none; width: auto;  }
-	#subscriptions-details { display: block; float: none; width: auto; padding: 0 20px; }
-	#new_subscription { display: block; float: none; margin: 20px 20px 20px 40px; }
-	
-	/* Nav */
-	.navbar-fixed-top { margin-right: -15px; margin-left: -15px; }
-		
-	.navbar .brand { padding-left: 15px; }
-	.navbar-inverse .brand { }
-	.navbar-inverse .nav { }
-	.navbar-inverse .nav .community_name > a { padding-right: 0; }
-	
-	.navbar-inverse .nav.pull-right { float: right; margin-right: 10px; display: block; }
-	.navbar-inverse .nav.pull-right > li > a { font-weight: bold; padding: 6px 20px; }
-	.navbar-inverse .nav.pull-right .active > a { }
-	
-	/* Default */
+@media (max-width: 480px) {
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
@@ -964,20 +916,17 @@
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
-    /*padding: 5px;*/
-		padding: 0;
+    padding: 5px;
   }
   .navbar .container {
     width: auto;
     padding: 0;
   }
   .navbar .brand {
-    /*
-		padding-right: 10px;
+    padding-right: 10px;
     padding-left: 10px;
     margin: 0 0 0 -5px;
-  */
-	}
+  }
   .nav-collapse {
     clear: both;
   }
