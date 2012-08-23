@@ -868,16 +868,16 @@
 	
 	.container { width: auto; }
 	
-	.span2 { width: 147px; }
-	.span10 { width: 200px; margin: 0; }
+	.span2 { width: 149px; }
+	.span10 { width: 198px; margin: 0; }
 	.span12 { display: block; float: none; width: auto; }
 
 	/* Home */
-	home_communities { display: block; float: none; width: auto; }
+	.home_communities { display: block; float: none; width: auto; }
 	
 	/* Users Page */
-	#users { padding: 3px 0 0 3px; }
-	.user { margin: 0 0 3px 0; }
+	#users { padding: 2px 0 0 2px; }
+	.user { margin: 0 0 2px 0; }
 			
 	/* Edit Page */
 	.span3 {  }

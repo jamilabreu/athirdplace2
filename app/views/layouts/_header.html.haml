@@ -1,50 +1,40 @@
 .navbar.navbar-fixed-top.navbar-inverse
 	.navbar-inner
 		.container
-			/ .btn-navbar is used as the toggle for collapsed navbar content
-			/ %a{:class => "btn-navbar", "data-toggle" => "collapse", "data-target" => ".nav-collapse"}
-			/	%span.icon-bar
-			/	%span.icon-bar
-			/	%span.icon-bar
-			
-			/ Be sure to leave the brand out there if you want it shown
 			= link_to root_url(subdomain: false), :class => "brand" do
 				3
 
 			%ul.nav
 				%li.community_name.hidden-phone= link_to community_name, "#"
 				%li.community_name.visible-phone= link_to mobile_name, "#"
-				
-			/ Everything you want hidden at 940px or less, place within here
-			/ %div.nav-collapse.pull-right
-			/ .nav, .navbar-search, .navbar-form, etc
-			%ul.nav.pull-right
-				- unless users_page
-					%li.divider-vertical
-				%li{ :class => users_page ? 'active' : nil }
-					= link_to root_url do
-						%i.icon-user
-				- unless users_page || conversations_page
-					%li.divider-vertical
-				%li{ :class => conversations_page ? 'active' : (user_signed_in? && current_user.has_unread? ? 'has_unread' : nil) }
-					= link_to conversations_path do
-						%i.icon-envelope-alt
-				- unless conversations_page
-					%li.divider-vertical
-				%li.dropdown{ :class => edit_page || subscriptions_page ? 'active' : nil }
-					= link_to "#", :class => "dropdown-toggle", "data-toggle" => "dropdown" do
-						%i.icon-caret-down
-					%ul.dropdown-menu{"role" => "menu", "aria-labelledby" => "dropdownMenu"}
-						%li
-							= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : edit_user_registration_path, "tabindex" => "-1"  do
-								%i.icon-heart
-								Support
-						%li
-							= link_to edit_user_registration_path, "tabindex" => "-1"  do
-								%i.icon-tasks
-								Profile
-						%li.divider
-						%li
-							= link_to destroy_user_session_path, method: :delete do
-								%i.icon-signin
-								Logout
+			- if user_signed_in?
+				%ul.nav.pull-right
+					- unless users_page
+						%li.divider-vertical
+					%li{ :class => users_page ? 'active' : nil }
+						= link_to root_url do
+							%i.icon-user
+					- unless users_page || conversations_page
+						%li.divider-vertical
+					%li{ :class => conversations_page ? 'active' : (user_signed_in? && current_user.has_unread? ? 'has_unread' : nil) }
+						= link_to conversations_path do
+							%i.icon-envelope-alt
+					- unless conversations_page
+						%li.divider-vertical
+					%li.dropdown{ :class => edit_page || subscriptions_page ? 'active' : nil }
+						= link_to "#", :class => "dropdown-toggle", "data-toggle" => "dropdown" do
+							%i.icon-caret-down
+						%ul.dropdown-menu{"role" => "menu", "aria-labelledby" => "dropdownMenu"}
+							%li
+								= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : edit_user_registration_path, "tabindex" => "-1"  do
+									%i.icon-heart
+									Support
+							%li
+								= link_to edit_user_registration_path, "tabindex" => "-1"  do
+									%i.icon-tasks
+									Profile
+							%li.divider
+							%li
+								= link_to destroy_user_session_path, method: :delete do
+									%i.icon-signin
+									Logout
