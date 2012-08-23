@@ -1,6 +1,6 @@
 jQuery ->
 	#$('.user').wookmark()
-	$('#users').imagesLoaded () ->
+	$('#users').imagesLoaded ->
 		$('.user').wookmark
 			container: $('#users')
 			offset: 10
@@ -28,8 +28,6 @@ jQuery ->
 	# Filters
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
-		#container.masonry 'remove', container.children()
-		$('.user').remove()
 		$.getScript $(this).attr 'href'
 
 	# Users

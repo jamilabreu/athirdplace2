@@ -1,11 +1,9 @@
 //Layout
-//var $container = $('#users');
-//$container.isotope('insert', $('<%= j render @users %>'));
-//$container.imagesLoaded( function(){
-//	$container.isotope('reLayout')
-//});
-$('#users').html("<%= j render @users %>");
-$('#users').imagesLoaded(function() {
+var $container = $('#users');
+
+$('.user').remove();
+$container.html("<%= j render @users %>");
+$container.imagesLoaded(function() {
 	$('.user').wookmark({
 		container: $('#users'),
 		offset: 10,
@@ -16,7 +14,7 @@ $('#users').imagesLoaded(function() {
 
 //Filters
 $('#filters').html('<%= j render :partial => "users/filters", :locals => { :filters => @filters } %>');
-$container.css({minHeight: $('#filters').height()});
+//$container.css({minHeight: $('#filters').height()});
 
 //Pagination
 <% if @users.current_page == @users.num_pages %>

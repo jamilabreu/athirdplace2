@@ -103,6 +103,8 @@ footer a:hover { color: $blue; }
 }
 #sign_in i { font-size: 16px; margin-right: 3px; position: relative; top: 1px; }
 
+.activity-indicator { display: inline-block; height: 10px; width: 20px; margin-left: 3px; }
+
 /*
 #login { border-top: 1px solid #FFF; border-bottom: 1px solid #E2E2E2; background: #F2F2F2; }
 #login-inner { height: 30px; padding: 20px 0; }
@@ -144,8 +146,7 @@ footer a:hover { color: $blue; }
 .user_image { position: relative; }
 .user_image img { width: 100%; display: block; }
 .user_image i { position: absolute; bottom: -1px; left: 7px; color: #FFF; display: none; }
-/*.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: block; }
-*/
+.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: block; }
 .user_name { position: absolute; bottom: -2px; right: -2px; background: #FFF; padding: 1px 5px 0; font-weight: bold; @include border-radius(2px 0 2px 0); }
 
 .user_section { padding: 8px 10px; border-bottom: 1px solid #E2E2E2; }
