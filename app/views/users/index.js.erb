@@ -1,8 +1,17 @@
 //Layout
-var $container = $('#users');
-$container.isotope('insert', $('<%= j render @users %>'));
-$container.imagesLoaded( function(){
-	$container.isotope('reLayout')
+//var $container = $('#users');
+//$container.isotope('insert', $('<%= j render @users %>'));
+//$container.imagesLoaded( function(){
+//	$container.isotope('reLayout')
+//});
+$('#users').html("<%= j render @users %>");
+$('#users').imagesLoaded(function() {
+	$('.user').wookmark({
+		container: $('#users'),
+		offset: 10,
+		itemWidth: 192,
+		autoResize: true		
+	});
 });
 
 //Filters

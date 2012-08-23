@@ -28,7 +28,8 @@ jQuery ->
 	# Filters
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
-		container.masonry 'remove', container.children()
+		#container.masonry 'remove', container.children()
+		$('.user').remove()
 		$.getScript $(this).attr 'href'
 
 	# Users
