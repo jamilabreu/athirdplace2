@@ -868,10 +868,17 @@
 	
 	.container { width: auto; }
 	
-	.span2 { width: 155px; }
+	.span2 { width: 147px; }
 	.span10 { width: 200px; margin: 0; }
 	.span12 { display: block; float: none; width: auto; }
-		
+
+	/* Home */
+	home_communities { display: block; float: none; width: auto; }
+	
+	/* Users Page */
+	#users { padding: 3px 0 0 3px; }
+	.user { margin: 0 0 3px 0; }
+			
 	/* Edit Page */
 	.span3 {  }
 	.span9 { width: 355px; }
@@ -879,19 +886,16 @@
 	/* Conversations Page */
 	.span4 { width: 155px; display: block; float: none; width: auto; }
 	.span8 { width: 200px; margin: 15px 0 0 20px; display: block; float: none; width: auto; }
-	
+	#conversation-messages { margin: 0 4px 4px 0; }
+	#message_body { width: 95%; }
+	#submit_message { width: 100%; }
+		
 	/* New Subscriptions */
 	.span11 { width: 355px; display: block; float: none; width: auto;  }
 	#subscriptions-details { display: block; float: none; width: auto; padding: 0 20px; }
 	#new_subscription { display: block; float: none; margin: 20px 20px 20px 40px; }
 	
-	#conversation-messages { margin: 0 4px 4px 0; }
-	#message_body { width: 95%; }
-	#submit_message { width: 100%; }
-	
-	#users { padding: 3px 0 0 3px; }
-	.user { margin: 0 0 3px 0; }
-	
+	/* Nav */
 	.navbar-fixed-top { margin-right: -15px; margin-left: -15px; }
 		
 	.navbar .brand { padding-left: 15px; }
