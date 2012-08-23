@@ -868,8 +868,8 @@
 	
 	.container { width: auto; }
 	
-	.span2 { width: 149px; }
-	.span10 { width: 198px; margin: 0; }
+	.span2 { width: 150px; }
+	.span10 { width: 158px; margin: 0; }
 	.span12 { display: block; float: none; width: auto; }
 
 	/* Home */
@@ -877,7 +877,7 @@
 	
 	/* Users Page */
 	#users { padding: 2px 0 0 2px; }
-	.user { margin: 0 0 2px 0; }
+	.user { margin: 0 0 2px 0; width: 140px; }
 			
 	/* Edit Page */
 	.span3 {  }
