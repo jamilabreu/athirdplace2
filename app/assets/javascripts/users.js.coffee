@@ -1,9 +1,10 @@
 jQuery ->
-	###
+	container = $('#users')
+	
 	# Wookmark
-	$('#users').imagesLoaded ->
+	container.imagesLoaded ->
 		$('.user').wookmark
-			container: $('#users')
+			container: container
 			offset: 10
 			itemWidth: 192
 			autoResize: true
@@ -16,7 +17,7 @@ jQuery ->
 			columnWidth: 192
 			gutterWidth: 10
 	
-	###
+
 	# Isotope
 	container = $('#users')
 	container.imagesLoaded ->
@@ -37,7 +38,7 @@ jQuery ->
 	# Filters
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
-		container.masonry( 'remove', container.children() )
+		#container.masonry( 'remove', container.children() )
 		$.getScript $(this).attr 'href'
 
 	# Users

@@ -4,24 +4,25 @@
 //$container.imagesLoaded( function(){
 //	$container.isotope('reLayout')
 //});
-
+/*
 var $container = $('#users');
 var $users = $('<%= j render @users %>');
 
 $container.imagesLoaded(function() {
 	$container.append($users)//.masonry('appended', $users);
 	$container.masonry('reload');
+});*/
+
+var $container = $('#users');
+$container.html("<%= j render @users %>");
+$container.imagesLoaded(function() {
+	$('.user').wookmark({
+		container: $('#users'),
+		offset: 10,
+		itemWidth: 192,
+		autoResize: true
+	});
 });
-//
-//$container.html("<%= j render @users %>");
-//$container.imagesLoaded(function() {
-//	$('.user').wookmark({
-//		container: $('#users'),
-//		offset: 10,
-//		itemWidth: 192,
-//		autoResize: true		
-//	});
-//});
 
 //Filters
 $('#filters').html('<%= j render :partial => "users/filters", :locals => { :filters => @filters } %>');
