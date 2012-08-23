@@ -144,8 +144,8 @@ footer a:hover { color: $blue; }
 .user_image { position: relative; }
 .user_image img { width: 100%; display: block; }
 .user_image i { position: absolute; bottom: -1px; left: 7px; color: #FFF; display: none; }
-.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: block; }
-
+/*.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: block; }
+*/
 .user_name { position: absolute; bottom: -2px; right: -2px; background: #FFF; padding: 1px 5px 0; font-weight: bold; @include border-radius(2px 0 2px 0); }
 
 .user_section { padding: 8px 10px; border-bottom: 1px solid #E2E2E2; }
