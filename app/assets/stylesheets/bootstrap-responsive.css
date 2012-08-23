@@ -868,8 +868,8 @@
 	
 	.container { width: auto; }
 	
-	.span2 { width: 150px; }
-	.span10 { width: 158px; margin: 0; }
+	.span2 { width: 125px; }
+	.span10 { width: 150px; margin: 0; }
 	.span12 { display: block; float: none; width: auto; }
 
 	/* Home */
