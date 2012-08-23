@@ -5,9 +5,10 @@ if ( $("#<%= @user.id %>_profile").length ) {
 }
 $('#<%= @user.id %>_image i').toggleClass('icon-chevron-down icon-chevron-up');
 //$('#users').masonry('reload');
-$('.user').wookmark({
-	container: $('#users'),
-	offset: 10,
-	itemWidth: 192,
-	autoResize: true	
-});
+//$('.user').wookmark({
+//	container: $('#users'),
+//	offset: 10,
+//	itemWidth: 192,
+//	autoResize: true	
+//});
+$('#users').masonry('reload');
