@@ -1,4 +1,13 @@
 jQuery ->
+	#$('.user').wookmark()
+	$('#users').imagesLoaded () ->
+		$('.user').wookmark
+			container: $('#users')
+			offset: 10
+			itemWidth: 192
+			autoResize: true
+		
+	###
 	# Isotope
 	container = $('#users')
 	container.imagesLoaded ->
@@ -15,7 +24,7 @@ jQuery ->
 					$('.pagination').text 'Fetching more...'
 					$.getScript(url)
 			$(window).scroll()
-
+	###	
 	# Filters
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
