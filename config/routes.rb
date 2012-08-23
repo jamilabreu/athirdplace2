@@ -7,7 +7,7 @@ Athirdplace::Application.routes.draw do
   resources :communities, only: [:index]
   resources :conversations, only: [:index, :show]
   resources :messages, only: [:new, :create]
-  #match 'support', to: "subscriptions#new", as: "subscriptions"
+  resources :posts, only: [:index]
   resources :subscriptions, only: [:index, :new, :create]
   match "", to: "users#index", constraints: lambda { |r| r.subdomain.present? && r.subdomain != "www" }
   root to: "users#home"
