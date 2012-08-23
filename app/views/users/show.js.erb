@@ -4,4 +4,4 @@ if ( $("#<%= @user.id %>_profile").length ) {
 	$("#<%= @user.id %>").append("<%= j render partial: 'users/profile', locals: { user: @user } %>");
 }
 $('#<%= @user.id %>_image i').toggleClass('icon-chevron-down icon-chevron-up');
-$('#users').isotope('reLayout');
+$('#users').masonry('reload');

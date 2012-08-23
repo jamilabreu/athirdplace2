@@ -2,8 +2,10 @@ jQuery ->
 	# Isotope
 	container = $('#users')
 	container.imagesLoaded ->
-		container.isotope
+		container.masonry
 			itemSelector: '.user'
+			columnWidth: 192
+			gutterWidth: 10
 
 		# Infinite Scroll
 		if $('.pagination').length
