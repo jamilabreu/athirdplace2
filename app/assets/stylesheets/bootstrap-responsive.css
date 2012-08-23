@@ -859,6 +859,9 @@
 }
 
 @media (max-width: 480px) {
+	/* Custom */
+	.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: none; }
+	
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
