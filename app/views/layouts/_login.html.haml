@@ -1,14 +1,8 @@
-#login
+%header{:class => "jumbotron", :id => "overview"}
 	.container
-		#login-inner
+		.well
+			%p.muted please sign in to access this network
 			= link_to "#{request.protocol + request.domain}/users/auth/facebook", id: "sign_in" do
 				%i.icon-facebook-sign
 				Sign In with Facebook
-			#login-tagline
-				welcome to
-				%b thirdplace
-				\&nbsp;-&nbsp;
-				= tagline
-				 
-				%span &nbsp;|
-				%i.icon-caret-right
+			

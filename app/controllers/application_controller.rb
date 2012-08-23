@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
   
   private
   def load_community
-    @community = Community.find_by(subdomain: request.subdomain) if request.subdomain.present?
+    begin
+      @community = Community.find_by(subdomain: request.subdomain) if request.subdomain.present?
+    rescue
+      redirect_to root_url(subdomain: false)
+    end
   end
   def validate_user
     if user_signed_in? && current_user.invalid?

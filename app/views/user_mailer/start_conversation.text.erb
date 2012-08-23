@@ -1,4 +1,1 @@
-Hi, <%= @recipient.first_name %>
-===============================================
-
-Thanks for joining and have a great day!
+<%= @sender.first_name %> has started a conversation with you. <%= link_to "Click here to view the message", conversations_url(subdomain: @community.subdomain) %>.

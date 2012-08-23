@@ -4,7 +4,6 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Hi, <%= @recipient.first_name %></h1>
-    <p>Thanks for joining and have a great day!</p>
+    <%= @sender.first_name %> has started a conversation with you. <%= link_to "Click here to view the message", conversations_url(subdomain: @community.subdomain) %>.
   </body>
 </html>

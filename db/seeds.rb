@@ -11,7 +11,7 @@ standing.each do |standing|
 end
 
 # 6 - 13
-degree = %W[ Associate's Bachelor's Master's Doctoral #{"Pursuing Associate's"} #{"Persuing Bachelor's"} #{"Persuing Master's"} #{"Pursuing Doctoral"} #{"High School"} ]
+degree = %W[ Associate's Bachelor's Master's Doctoral #{"Pursuing Associate's"} #{"Pursuing Bachelor's"} #{"Pursuing Master's"} #{"Pursuing Doctoral"} #{"High School"} ]
 degree.each do |degree|
   Community.create name: degree, subdomain: degree.delete(" ").delete("'").parameterize, display_name: "#{degree} Network", nickname: degree, community_type: "Degree"
 end

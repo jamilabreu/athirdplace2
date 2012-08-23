@@ -4,15 +4,15 @@ $grey: #666;
 $green: #7FC046;
 $red: #FA1919;
 
-body { font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; -webkit-font-smoothing: antialiased; 
-			 padding-top: 51px; position: relative; overflow-y: scroll; }
+body { font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; 
+			 padding-top: 52px; overflow-y: scroll; }
 a:hover { text-decoration: none; }
 ul { list-style: none; margin-left: 0; }
 
-.container, .navbar-fixed-top .container { width: 778px; }
+.container, .navbar-fixed-top .container { width: 778px; position: relative; }
 
-.span2 { width: 160px; }
-.span10 { width: 618px; margin: 0; }
+.span2, .span4 { width: 160px; }
+.span10, .span8, .span11 { width: 618px; margin: 0; }
 
 .span3 { width: 192px; }
 .span9 { width: 566px; }
@@ -23,13 +23,52 @@ footer { text-align: right; margin-top: 30px; padding-top: 5px; font-size: 12px;
 footer a { color: #AAA; font-weight: normal; }
 footer a:hover { color: $blue; }
 
-#opaque { background: rgba(255,255,255,0.5); position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; }
+#opaque { background: rgba(255,255,255,0.6); position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; }
 
 .alert { font-weight: bold; text-align: center; }
 .alert a { color: #3b5998; text-decoration: underline; }
 .alert a:hover { color: #3D358C; text-decoration: underline; }
 
 /* Navigation */
+.navbar-inverse .brand { font-family: "p22-underground"; padding: 8px 5px 4px 0; font-size: 20px; }
+
+.navbar-inverse .nav .community_name > a,
+.navbar-inverse .nav .community_name > a:hover,
+.navbar-inverse .nav .community_name > a:focus { color: #FFF; padding-left: 10px; }
+
+.navbar-inverse .nav > li > a { font-weight: bold; padding: 6px 25px; }
+
+.navbar-inverse .nav li.dropdown > .dropdown-toggle { padding: 7px 0 5px 10px; }
+.navbar-inverse .nav li.dropdown > .dropdown-toggle i { line-height: 12px; }
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a { @include border-radius(4px); }
+
+.navbar-inverse .btn-navbar { @include border-radius(4px); }
+/*
+.navbar-inner { background: #666; }
+
+.navbar .nav .community_name > a, .navbar .nav .community_name > a:hover { color: #FFF; padding: 5px 15px 5px 0; font-weight: 700; }
+
+.right_nav { float: right; }
+
+.navbar .nav { margin: 0; }
+.navbar .nav > li > a { color: #BBB; padding: 5px 25px 5px; }
+.navbar .nav .active > a, .navbar .nav .active > a:hover { background: #FFF; color: #666; }
+.navbar .nav .has_unread > a, .navbar .nav .has_unread > a:hover { color: #CCFF00; }
+.navbar .nav > li > a i { position: relative; top: 1px; }
+
+.navbar .divider-vertical { height: 20px; width: 1px; background: #444; margin: 6px 0 0 0; border: 0; }
+
+.dropdown a { padding-left: 10px !important; padding-right: 0 !important; }
+.dropdown:hover i { color: #FFF; }
+.dropdown-toggle.active i { color: #FFF; }
+
+.logo { position: absolute; left: 0; font-family: "p22-underground", sans-serif; font-size: 19px; font-weight: 900; }
+.logo a { display: block; padding: 8px 12px 3px; color: #888; background: #555; }
+.logo a:hover { background: $green; color: #FFF; border-right: 2px solid #FFF; }
+*/
+/*
 .navbar .nav { width: 100%; margin: 0; }
 .navbar-inner { background: #666; }
 
@@ -49,8 +88,22 @@ footer a:hover { color: $blue; }
 .dropdown a { padding-left: 10px !important; padding-right: 0 !important; }
 .dropdown:hover i { color: #FFF; }
 .dropdown-toggle.active i { color: #FFF; }
+*/
 
 /* Login */
+
+.jumbotron { text-align: center; }
+.well { padding-top: 10px; font-weight: bold; }
+
+#sign_in { background: #5872A7; padding: 8px 32px; color: #FFF; font-size: 14px; font-weight: bold; text-align: center;
+	@include border-radius(3px); border: 1px solid #29447E; border-bottom-color: #1A356E; 
+	background-image: -webkit-linear-gradient(#637BAD, #5872A7); background-image: -moz-linear-gradient(#637BAD, #5872A7); 
+	background-image: -ms-linear-gradient(#637BAD, #5872A7); background-image: -o-linear-gradient(#637BAD, #5872A7); 
+	background-image: linear-gradient(#637BAD, #5872A7); -webkit-box-shadow: inset 0 1px 0 #879AC0; box-shadow: inset 0 1px 0 #879AC0;
+}
+#sign_in i { font-size: 16px; margin-right: 3px; position: relative; top: 1px; }
+
+/*
 #login { border-top: 1px solid #FFF; border-bottom: 1px solid #E2E2E2; background: #F2F2F2; }
 #login-inner { height: 30px; padding: 20px 0; }
 #login-tagline { padding: 7px 0; color: #666; font-size: 17px; span { color: #BBB; position: relative; top: 1px; }; i { color: #BBB; line-height: 6px; } }
@@ -64,14 +117,14 @@ footer a:hover { color: $blue; }
 #sign_in i { font-size: 16px; margin-right: 3px; position: relative; top: 1px; }
 
 .activity-indicator { display: inline-block; height: 10px; width: 20px; margin-left: 3px; }
-
+*/
 
 /* Dashboard */
 #dashboard { height: 35px; margin-left: 160px; display: none; }
 #dashboard-inner { padding-bottom: 10px; border: 0 solid #E2E2E2; border-bottom: 0; @include border-radius(4px 4px 0 0); }
 #dashboard-inner ul { margin: 0; } 
 #dashboard-inner li.dash_nav { float: right; color: #EEE; }
-#dashboard-inner li.dash_nav a { display: block; padding: 6px 0 9px; margin-left: 15px; color: $blue; font-weight: bold; }
+#dashboard-inner li.dash_nav a { display: block; padding: 4px 0 8px; margin-left: 15px; color: $blue; font-weight: bold; }
 #dashboard-inner li.dash_nav a:hover { color: $green; border-bottom: 2px solid $green; }
 
 /* Home */
@@ -131,7 +184,7 @@ footer a:hover { color: $blue; }
 .message_contents { margin-left: 60px; }
 .message_user { font-weight: bold; }
 .message_body { font-size: 14px; word-break: break-word; }
-.message_timeago { color: #BBB; font-size: 10px; }
+.message_timeago { color: #BBB; font-size: 10px; line-height: 12px; position: relative; top: 3px; }
 
 
 /* New Message Form */
@@ -139,7 +192,7 @@ footer a:hover { color: $blue; }
 #message_body { height: 18px; width: 284px; color: #333; padding: 5px 7px; border: 1px solid #E2E2E2;
 						@include border-radius(0); @include box-shadow(0 0 0 #000); resize: none; }
 
-#submit_message { padding: 5px 15px; font-weight: bold; }
+#submit_message { padding: 5px 15px; font-size: 13px; font-weight: bold; }
 				
 /* Posts 
 #posts { @extend #users; }
@@ -163,9 +216,9 @@ footer a:hover { color: $blue; }
 /* Filters */
 #filters { }
 .filters_title { font-family: "franklin-gothic-urw", sans-serif; text-transform: uppercase; font-size: 12px; font-weight: 500; color: #CCC; 
-								 border-bottom: 1px solid #EEE; height: 8px; margin-bottom: 10px; span { background: #FFF; padding-right: 5px; } }
+								 border-bottom: 1px solid #EEE; height: 8px; margin-bottom: 11px; span { background: #FFF; padding-right: 5px; } }
 
-.filter { display: block; padding: 1px 10px 1px 0; color: $blue; font-weight: 700; }
+.filter { display: block; padding: 0 10px 0 0; color: $blue; font-weight: 700; }
 .filter:hover, .selected a { color: $green; border-right: 2px solid $green; }
 .selected a:hover { color: $red; border-right: 2px solid $red; }
 
@@ -180,11 +233,12 @@ footer a:hover { color: $blue; }
 .modal-inner { border: 1px solid #666;}
 .modal-header { padding: 10px; }
 .modal-header .close { margin-top: 0; }
-.modal-header h3 span { position: relative; left: 5px; top: 1px; }
+.modal-header h3 span { position: relative; left: 5px; top: 1px; font-size: 18px; line-height: 27px; }
 .modal-image { width: 25px; }
 .modal-body { padding: 0; }
 .modal-body form textarea { min-height: 57px !important; width: 338px !important; color: #333; }
-.modal-footer { background: #FFF; border: 0; padding: 12px 0 0;}
+.modal-footer { background: #FFF; border: 0; padding: 12px 0 0; }
+.modal-footer .btn + .btn { font-size: 12px; }
 
 
 /* Edit User Form */
@@ -203,7 +257,7 @@ footer a:hover { color: $blue; }
 .form-horizontal .controls { margin-left: 0; }
 .search-choice-close { color: #ff0; }
 
-.textarea-style { width: 204px; padding: 4px 7px 1px; @include border-radius(0); resize: none; }
+.textarea-style { width: 204px; padding: 3px 7px 2px; @include border-radius(0); resize: none; font-size: 13px; }
 .form-horizontal textarea { height: 20px; @extend .textarea-style; }
 #user_bio { }
 
@@ -213,7 +267,7 @@ footer a:hover { color: $blue; }
 
 #user_show_facebook_url {float: left; margin-right: 5px; }
 
-#submit-button { margin-top: 10px; padding: 5px 15px; font-weight: bold; }
+#submit-button { margin-top: 10px; padding: 5px 15px; font-size: 13px; font-weight: bold; }
 
 
 /* Edit Form Errors */
