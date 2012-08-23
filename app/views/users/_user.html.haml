@@ -1,6 +1,6 @@
 .user{id:"#{user.id}"}
 	.user_image{id:"#{user.id}_image"}
-		= link_to image_tag(user.large_image), user_path(user), remote: true
+		= link_to image_tag(user.large_image), user_path(user)#, remote: true
 		.user_name= user.first_name
 		%i.icon-chevron-down
 		

@@ -20,6 +20,11 @@ jQuery ->
 		container.isotope 'remove', container.children()
 		$.getScript $(this).attr 'href'
 
+	# Users
+	$('#users').on 'click', 'a', (e) ->
+		e.preventDefault()
+		$.getScript $(this).attr 'href'
+
 	# Other
 	$('.user_name').hide().fadeIn 1400
 	$('.pagination').css 'visibility', 'hidden'
