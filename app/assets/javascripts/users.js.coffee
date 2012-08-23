@@ -19,13 +19,13 @@ jQuery ->
 	# Filters
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
-		container.isotope 'remove', container.children()
+		container.masonry 'remove', container.children()
 		$.getScript $(this).attr 'href'
 
 	# Users
-	$('#users').on 'click', 'a', (e) ->
-		e.preventDefault()
-		$.getScript $(this).attr 'href'
+	#$('#users').on 'click', 'a', (e) ->
+	#	e.preventDefault()
+	#	$.getScript $(this).attr 'href'
 
 	# Other
 	$('.user_name').hide().fadeIn 1400
