@@ -871,10 +871,10 @@
 	
 	/* Users */
 	.span2 { width: 114px; margin-left: 30px; }
-	.span10 { width: 196px; }
+	.span10 { width: 194px; }
 	
-	#users { padding: 0 0 3px 0; }
-	.user { width: 180px; margin: 3px auto 0 3px; padding: 2px; }
+	#users { padding: 0 0 0 0; @include border-radius(4px 0 0 4px); }
+	.user { width: 180px; margin: 2px 0 0 3px; padding: 2px; }
 
 	
 	/* Default */
