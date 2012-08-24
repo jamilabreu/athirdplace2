@@ -10,12 +10,13 @@
 			
 			- if user_signed_in?
 				%ul.nav.pull-right
-					- unless users_page
+					- unless users_page || home_page
 						%li.divider-vertical
-					%li{ :class => users_page ? 'active' : nil }
-						= link_to root_url do
-							%i.icon-user
-					- unless users_page || conversations_page
+					- unless home_page
+						%li{ :class => users_page ? 'active' : nil }
+							= link_to root_url do
+								%i.icon-user
+					- unless users_page || conversations_page || home_page
 						%li.divider-vertical
 					%li{ :class => conversations_page ? 'active' : (user_signed_in? && current_user.has_unread? ? 'has_unread' : nil) }
 						= link_to conversations_path do

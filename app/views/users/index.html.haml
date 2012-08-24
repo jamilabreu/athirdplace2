@@ -8,5 +8,5 @@
 	.span10
 		#users
 			= render @users
-			&nbsp;
+			.div{style:"clear: both"}
 		= paginate @users, :remote => true

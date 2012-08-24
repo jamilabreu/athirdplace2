@@ -862,18 +862,25 @@
 	/* Custom */
 	.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: none; } /* Mobile hover fix */ 
 	
-	.navbar-fixed-top .navbar-inner { padding: 5px 5px 0; }
+	.navbar-fixed-top .navbar-inner { padding: 3px 5px 0; }
   .navbar .container { width: auto; padding: 0; }
-  .navbar .brand { padding-right: 5px; padding-left: 10px; margin: 0 0 0 -5px; }
+  .navbar .brand { padding-right: 10px; padding-left: 10px; margin: 0 0 0 -5px; }
+	.navbar-inverse .nav .community_name > a, 
+	.navbar-inverse .nav .community_name > a:hover,
+	.navbar-inverse .nav .community_name > a:focus { padding-left: 0; }
 	.navbar .nav { margin-right: 5px; }
 	.navbar .nav > li > a { padding-left: 20px; padding-right: 20px; }
 	.navbar .nav > .active > a { @include border-radius(4px 4px 0 0); }
 	
-	/* Users */
+	/* Home Page */
+	.span12 { width: 320px; }
+	.home_communities { padding: 20px; @include border-radius(0); }
+	
+	/* Users Page */
 	.span2 { width: 114px; margin-left: 30px; }
 	.span10 { width: 194px; }
 	
-	#users { padding: 0 0 0 0; @include border-radius(4px 0 0 4px); }
+	#users { padding: 0; @include border-radius(4px 0 0 4px); }
 	.user { width: 180px; margin: 2px 0 0 3px; padding: 2px; }
 
 	

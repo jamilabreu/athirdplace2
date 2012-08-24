@@ -121,20 +121,12 @@ footer a:hover { color: $blue; }
 .activity-indicator { display: inline-block; height: 10px; width: 20px; margin-left: 3px; }
 */
 
-/* Dashboard */
-#dashboard { height: 35px; margin-left: 160px; display: none; }
-#dashboard-inner { padding-bottom: 10px; border: 0 solid #E2E2E2; border-bottom: 0; @include border-radius(4px 4px 0 0); }
-#dashboard-inner ul { margin: 0; } 
-#dashboard-inner li.dash_nav { float: right; color: #EEE; }
-#dashboard-inner li.dash_nav a { display: block; padding: 4px 0 8px; margin-left: 15px; color: $blue; font-weight: bold; }
-#dashboard-inner li.dash_nav a:hover { color: $green; border-bottom: 2px solid $green; }
-
 /* Home */
-#home {}
-.home_title { padding: 10px 0; color: #AAA; font-size: 24px; text-align: center; display: block; }
+#home { text-align: center; }
+.home_title { padding: 10px 0 25px; color: #AAA; font-size: 24px; text-align: center; display: block; }
 .home_title i { margin-left: 5px; font-size: 16px; color: #DDD; }
-.home_communities { width: 300px; margin: 15px auto; padding: 20px 0; text-align: center; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
-.home_communities a { display: block; color: #3D89C8; padding: 1px 0 1px 1px; font-weight: bold; font-size: 18px; line-height: 24px; }
+.home_communities { width: auto; padding: 20px 0; text-align: center; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
+.home_communities a { display: block; color: #3D89C8; padding: 1px 0 1px 1px; font-weight: bold; font-size: 18px; line-height: 26px; }
 .home_communities a:hover { color: $blue; }
 
 /* Users */
