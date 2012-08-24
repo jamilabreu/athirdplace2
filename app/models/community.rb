@@ -50,4 +50,8 @@ class Community
   def filter_name
     name_and_parent(:filter)
   end
+  
+  def mobile_name
+    nickname? ? nickname : name
+  end
 end

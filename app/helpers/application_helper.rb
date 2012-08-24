@@ -3,7 +3,7 @@ module ApplicationHelper
     @community ? @community.display_name : "thirdplace"
   end
   def mobile_name
-    @community ? @community.name : "thirdplace"
+    @community ? @community.mobile_name : "thirdplace"
   end  
   def tagline
     @community ? "a global support network for #{@community.name.pluralize.downcase}" : "a global support network for the communities you care about"
