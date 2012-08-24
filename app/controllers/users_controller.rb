@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     
     # Users
     community_users = @community.users.all(community_ids: params[:ids])
-    @users = Kaminari.paginate_array(community_users.shuffle).page(params[:page]).per(100)
+    @users = Kaminari.paginate_array(community_users.shuffle).page(params[:page]).per(15)
     
     # Filters
     @filters = Community.in(id: community_users.flat_map(&:community_ids).uniq - [@community.id])

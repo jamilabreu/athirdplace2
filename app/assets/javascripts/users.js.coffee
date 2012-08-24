@@ -1,50 +1,25 @@
 jQuery ->
-	container = $('#users')
-	
-	# Wookmark
-	container.imagesLoaded ->
-		$('.user').wookmark
-			container: container
-			offset: 10
-			itemWidth: 192
-			autoResize: true
-	###
-	# Masonry
-	container = $('#users')
-	container.imagesLoaded ->
-		container.masonry
-			itemSelector: '.user'
-			columnWidth: 192
-			gutterWidth: 10
-	
-
+	container = $("#users")
 	# Isotope
 	container = $('#users')
 	container.imagesLoaded ->
-		container.masonry
+		container.isotope
 			itemSelector: '.user'
-			columnWidth: 192
-			gutterWidth: 10
 
 		# Infinite Scroll
 		if $('.pagination').length
 			$(window).scroll ->
 				url = $('.pagination .next_page a').attr 'href'
-				if url && $(window).scrollTop() > container.height() - 800
+				if url && $(window).scrollTop() > container.height() - 850
 					$('.pagination').text 'Fetching more...'
 					$.getScript(url)
-			$(window).scroll()
-	###	
+			$(window).scroll()	
+			
 	# Filters
 	$('#filters').on 'click', 'ul a', (e) ->
 		e.preventDefault()
-		#container.masonry( 'remove', container.children() )
+		container.isotope 'remove', container.children()
 		$.getScript $(this).attr 'href'
-
-	# Users
-	#$('#users').on 'click', 'a', (e) ->
-	#	e.preventDefault()
-	#	$.getScript $(this).attr 'href'
 
 	# Other
 	$('.user_name').hide().fadeIn 1400
