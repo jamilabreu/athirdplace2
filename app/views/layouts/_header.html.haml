@@ -28,7 +28,7 @@
 							%i.icon-caret-down
 						%ul.dropdown-menu{"role" => "menu", "aria-labelledby" => "dropdownMenu"}
 							%li
-								= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : edit_user_registration_path, "tabindex" => "-1"  do
+								= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : new_subscription_path, "tabindex" => "-1"  do
 									%i.icon-heart
 									Support
 							%li
