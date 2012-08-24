@@ -95,6 +95,7 @@ footer a:hover { color: $blue; }
 
 .jumbotron { text-align: center; }
 .well { padding-top: 10px; font-weight: bold; }
+.well p { margin-bottom: 16px; }
 
 #sign_in { background: #5872A7; padding: 8px 32px; color: #FFF; font-size: 14px; font-weight: bold; text-align: center;
 	@include border-radius(3px); border: 1px solid #29447E; border-bottom-color: #1A356E; 

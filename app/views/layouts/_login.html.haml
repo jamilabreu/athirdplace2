@@ -1,7 +1,7 @@
 %header{:class => "jumbotron", :id => "overview"}
 	.container
 		.well
-			%p.muted please sign in to access this network
+			%p.muted please sign in to enter
 			= link_to "#{request.protocol + request.domain}/users/auth/facebook", id: "sign_in" do
 				%i.icon-facebook-sign
 				Sign In with Facebook
