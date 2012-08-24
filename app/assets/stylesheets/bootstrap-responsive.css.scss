@@ -872,17 +872,28 @@
 	.navbar .nav > li > a { padding-left: 20px; padding-right: 20px; }
 	.navbar .nav > .active > a { @include border-radius(4px 4px 0 0); }
 	
+	.block_span { display: block; float: none; }
+	
 	/* Home Page */
 	.span12 { width: 320px; }
+	
 	.home_communities { padding: 20px; @include border-radius(0); }
 	
 	/* Users Page */
 	.span2 { width: 114px; margin-left: 30px; }
 	.span10 { width: 194px; }
-	
+		
 	#users { padding: 0; @include border-radius(4px 0 0 4px); }
 	.user { width: 180px; margin: 2px 0 0 3px; padding: 2px; }
-
+	
+	/* Conversations Page */
+	.span4 { width: 310px; margin-left: 30px; @extend .block_span; }
+	.span8 { width: 310px; margin: 20px 0 0 30px; @extend .block_span; }
+	#conversation { padding: 2px; @include border-radius(4px); }
+	#conversation-messages { margin: 0; }
+	.message { padding: 10px; }
+	#message_body { width: 262px; }
+	#submit_message { width: 100%; }
 	
 	/* Default */
 	
