@@ -156,6 +156,8 @@ footer a:hover { color: $blue; }
 
 .user_mutual_friends, .user_network_friends { font-size: 13px; font-weight: bold }
 
+.edit_user_image { margin-top: 0; }
+.conversation_user_image { margin-top: -10px }
 
 /* Conversations */
 #conversation { @extend #users; padding: 10px 0 0 10px; }
