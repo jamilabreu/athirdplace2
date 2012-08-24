@@ -886,6 +886,11 @@
 	#users { padding: 0; @include border-radius(4px 0 0 4px); }
 	.user { width: 180px; margin: 2px 0 0 3px; padding: 2px; }
 	
+	/* Edit Page */
+	.span9 { width: 310px; @extend .block_span; }
+	.form-horizontal { @include border-radius(0); }
+	#form-fields { width: auto; }
+	
 	/* Conversations Page */
 	.span4 { width: 310px; margin-left: 30px; @extend .block_span; }
 	.span8 { width: 310px; margin: 20px 0 0 30px; @extend .block_span; }
@@ -894,6 +899,15 @@
 	.message { padding: 10px; }
 	#message_body { width: 262px; }
 	#submit_message { width: 100%; }
+	
+	/* Subscriptions Page */
+	#subscriptions { padding: 20px; }
+	
+	/* New Subscriptions */
+	.span11 { width: 310px; @extend .block_span; }
+	#subscriptions { padding-top: 0; }
+	#subscriptions-details { width: 250px; padding: 0 20px; @extend .block_span; }
+	#new_subscription { margin: 20px 0 0 10px; }
 	
 	/* Default */
 	
