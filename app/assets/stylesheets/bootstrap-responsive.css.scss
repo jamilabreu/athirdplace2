@@ -904,10 +904,10 @@
 	#subscriptions { padding: 20px; }
 	
 	/* New Subscriptions */
-	.span11 { width: 320px; @extend .block_span; }
+	.span11 { width: 340px; @extend .block_span; }
 	#subscriptions { padding-top: 0; }
-	#subscriptions-details { width: 250px; padding: 0 20px; @extend .block_span; }
-	#new_subscription { margin: 20px 0 0 15px; }
+	#subscriptions-details { width: 280px; padding: 0 20px; @extend .block_span; }
+	#new_subscription { margin: 20px 0 0 25px; }
 	
 	/* Default */
 	
