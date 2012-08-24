@@ -8,15 +8,15 @@
 				%li.community_name.hidden-phone= link_to community_name, "#"
 				%li.community_name.visible-phone= link_to mobile_name, "#"
 			
-			- if user_signed_in?
-				%ul.nav.pull-right
-					- unless users_page || home_page
+			%ul.nav.pull-right
+				- if @community
+					- unless users_page
 						%li.divider-vertical
-					- unless home_page
-						%li{ :class => users_page ? 'active' : nil }
-							= link_to root_url do
-								%i.icon-user
-					- unless users_page || conversations_page || home_page
+					%li{ :class => users_page ? 'active' : nil }
+						= link_to root_url do
+							%i.icon-user		
+				- if user_signed_in?
+					- if @community && subscriptions_page || @community && edit_page
 						%li.divider-vertical
 					%li{ :class => conversations_page ? 'active' : (user_signed_in? && current_user.has_unread? ? 'has_unread' : nil) }
 						= link_to conversations_path do
