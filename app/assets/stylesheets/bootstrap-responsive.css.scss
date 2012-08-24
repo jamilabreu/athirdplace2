@@ -861,7 +861,6 @@
 @media (max-width: 480px) {
 	/* Custom */
 	.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: none; } /* Mobile hover fix */ 
-	 body { padding-top: 0; }
 	
 	.navbar-fixed-top .navbar-inner { padding: 5px 5px 0; }
   .navbar .container { width: auto; padding: 0; }
@@ -871,11 +870,11 @@
 	.navbar .nav > .active > a { @include border-radius(4px 4px 0 0); }
 	
 	/* Users */
-	.span2 { width: 114px; }
-	.span10 { width: 206px; }
+	.span2 { width: 114px; margin-left: 30px; }
+	.span10 { width: 196px; }
 	
-	#users { padding: 0 0 5px 4px; }
-	.user { width: 180px; margin: 5px 5px 5px 2px; padding: 5px; }
+	#users { padding: 0 0 3px 0; }
+	.user { width: 180px; margin: 3px auto 0 3px; padding: 2px; }
 
 	
 	/* Default */
