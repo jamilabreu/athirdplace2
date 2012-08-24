@@ -7,6 +7,7 @@
 			%ul.nav
 				%li.community_name.hidden-phone= link_to community_name, "#"
 				%li.community_name.visible-phone= link_to mobile_name, "#"
+			
 			- if user_signed_in?
 				%ul.nav.pull-right
 					- unless users_page
