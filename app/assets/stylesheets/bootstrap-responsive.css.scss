@@ -861,6 +861,7 @@
 @media (max-width: 480px) {
 	/* Custom */
 	.user_image:hover .icon-chevron-down, .user_image:hover .icon-chevron-up { display: none; } /* Mobile hover fix */ 
+	 body { padding-top: 0; }
 	
 	.navbar-fixed-top .navbar-inner { padding: 5px 5px 0; }
   .navbar .container { width: auto; padding: 0; }
