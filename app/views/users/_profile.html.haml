@@ -1,10 +1,14 @@
 .user_profile{id:"#{user.id}_profile"}
 	.user_section
-		.user_standing= user.standing.name
-		.user_degree= user.degree.name
-		- user.school.to_a.each do |school|
-			.user_school= school.name
-		.user_city= user.city.filter_name
+		- if user.standing.present?
+			.user_standing= user.standing.name
+		- if user.degree.present?
+			.user_degree= user.degree.name
+		- if user.school.present?
+			- user.school.to_a.each do |school|
+				.user_school= school.name
+		- if user.city.present?
+			.user_city= user.city.filter_name
 	.user_section
 		- user.field.to_a.each do |field|
 			.user_field= field.name
