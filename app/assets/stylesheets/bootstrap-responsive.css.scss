@@ -873,6 +873,9 @@
 	.navbar .nav > .active > a { @include border-radius(4px 4px 0 0); }
 	
 	.block_span { display: block; float: none; }
+
+	#login, .well { width: 320px; padding-left: 0; padding-right: 0; @include border-radius(0); }
+	.alert { width: 280px; padding: 8px 20px; display: block; float: none; }
 	
 	/* Home Page */
 	.span12 { width: 320px; }
@@ -880,8 +883,8 @@
 	.home_communities { padding: 20px; @include border-radius(0); }
 	
 	/* Users Page */
-	.span2 { width: 114px; margin-left: 30px; }
-	.span10 { width: 194px; }
+	.span2 { width: 115px; margin-left: 30px; }
+	.span10 { width: 195px; }
 		
 	#users { padding: 0; @include border-radius(4px 0 0 4px); }
 	.user { width: 180px; margin: 2px 0 0 3px; padding: 2px; }
