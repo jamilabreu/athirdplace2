@@ -113,6 +113,20 @@ CSV.foreach('db/data/colleges.csv', {encoding: "ISO-8859-1:UTF-8", headers: true
   )
   puts row[0]
 end
+
+company = %W[ #{'New York Yankees'} #{'Teach For America'} Facebook #{'Random House'} #{'City University of New York'} #{'Lilla G. Frederick Pilot Middle School'} ]
+company.each do |company|
+  Community.create(name: company, subdomain: company.delete(" ").parameterize, display_name: "#{company} Network", nickname: company, community_type: "Company")
+end
+
+company = %W[ Teacher #{'Project Analyst'} Historian Sales #{'Advertising Sales'} Entreprenuer ]
+company.each do |company|
+  Community.create(name: company, subdomain: company.delete(" ").parameterize, display_name: "#{company} Network", nickname: company, community_type: "Profession")
+end
+
+
+Community.create!(name: id, subdomain: id.to_s.delete(" ").delete("-").parameterize, display_name: "#{id} Network", display_name: "#{id} Network", nickname: val, community_type: community_type.titleize)
+          
 =begin
 puts 'Cities...'
 CSV.foreach('db/data/world_cities_MASTER.csv', {encoding: "ISO-8859-1:UTF-8", headers: true}) do |row| 

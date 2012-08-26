@@ -12,10 +12,13 @@
 	.user_section
 		- user.field.to_a.each do |field|
 			.user_field= field.name
-	- if user.company? || user.profession?
+	- if user.company.present? || user.profession.present?
 		.user_section
-			.user_profession= user.profession
-			.user_company= user.company
+			.user_profession
+			- user.profession.to_a.each do |profession|
+				.user_profession= profession.name
+			- user.company.to_a.each do |company|
+				.user_company= user.company.name
 	- if user.bio?
 		.user_section
 			.user_bio= user.bio
