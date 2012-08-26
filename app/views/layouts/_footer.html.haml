@@ -1,0 +1,5 @@
+%footer
+	- mail_content = capture do
+		%i.icon-envelope
+		contact
+	= mail_to "jamil@athirdplace.com", mail_content, encode: "hex", target: "_blank"

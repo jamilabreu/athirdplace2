@@ -3,7 +3,7 @@
 		%span
 			\/&nbsp;
 			= link_to "reset", users_path
-- %W[ standing degree field gender relationship orientation religion ethnicity school city state country ].each do |community_type|
+- %W[ standing degree field profession company gender relationship orientation religion ethnicity school city state country ].each do |community_type|
 	- communities = @filters.where(community_type: community_type.titleize)
 	- if communities.present?
 		.filters_title

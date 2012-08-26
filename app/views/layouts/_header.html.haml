@@ -5,8 +5,8 @@
 				3
 
 			%ul.nav
-				%li.community_name.hidden-phone= link_to community_name, "#"
-				%li.community_name.visible-phone= link_to mobile_name, "#"
+				%li.community_name.hidden-phone= link_to community_name, root_path
+				%li.community_name.visible-phone= link_to mobile_name, root_path
 			
 			%ul.nav.pull-right
 				- if @community
@@ -28,13 +28,13 @@
 							%i.icon-caret-down
 						%ul.dropdown-menu{"role" => "menu", "aria-labelledby" => "dropdownMenu"}
 							%li
-								= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : new_subscription_path, "tabindex" => "-1"  do
-									%i.icon-heart
-									Support
-							%li
 								= link_to edit_user_registration_path, "tabindex" => "-1"  do
 									%i.icon-tasks
 									Profile
+							%li
+								= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : new_subscription_path, "tabindex" => "-1"  do
+									%i.icon-heart
+									Support
 							%li.divider
 							%li
 								= link_to destroy_user_session_path, method: :delete do

@@ -34,13 +34,57 @@ jQuery ->
 			city.name
 		formatSelection: (city) ->
 			city.name
-	
+			
+	$(".profession-select2").select2
+		placeholder: "Type or Select a Profession"
+		multiple: true
+		ajax:
+			url: "/communities.json"
+			dataType: 'jsonp'
+			data: (term) ->
+				professions: term
+			results: (data) ->
+				results: data
+		formatResult: (profession) ->
+			profession.name
+		formatSelection: (profession) ->
+			profession.name
+
+	$(".company-select2").select2
+		placeholder: "Type or Select a Company"
+		multiple: true
+		ajax:
+			url: "/communities.json"
+			dataType: 'jsonp'
+			data: (term) ->
+				companies: term
+			results: (data) ->
+				results: data
+		formatResult: (company) ->
+			company.name
+		formatSelection: (company) ->
+			company.name		
+
 	$.ajax "/communities.json?school=true",
 		dataType: 'jsonp'
 		success: (response) ->
-			$('.school-select2').select2 'data', response
+			if response.length
+				$('.school-select2').select2 'data', response
 
 	$.ajax "/communities.json?city=true",
 		dataType: 'jsonp'
 		success: (response) ->
-			$('.city-select2').select2 'data', response
+			if response # Note no length
+				$('.city-select2').select2 'data', response
+				
+	$.ajax "/communities.json?profession=true",
+		dataType: 'jsonp'
+		success: (response) ->
+			if response.length
+				$('.profession-select2').select2 'data', response
+				
+	$.ajax "/communities.json?company=true",
+		dataType: 'jsonp'
+		success: (response) ->
+			if response.length
+				$('.company-select2').select2 'data', response				

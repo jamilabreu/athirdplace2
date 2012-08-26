@@ -63,13 +63,13 @@
 							%label.control-label{:for => "user_profession"}
 								Profession
 							.controls
-								= f.text_area :profession, :placeholder => "Profession", :id => "user_profession", :maxlength => 75, :value => params[:user] ? params[:user][:profession] : nil						
+								%input{:type => "hidden", :class => "profession-select2", :id => "user_profession_ids", :name => "user[profession_ids]", :style => "width: 220px"}					
 						
 						.control-group
 							%label.control-label{:for => "user_company"}
 								Employer
 							.controls
-								= f.text_area :company, :placeholder => "Company Name", :id => "user_company", :maxlength => 75, :value => params[:user] ? params[:user][:company] : nil
+								%input{:type => "hidden", :class => "company-select2", :id => "user_company_ids", :name => "user[company_ids]", :style => "width: 220px"}
 	
 					- %W[ relationship orientation religion ].each do |type|
 						.control-group

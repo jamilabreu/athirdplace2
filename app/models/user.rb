@@ -15,7 +15,7 @@ class User
                   :large_image, :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :profession, 
                   :company, :gender, :message_ids, :friend_ids, :coordinates, :community_ids, :gender_ids, 
                   :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids, :state_ids, :country_ids, 
-                  :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
+                  :profession_ids, :company_ids, :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
   
   validates :blog_url, allow_blank: true, url: true
   
@@ -67,7 +67,6 @@ class User
   field :profession, type: String
   field :company, type: String
   field :gender, type: String
-  field :coordinates, type: Array
   field :friend_ids, type: Array
   field :coordinates, type: Array
   
@@ -105,7 +104,7 @@ class User
   # field :authentication_token, :type => String
 
   # Create custom methods
-  %W[ gender standing field school city state country degree relationship orientation ethnicity religion ].each do |community_type|
+  %W[ gender standing degree field school city state country profession company relationship orientation ethnicity religion ].each do |community_type|
     define_method "#{community_type}" do
       array = self.communities.filtered_by(community_type)
       array.length == 1 ? array.first : array
@@ -115,9 +114,20 @@ class User
     end
     define_method "#{community_type}_ids=" do |val| 
       self.communities.clear if community_type == "gender"
+      
       if community_type == "school" # Schools hack
         val.split(",").each do |school_id|
           self.communities << Community.find_by(id: school_id) if school_id != "[]" # Schools hack
+        end
+      
+      elsif community_type == "profession" || community_type == "company"# Professions hack
+        val.split(",").each do |id|
+          if Community.where(id: id).exists?
+            self.communities << Community.find_by(id: id) if id.present?
+          else
+            self.communities << Community.create!(name: id, subdomain: id.to_s.delete(" ").delete("-").parameterize, 
+                                display_name: "#{id} Network", display_name: "#{id} Network", nickname: val, community_type: community_type.titleize)
+          end
         end
       else  
         if val.class == Array
