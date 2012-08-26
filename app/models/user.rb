@@ -64,8 +64,6 @@ class User
   field :twitter_name, type: String
   field :blog_url, type: String
   field :bio, type: String
-  field :profession, type: String
-  field :company, type: String
   field :gender, type: String
   field :friend_ids, type: Array
   field :coordinates, type: Array
