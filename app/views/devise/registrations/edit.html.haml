@@ -58,7 +58,7 @@
 							= f.text_area :bio, :placeholder => "Introduce Yourself  ( 280 chars )", :id => "user_bio", :maxlength => 280, :value => params[:user] ? params[:user][:bio] : nil
 					
 					
-					#alumni_fields{:class => current_user.company? || current_user.profession? || current_user.standing.name == "Graduate Student" || current_user.standing.name == "Alumni" ? nil : "hide"}
+					#alumni_fields{:class => current_user.company.present? || current_user.profession.present? || current_user.standing.name == "Graduate Student" || current_user.standing.name == "Alumni" ? nil : "hide"}
 						.control-group
 							%label.control-label{:for => "user_profession"}
 								Profession
