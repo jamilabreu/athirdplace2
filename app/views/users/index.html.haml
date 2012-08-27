@@ -4,6 +4,7 @@
 .row
 	.span2
 		#filters
+			= current_user.company?
 			= render "users/filters"
 	.span10
 		#users
