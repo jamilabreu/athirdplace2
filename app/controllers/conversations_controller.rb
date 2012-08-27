@@ -10,7 +10,12 @@ class ConversationsController < ApplicationController
       @user = @conversation.partner(current_user)
       
       # Update read status
-      @conversation.messages.last.add_to_set(:read_by, current_user.id) if @messages.present?
+      if @messages.present?
+        @conversation.messages.unread_by(current_user).each do |message|
+          message.add_to_set(:read_by, current_user.id) 
+        end
+      end
+      
     end
   end
   

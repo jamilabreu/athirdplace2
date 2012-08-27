@@ -10,4 +10,7 @@ class Message
   
   field :body, type: String
   field :read_by, type: Array
+  
+  scope :unread_by, lambda { |user| ne(read_by: user.id) }
+
 end
