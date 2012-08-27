@@ -2,9 +2,9 @@
 	.container
 		.well
 			%p.muted
-				find, organize, and communicate with other
-				= @community.name.pluralize.downcase
-				more efficiently
+				find, organize, and share information with the
+				= @community.name.downcase
+				community
 			= link_to "#{request.protocol + request.domain}/users/auth/facebook", id: "sign_in" do
 				%i.icon-facebook-sign
 				Sign In with Facebook

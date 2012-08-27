@@ -4,6 +4,7 @@
 .row
 	.span2
 		#filters
+			=# current_user.company? if current_user.email == "ydiaz13@gmail.com"
 			= render "users/filters"
 	.span10
 		#users

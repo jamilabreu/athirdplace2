@@ -29,6 +29,7 @@ footer a:hover { color: $blue; }
 .alert a { color: #3b5998; text-decoration: underline; }
 .alert a:hover { color: #3D358C; text-decoration: underline; }
 
+
 /* Navigation */
 .navbar-inverse .brand { font-family: "p22-underground"; padding: 8px 5px 4px 0; font-size: 20px; }
 .navbar-inverse .brand:hover { color: #AAA; }
@@ -46,50 +47,7 @@ footer a:hover { color: $blue; }
 .dropdown-submenu:hover > a { @include border-radius(4px); }
 
 .navbar-inverse .btn-navbar { @include border-radius(4px); }
-/*
-.navbar-inner { background: #666; }
 
-.navbar .nav .community_name > a, .navbar .nav .community_name > a:hover { color: #FFF; padding: 5px 15px 5px 0; font-weight: 700; }
-
-.right_nav { float: right; }
-
-.navbar .nav { margin: 0; }
-.navbar .nav > li > a { color: #BBB; padding: 5px 25px 5px; }
-.navbar .nav .active > a, .navbar .nav .active > a:hover { background: #FFF; color: #666; }
-.navbar .nav .has_unread > a, .navbar .nav .has_unread > a:hover { color: #CCFF00; }
-.navbar .nav > li > a i { position: relative; top: 1px; }
-
-.navbar .divider-vertical { height: 20px; width: 1px; background: #444; margin: 6px 0 0 0; border: 0; }
-
-.dropdown a { padding-left: 10px !important; padding-right: 0 !important; }
-.dropdown:hover i { color: #FFF; }
-.dropdown-toggle.active i { color: #FFF; }
-
-.logo { position: absolute; left: 0; font-family: "p22-underground", sans-serif; font-size: 19px; font-weight: 900; }
-.logo a { display: block; padding: 8px 12px 3px; color: #888; background: #555; }
-.logo a:hover { background: $green; color: #FFF; border-right: 2px solid #FFF; }
-*/
-/*
-.navbar .nav { width: 100%; margin: 0; }
-.navbar-inner { background: #666; }
-
-.logo { position: absolute; left: 0; font-family: "p22-underground", sans-serif; font-size: 19px; font-weight: 900; }
-.logo a { display: block; padding: 8px 12px 5px; color: #888; background: #555; }
-.logo a:hover { background: $green; color: #FFF; border-right: 2px solid #FFF; }
-
-.navbar .nav .community_name > a, .navbar .nav .community_name > a:hover { color: #FFF; padding: 5px 15px 5px 0; font-weight: 700; }
-
-.right_nav { float: right; }
-.navbar .nav > li > a { color: #BBB; padding: 6px 25px 5px; text-shadow: 0 0 0 #000; }
-.navbar .nav .active > a, .navbar .nav .active > a:hover { background: #FFF; color: #666; }
-.navbar .nav .has_unread > a, .navbar .nav .has_unread > a:hover { color: #CCFF00; }
-.navbar .nav > li > a i { position: relative; top: 1px; }
-.navbar .divider-vertical { height: 20px; background: #444; margin: 0; margin-top: 6px; border: 0; }
-
-.dropdown a { padding-left: 10px !important; padding-right: 0 !important; }
-.dropdown:hover i { color: #FFF; }
-.dropdown-toggle.active i { color: #FFF; }
-*/
 
 /* Login */
 
@@ -107,21 +65,6 @@ footer a:hover { color: $blue; }
 
 .activity-indicator { display: inline-block; height: 10px; width: 20px; margin-left: 3px; }
 
-/*
-#login { border-top: 1px solid #FFF; border-bottom: 1px solid #E2E2E2; background: #F2F2F2; }
-#login-inner { height: 30px; padding: 20px 0; }
-#login-tagline { padding: 7px 0; color: #666; font-size: 17px; span { color: #BBB; position: relative; top: 1px; }; i { color: #BBB; line-height: 6px; } }
-
-#sign_in { float: right; width: 161px; background: #5872A7; padding: 4px 25px; margin: 0 0 0 0; color: #FFF; 
-	font-size: 14px; font-weight: bold; @include border-radius(3px); border: 1px solid #29447E; border-bottom-color: #1A356E; text-align: center;
-	background-image: -webkit-linear-gradient(#637BAD, #5872A7); background-image: -moz-linear-gradient(#637BAD, #5872A7); 
-	background-image: -ms-linear-gradient(#637BAD, #5872A7); background-image: -o-linear-gradient(#637BAD, #5872A7); 
-	background-image: linear-gradient(#637BAD, #5872A7); -webkit-box-shadow: inset 0 1px 0 #879AC0; box-shadow: inset 0 1px 0 #879AC0;
-}
-#sign_in i { font-size: 16px; margin-right: 3px; position: relative; top: 1px; }
-
-.activity-indicator { display: inline-block; height: 10px; width: 20px; margin-left: 3px; }
-*/
 
 /* Home */
 #home { text-align: center; }
@@ -130,6 +73,7 @@ footer a:hover { color: $blue; }
 .home_communities { width: auto; padding: 20px 0; text-align: center; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
 .home_communities a { display: block; color: #3D89C8; padding: 1px 0 1px 1px; font-weight: bold; font-size: 18px; line-height: 26px; }
 .home_communities a:hover { color: $blue; }
+
 
 /* Users */
 #users { padding: 10px 0 0 10px; background: #F2F2F2; border: 1px solid #E2E2E2; @include border-radius(4px); }
@@ -158,6 +102,7 @@ footer a:hover { color: $blue; }
 
 .edit_user_image { margin-top: 0; }
 .conversation_user_image { margin-top: -10px }
+
 
 /* Conversations */
 #conversation { @extend #users; padding: 10px 0 0 10px; }
@@ -190,25 +135,7 @@ footer a:hover { color: $blue; }
 						@include border-radius(0); @include box-shadow(0 0 0 #000); resize: none; }
 
 #submit_message { padding: 5px 15px; font-size: 13px; font-weight: bold; }
-				
-/* Posts 
-#posts { @extend #users; }
 
-.post { margin: 0 10px 10px 0; padding: 5px; border: 1px solid #EEE; border-color: #EBEAE5 #E0DFDC #DBDAD7;
-					 @include border-radius(3px); @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.05)); background: #FFF; }
-					
-.post_user { float: left; width: 75px; }
-
-.post_contents { margin-left: 85px; }
-.post_user_name { font-weight: bold; }
-.post_communities {}
-.post_communities li { display: inline-block; color: #BBB; font-size: 12px; font-weight: bold; }
-
-/* New Post 
-#new_post { margin: 0 0 10px; }
-#post_body { height: 18px; width: 580px; resize: none; padding: 5px 7px; border: 1px solid #E2E2E2;
-						@include border-radius(3px); @include box-shadow(0 0 0 #000);}
-*/
 
 /* Filters */
 #filters { }
