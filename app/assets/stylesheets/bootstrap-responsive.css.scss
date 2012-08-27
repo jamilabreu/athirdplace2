@@ -878,7 +878,7 @@
 	.alert { width: 280px; padding: 8px 20px; display: block; float: none; }
 	
 	/* Home Page */
-	.span12 { width: 320px; }
+	.span12 { width: 100%; }
 	
 	.home_communities { padding: 20px; @include border-radius(0); }
 	

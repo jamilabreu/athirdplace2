@@ -6,7 +6,7 @@
 		#filters
 			= render "users/filters"
 	.span10
-		#users
+		#users{ :class => @users.blank? ? 'hidden' : nil }
 			= render @users
 			.div{style:"clear: both"}
 		= paginate @users, :remote => true

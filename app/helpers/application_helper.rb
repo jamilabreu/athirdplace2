@@ -6,7 +6,7 @@ module ApplicationHelper
     @community ? @community.mobile_name : "thirdplace"
   end  
   def tagline
-    @community ? "a global support network for #{@community.name.pluralize.downcase}" : "a global support network for the communities you care about"
+    @community ? "a global directory of #{@community.name.downcase} students + #{@community.community_type == "School" ? 'alumni' : 'professionals'}" : "a global directory of people in the networks you care about"
   end
   
   # Page helper
