@@ -16,7 +16,7 @@ jQuery ->
 			$(window).scroll()	
 			
 	# Filters
-	$('#filters').on 'click', 'ul a', (e) ->
+	$('#filters').on 'click', 'ul li a', (e) ->
 		e.preventDefault()
 		container.isotope 'remove', container.children()
 		$.getScript $(this).attr 'href'

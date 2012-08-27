@@ -4,7 +4,7 @@ var $users = $('<%= j render @users %>');
 
 $container.isotope('insert', $users);
 $container.imagesLoaded( function(){
-	$container.isotope('reLayout')
+	$container.isotope('reLayout');
 });
 
 //Filters
@@ -14,8 +14,9 @@ $('#filters').html('<%= j render :partial => "users/filters", :locals => { :filt
 <% if @users.current_page == @users.num_pages %>
   $('.pagination').remove();
 <% else %>
+	//Restore pagination div if removed via filtering
 	if ( !$('.pagination').length ) {
-		$('.span10').append("<div class='pagination'></div>")
+		$('.span10').append('<div class="pagination"></div>')
 	}
   $('.pagination').replaceWith('<%= j paginate @users %>');
 <% end %>
