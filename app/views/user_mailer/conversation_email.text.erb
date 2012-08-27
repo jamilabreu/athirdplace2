@@ -1,0 +1,5 @@
+<% if @type == :start %>
+	<%= @sender.first_name %> has started a conversation with you. <%= link_to "Click here to view the message", conversations_url(subdomain: @community.subdomain) %>.
+<% else %>
+	<%= @sender.first_name %> has continued your conversation. <%= link_to "Click here to view the message", conversations_url(subdomain: @community.subdomain) %>.		
+<% end %>

@@ -48,6 +48,7 @@ footer a:hover { color: $blue; }
 
 .navbar-inverse .btn-navbar { @include border-radius(4px); }
 
+.has_unread { color: #CCFF00; }
 
 /* Login */
 

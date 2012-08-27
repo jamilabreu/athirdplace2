@@ -143,6 +143,8 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rufus-scheduler (2.0.17)
+      tzinfo (>= 0.3.23)
     sass (3.1.20)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -187,6 +189,7 @@ DEPENDENCIES
   mongoid-tree
   omniauth-facebook
   rails (= 3.2.7)
+  rufus-scheduler
   sass-rails (~> 3.2.3)
   stripe
   uglifier (>= 1.0.3)

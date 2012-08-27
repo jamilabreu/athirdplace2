@@ -18,9 +18,9 @@
 				- if user_signed_in?
 					- if @community && subscriptions_page || @community && edit_page
 						%li.divider-vertical
-					%li{ :class => conversations_page ? 'active' : (user_signed_in? && current_user.has_unread? ? 'has_unread' : nil) }
+					%li{ :class => conversations_page ? 'active' : nil }
 						= link_to conversations_path do
-							%i.icon-envelope-alt
+							%i.icon-envelope-alt{ :class => current_user.has_unread? ? 'has_unread' : nil }
 					- unless conversations_page
 						%li.divider-vertical
 					%li.dropdown{ :class => edit_page || subscriptions_page ? 'active' : nil }

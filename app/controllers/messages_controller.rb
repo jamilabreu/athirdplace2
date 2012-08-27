@@ -17,10 +17,17 @@ class MessagesController < ApplicationController
     if @message.save!
       @message.conversation.touch
       
-      # Send email
+      # Send reminder email
+      @recipient = @message.conversation.partner(current_user)
       if @message.conversation.messages.length == 1
-        @recipient = @message.conversation.partner(current_user)
-        UserMailer.delay.start_conversation(current_user, @recipient, @community)
+        UserMailer.delay.conversation_email(current_user, @recipient, @community, :start)
+      else
+        #DateTime.now.end_of_day + 4.hours
+        Rufus::Scheduler.start_new.at "#{DateTime.now + 2.minutes}" do
+          if @message.conversation.has_unread_by(@recipient)
+            UserMailer.conversation_email(current_user, @recipient, @community, :continue).deliver
+          end
+        end
       end
       
       respond_to do |format|
