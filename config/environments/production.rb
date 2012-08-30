@@ -46,7 +46,7 @@ Athirdplace::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( activity-indicator.min.js autosize.min.js bootstrap.min.js chosen.min.js conversations.js facebook.js isotope.min.js login.js select2.min.js subscriptions.js timeago.js users-edit.js users.js )
+  config.assets.precompile += %w( activity-indicator.min.js autosize.min.js bootstrap.min.js chosen.min.js conversations.js facebook.js isotope.min.js login.js posts-new.js select2.min.js subscriptions.js timeago.js users-edit.js users.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

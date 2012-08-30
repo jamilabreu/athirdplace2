@@ -118,6 +118,7 @@ footer a:hover { color: $blue; }
 .post_body { }
 .post_actions a { color: #BBB; font-size: 12px; }
 
+.empty_post { margin: 5px; padding: 10px; color: #3a87ad; font-weight: bold; background-color: #d9edf7; border-color: #bce8f1; @include border-radius(2px); }
 
 /* Event */
 

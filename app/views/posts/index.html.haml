@@ -9,6 +9,9 @@
 				= link_to new_post_path, :id => "new_post_button" do
 					%i.icon-plus
 					New Announcement				
-			#posts-inner	
-				- current_user.community_ids.length.downto(1) do |i|
-					= render @posts[i] if @posts[i].present?
+			#posts-inner
+				- if @posts.present?
+					- current_user.community_ids.length.downto(1) do |i|
+						= render @posts[i] if @posts[i].present?
+				- else
+					= render partial: "posts/empty"
