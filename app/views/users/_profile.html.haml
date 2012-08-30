@@ -9,9 +9,10 @@
 				.user_school= school.name
 		- if user.city.present?
 			.user_city= user.city.filter_name
-	.user_section
-		- user.field.to_a.each do |field|
-			.user_field= field.name
+	- if user.field.present?
+		.user_section
+			- user.field.to_a.each do |field|
+				.user_field= field.name
 	- if user.company.present? || user.profession.present?
 		.user_section
 			.user_profession

@@ -1,7 +1,7 @@
-if ( $("#<%= @user.id %>_profile").length ) {
-	$("#<%= @user.id %>_profile").toggle();
+if ( $('#<%= @user.id %>_profile').length ) { 
+	$('#<%= @user.id %>_profile').toggle();
 } else {
-	$("#<%= @user.id %>").append("<%= j render partial: 'users/profile', locals: { user: @user } %>");
+	$('#<%= @user.id %>').append('<%= j render partial: "users/profile", locals: { user: @user } %>');
 }
 $('#<%= @user.id %>_image i').toggleClass('icon-chevron-down icon-chevron-up');
 $('#users').isotope('reLayout');

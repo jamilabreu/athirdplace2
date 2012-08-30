@@ -8,14 +8,15 @@ class User
   
   has_and_belongs_to_many :communities
   has_and_belongs_to_many :conversations
+  has_many :posts
   has_many :messages
   has_one :subscription
   
   attr_accessible :email, :provider, :uid, :oauth_token, :name, :first_name, :last_name, :image, :normal_image, 
-                  :large_image, :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :profession, 
-                  :company, :gender, :message_ids, :friend_ids, :coordinates, :community_ids, :gender_ids, 
-                  :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids, :state_ids, :country_ids, 
-                  :profession_ids, :company_ids, :relationship_ids, :orientation_ids, :religion_ids, :ethnicity_ids
+                  :large_image, :facebook_url, :show_facebook_url, :twitter_name, :blog_url, :bio, :message_ids, 
+                  :friend_ids, :coordinates, :community_ids, :gender_ids, :standing_ids, :degree_ids, :field_ids, 
+                  :school_ids, :city_ids, :state_ids, :country_ids, :profession_ids, :company_ids, :relationship_ids, 
+                  :orientation_ids, :religion_ids, :ethnicity_ids
   
   validates :blog_url, allow_blank: true, url: true
   

@@ -19,6 +19,9 @@ module ApplicationHelper
   def edit_page
     params[:controller] == "registrations" && params[:action] == "edit"
   end
+  def posts_page
+    params[:controller] == "posts" && params[:action] == "index"
+  end  
   def conversations_page
     params[:controller] == "conversations" && params[:action] == "index"
   end  

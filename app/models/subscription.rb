@@ -5,7 +5,7 @@ class Subscription
   
   belongs_to :user
   
-  field :stripe_customer_token, type: String
+  field :stripe_customer_id, type: String
   
   attr_accessor :stripe_card_token
   
@@ -13,9 +13,9 @@ class Subscription
     if valid?
       user = User.find_by(id: user_id)
       customer = Stripe::Customer.create(card: stripe_card_token, plan: 1, email: user.email, description: "#{user.name} #{user.id}")
-      self.stripe_customer_token = customer.id
+      self.stripe_customer_id = customer.id
       self.user = user
-      #Stripe::Charge.create(:amount => 2000, :currency => "usd", :customer => stripe_customer_token, :description => "text")
+
       save!
     end
   rescue Stripe::InvalidRequestError => e

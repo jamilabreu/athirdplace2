@@ -1,0 +1,7 @@
+.event
+	.event_image= image_tag event.large_image
+	.event_contents
+		.event_title= event.title
+		.event_start= event.start_time.strftime("%A, %B %e, %Y - %l:%M%p") if event.start_time
+		.event_body.hidden-phone= truncate_html(event.body_html, length: 210)
+	.div{style:"clear:both"}

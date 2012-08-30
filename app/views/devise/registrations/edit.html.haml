@@ -37,17 +37,14 @@
 						%label.control-label{:for => "user_school"}
 							School(s)
 						.controls
-							<input type="hidden" class="school-select2" id="user_school_ids" name="user[school_ids]" style="width: 220px;">
-							=# f.hidden_field :school_ids, :class => "school-select2", :style => "width: 220px"
+							%input{:type => "hidden", :class => "school-select2", :id => "user_school_ids", :name => "user[school_ids]", :style => "width: 220px"}
 
 					.control-group
 						%label.control-label{:for => "user_city"}
 							Location
 						.controls
-							<input type="hidden" class="city-select2" id="user_city_ids" name="user[city_ids]" style="width: 220px;">
-							=# f.hidden_field :city_ids, :class => "city-select2", :style => "width: 220px"
-							=# f.collection_select(:city_ids, Community.filtered_by(:city), :id, :dropdown_name, {:include_blank => true, :selected => params[:user] ? params[:user][:city_ids] : (@community ? (current_user.city_ids.blank? ? @community.id : current_user.city_ids) : current_user.city_ids)}, {'data-placeholder' => "Select Current City", :class => 'chzn-select2', :id => "user_city"})
-
+							%input{:type => "hidden", :class => "city-select2", :id => "user_city_ids", :name => "user[city_ids]", :style => "width: 220px"}
+							
 					.form-divider 
 						%span optional
 
@@ -83,7 +80,7 @@
 							%label.control-label{:for => "user_#{type}"}
 								= type.titlecase
 							.controls
-								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type), :id, :name, {:include_blank => true, :selected => params[:user] ? params[:user]["#{type}_ids".to_sym] : (@community ? (current_user.send("#{type}_ids").blank? ? @community.id : current_user.send("#{type}_ids")) : current_user.send("#{type}_ids"))}, {'data-placeholder' => "Select #{type.titlecase}(s) #{'of Experience' if type == 'field'}", :class => 'chzn-select-optional', :id => "user_#{type}", :multiple => true})
+								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type), :id, :name, {:include_blank => true, :selected => params[:user] ? params[:user]["#{type}_ids".to_sym] : (@community ? (current_user.send("#{type}_ids").blank? ? @community.id : current_user.send("#{type}_ids")) : current_user.send("#{type}_ids"))}, {'data-placeholder' => "Select #{type.titlecase}(s)", :class => 'chzn-select-optional', :id => "user_#{type}", :multiple => true})
 							
 					.control-group
 						%label.control-label{:for => "user_twitter_name"}

@@ -6,6 +6,7 @@ class Community
   include Geocoder::Model::Mongoid
 
   has_and_belongs_to_many :users
+  has_and_belongs_to_many :posts
   
   field :name, type: String
   field :subdomain, type: String
@@ -24,7 +25,7 @@ class Community
   scope :filtered_by, lambda { |community_type| where(community_type: community_type.to_s.titleize).asc(:name) }
 
   def as_json(options={})
-    { :id => self._id, :name => self.dropdown_name }
+    { id: self._id, name: self.dropdown_name }
   end
 
   def name_and_parent(type)

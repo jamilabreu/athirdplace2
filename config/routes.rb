@@ -1,10 +1,14 @@
 Athirdplace::Application.routes.draw do 
+
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks", registrations: "registrations", sessions: "sessions"}
   devise_scope :user do
     match "/users/sign_out" => "sessions#destroy"
   end  
   resources :users, only: [:index, :show]
   resources :communities, only: [:index]
+  resources :posts, only: [:index, :new, :create]
+  match 'posts/new/preview', to: 'posts#preview', as: "preview_post"
+  match 'posts/new/show_tags', to: 'posts#show_tags', as: "show_tags"
   resources :conversations, only: [:index, :show]
   resources :messages, only: [:new, :create]
   resources :subscriptions, only: [:index, :new, :create]

@@ -1,7 +1,7 @@
 jQuery ->
-	container = $("#users")
-	# Isotope
 	container = $('#users')
+	
+	# Isotope
 	container.imagesLoaded ->
 		container.isotope
 			itemSelector: '.user'

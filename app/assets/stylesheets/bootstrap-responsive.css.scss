@@ -869,7 +869,7 @@
 	.navbar-inverse .nav .community_name > a:hover,
 	.navbar-inverse .nav .community_name > a:focus { padding-left: 0; }
 	.navbar .nav { margin-right: 5px; }
-	.navbar .nav > li > a { padding-left: 20px; padding-right: 20px; }
+	.navbar .nav > li > a { padding-left: 15px; padding-right: 15px; }
 	.navbar .nav > .active > a { @include border-radius(4px 4px 0 0); }
 	
 	.block_span { display: block; float: none; }
@@ -886,13 +886,29 @@
 	.span2 { width: 115px; margin-left: 30px; }
 	.span10 { width: 195px; }
 		
-	#users { padding: 0; @include border-radius(4px 0 0 4px); }
+	#users { padding: 0 0 3px; @include border-radius(4px 0 0 4px); }
 	.user { width: 180px; margin: 2px 0 0 3px; padding: 2px; }
 	
 	/* Edit Page */
 	.span9 { width: 320px; @extend .block_span; }
 	.form-horizontal { @include border-radius(0); }
 	#form-fields { width: auto; }
+	
+	/* Posts */
+	#posts { padding: 1px 2px 2px; @include border-radius(4px 0 0 4px); }
+	#posts-inner { @include border-radius(0 0 3px 3px);}
+	#new_post_button { border-bottom: 1px solid #EEE; padding: 8px 22px; }
+	.post, .event { text-align: center; padding: 11px; }
+	.post_image, .event_image { margin: 0 0 10px; max-width: none; }
+	
+	/* New Post */
+	#post_input { height: 43px; width: 248px; }
+	
+	#preview_post { text-align: center; }
+	#preview_post_image { float: none; margin: 0 0 10px; max-width: none; }
+	#preview_post_contents { display: block; width: auto; margin: 0; }
+	#post_title, #post_body { width: auto; }
+	
 	
 	/* Conversations Page */
 	.span4 { width: 300px; margin-left: 30px; @extend .block_span; }
@@ -901,7 +917,7 @@
 	#conversation-messages { margin: 0; }
 	.message { padding: 10px; }
 	#message_body { width: 252px; }
-	#submit_message { width: 100%; }
+	#submit_message { width: 100%; margin-top: 10px; }
 	
 	/* Subscriptions Page */
 	#subscriptions { padding: 20px; }

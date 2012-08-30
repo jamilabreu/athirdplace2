@@ -2,7 +2,7 @@
 	.reset_filters
 		%span
 			\/&nbsp;
-			= link_to "reset", users_path
+			= link_to "reset", params[:controller] == "users" ? users_path : posts_path
 - %W[ standing degree field profession company gender relationship orientation religion ethnicity school city state country ].each do |community_type|
 	- communities = @filters.where(community_type: community_type.titleize)
 	- if communities.present?
@@ -11,4 +11,4 @@
 		%ul
 			- communities.each do |community|
 				%li{:class => selected?(community) ? "selected" : nil}
-					= link_to community.filter_name, users_path(ids: set_params!(community)), :class => "filter"
+					= link_to community.filter_name, params[:controller] == "users" ? users_path(ids: set_params!(community)) : posts_path(ids: set_params!(community)), :class => "filter"

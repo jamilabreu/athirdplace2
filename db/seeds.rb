@@ -126,6 +126,10 @@ end
 
 
 Community.create!(name: id, subdomain: id.to_s.delete(" ").delete("-").parameterize, display_name: "#{id} Network", display_name: "#{id} Network", nickname: val, community_type: community_type.titleize)
+     
+20.times do
+  Post.create!(body: Faker::Lorem.paragraph, user_id: User.all.sample.id, community_ids: [ Community.find_by(name: "Dominican").id.to_s, Community.all.sample.id.to_s, Community.all.sample.id.to_s, Community.all.sample.id.to_s ])
+end
           
 =begin
 puts 'Cities...'

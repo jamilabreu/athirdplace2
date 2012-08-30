@@ -1,0 +1,10 @@
+.post
+	.post_image= image_tag post.user.large_image
+	.post_contents
+		.post_title= post.user.name
+		.post_body= truncate_html(post.body_html, length: 280)
+		/.post_actions
+		/= link_to "Comment", "#"
+		/= post.communities.map(&:name)
+		/= post.relevance(current_user)
+	.div{style:"clear:both"}

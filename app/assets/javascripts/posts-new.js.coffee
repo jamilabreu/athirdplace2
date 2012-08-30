@@ -1,9 +1,40 @@
 jQuery ->
-	$('.chzn-select').chosen()
-	$('.chzn-select-optional').chosen
+	$('.chzn-select').chosen
 		allow_single_deselect: true
-	$('#user_bio, #user_profession, #user_company, #user_blog_url').autosize()
-
+	$('#post_input, #post_title, #post_body').autosize()
+	
+	$('#post_input').bind 'input paste propertychange', ->
+		input = $.trim($(this).val())
+		if !input.length
+			$('#post_body').val('')
+			$('#preview_post').hide()
+		else
+			if $('#preview_post').is(":hidden")
+				$('.post-activity-indicator').show().activity
+					segments: 8
+					width: 2
+					space: 0
+					length: 2
+					speed: 1.1	
+			$.ajax
+				type: "POST"
+				url: '/posts/new/preview'
+				data: { q : input }
+				success: () ->
+					$('.post-activity-indicator').activity(false)
+				#complete:function(request){},
+				#data:'person_one='+ $(this).val(),
+				#dataType:'script',
+				#type:'get',		
+	
+	###
+	$('#post_body').bind 'input paste', ->
+		input = $('#post_body')
+		if !input.length
+			$('.post_body').html("Begin typing...")
+		else
+			$('.post_body').html(input)
+	###
 	$('.school-select2').select2
 		placeholder: 'Select School(s)'
 		multiple: true
@@ -21,7 +52,7 @@ jQuery ->
 			school.name	
 
 	$('.city-select2').select2
-		placeholder: 'Select Current City'
+		placeholder: 'Select City'
 		minimumInputLength: 3
 		ajax:
 			url: '/communities.json'
@@ -63,28 +94,4 @@ jQuery ->
 		formatResult: (company) ->
 			company.name
 		formatSelection: (company) ->
-			company.name		
-
-	$.ajax '/communities.json?school=true',
-		dataType: 'jsonp'
-		success: (response) ->
-			if response.length
-				$('.school-select2').select2 'data', response
-
-	$.ajax '/communities.json?city=true',
-		dataType: 'jsonp'
-		success: (response) ->
-			if response # Note no length
-				$('.city-select2').select2 'data', response
-				
-	$.ajax '/communities.json?profession=true',
-		dataType: 'jsonp'
-		success: (response) ->
-			if response.length
-				$('.profession-select2').select2 'data', response
-				
-	$.ajax '/communities.json?company=true',
-		dataType: 'jsonp'
-		success: (response) ->
-			if response.length
-				$('.company-select2').select2 'data', response	
+			company.name

@@ -6,8 +6,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if user.persisted?
       # Renew oauth_token
       user.update_attribute(:oauth_token, auth.credentials.token)
+      # Update email
+      user.update_attribute(:email, auth.info.email) unless user.email == auth.info.email
       # Update friends
       user.update_attribute(:friend_ids, user.facebook.get_connections("me", "friends").map{|item|item["id"]}.uniq)
+      
       sign_in user
       redirect_to request.env["omniauth.origin"] || "/"
     else

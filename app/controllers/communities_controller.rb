@@ -3,8 +3,10 @@ class CommunitiesController < ApplicationController
   def index
     if params[:schools]
       @communities = Community.filtered_by(:school).where(name: /#{params[:schools]}/i)
+      @communities += @community.to_a if @community && @community.community_type == "School"
     elsif params[:cities]
       @communities = Community.filtered_by(:city).where(name: /#{params[:cities]}/i)
+      @communities += @community.to_a if @community && @community.community_type == "City"
     elsif params[:professions]
       professions = Community.filtered_by(:profession).where(name: /#{params[:professions]}/i) 
       if professions.blank?
@@ -12,21 +14,23 @@ class CommunitiesController < ApplicationController
       else
         @communities = professions
       end
+      @communities += @community.to_a if @community && @community.community_type == "Profession"
     elsif params[:companies]
       companies = Community.filtered_by(:company).where(name: /#{params[:companies]}/i) 
       if companies.blank?
         @communities = [{id: params[:companies].titlecase, name: params[:companies].titlecase}]
       else
         @communities = companies
-      end    
+      end
+      @communities += @community.to_a if @community && @community.community_type == "Company"
     elsif params[:school]
-      @communities = Community.any_in(id: current_user.school_ids)
+      @communities = Community.in(id: current_user.school_ids)
     elsif params[:city]
       @communities = Community.find_by(id: current_user.city_ids.first)
     elsif params[:profession]
-      @communities = Community.any_in(id: current_user.profession_ids)
+      @communities = Community.in(id: current_user.profession_ids)
     elsif params[:company]
-      @communities = Community.any_in(id: current_user.company_ids)      
+      @communities = Community.in(id: current_user.company_ids)  
     end
     respond_to do |format|
       format.json { render json: @communities, callback: params[:callback] }

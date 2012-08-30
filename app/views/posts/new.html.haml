@@ -1,0 +1,86 @@
+- content_for :javascript do
+	= javascript_include_tag 'activity-indicator.min', 'chosen.min', 'select2.min', 'autosize.min', 'posts-new'
+
+.row
+	.span3.hidden-phone
+		&nbsp;
+	.span9
+		#new_post_holder
+			- if @post.errors.full_messages.present?
+				#error_explanation
+					%ul
+						- @post.errors.full_messages.each do |msg|
+							%li= msg
+			= form_for @post, :html => { :class => "form-horizontal" } do |f|
+				= text_area_tag "body", nil, {:id => "post_input", :size => "40x20", :placeholder => "Type announcement or paste Facebook event URL (https://...)" }
+				= f.hidden_field :_type
+				= f.hidden_field :image
+				= f.hidden_field :normal_image
+				= f.hidden_field :large_image
+				= f.hidden_field :start_time
+				= f.hidden_field :end_time
+
+				.post-activity-indicator
+				
+				#preview_post
+					#preview_post_image= image_tag current_user.image
+					#preview_post_contents
+						#preview_post_title= f.text_area :title
+						#preview_post_body= f.text_area :body
+						#preview_post_actions
+							= link_to "Comment", "#"		
+					.div{style:"clear:both"}
+
+				.form-divider 
+					%span= link_to "Add networks [+]", show_tags_path, remote: true
+				
+				#optional_fields
+					.control-group
+						%label.control-label{:for => "post_city"}
+							Location
+						.controls
+							%input{:type => "hidden", :class => "city-select2", :id => "post_city_ids", :name => "post[city_ids]", :style => "width: 220px"}	
+				
+					- %W[ field ].each do |type|
+						.control-group.multiple
+							%label.control-label{:for => "post_#{type}"}
+								= "#{type.titlecase}(s)"
+							.controls
+								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type), :id, :name, {:include_blank => true, :selected => params[:post] ? params[:post]["#{type}_ids".to_sym] : (@community ? @community.id : nil)}, {'data-placeholder' => "Select #{type.titlecase}(s) of Experience", :class => 'chzn-select', :id => "post_#{type}", :multiple => true})
+		
+					.control-group
+						%label.control-label{:for => "post_profession"}
+							Profession
+						.controls
+							%input{:type => "hidden", :class => "profession-select2", :id => "post_profession_ids", :name => "post[profession_ids]", :style => "width: 220px"}	
+
+					.control-group
+						%label.control-label{:for => "post_school"}
+							School(s)
+						.controls
+							%input{:type => "hidden", :class => "school-select2", :id => "post_school_ids", :name => "post[school_ids]", :style => "width: 220px"}
+												
+					- %W[ gender standing degree ].each do |type|
+						.control-group
+							%label.control-label{:for => "post_#{type}"}
+								= type.titlecase
+							.controls
+								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type).ne(name: "High School"), :id, :name, {:include_blank => true, :selected => params[:post] ? params[:post]["#{type}_ids".to_sym] : nil}, {'data-placeholder' => "Select #{type.titlecase}", :class => 'chzn-select', :id => "post_#{type}"})
+
+	
+					- %W[ relationship orientation religion ].each do |type|
+						.control-group
+							%label.control-label{:for => "post_#{type}"}
+								= type == 'relationship' ? "Status" : type.titlecase
+							.controls
+								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type), :id, :name, {:include_blank => true, :selected => params[:post] ? params[:post]["#{type}_ids".to_sym] : (@community ? @community.id : nil)}, {'data-placeholder' => "Select #{type == 'relationship' ? "Relationship Status" : type.titlecase}", :class => 'chzn-select', :id => "post_#{type}"})
+
+					- %W[ ethnicity ].each do |type|
+						.control-group.multiple
+							%label.control-label{:for => "post_#{type}"}
+								= type.titlecase
+							.controls
+								= f.collection_select("#{type}_ids".to_sym, Community.filtered_by(type), :id, :name, {:include_blank => true, :selected => params[:post] ? params[:post]["#{type}_ids".to_sym] : (@community ? @community.id : nil)}, {'data-placeholder' => "Select #{type.titlecase}(s)", :class => 'chzn-select', :id => "post_#{type}", :multiple => true})
+								
+				= f.submit "Submit Post", :class => "btn btn-primary", :id => "submit-button"
+				=# link_to "Preview", preview_post_path, :class => "btn btn-info", :id => "preview-button", remote: true

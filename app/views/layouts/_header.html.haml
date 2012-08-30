@@ -15,9 +15,14 @@
 					%li{ :class => users_page ? 'active' : nil }
 						= link_to root_url do
 							%i.icon-user		
-				- if user_signed_in?
-					- if @community && subscriptions_page || @community && edit_page
+					- unless users_page || posts_page
 						%li.divider-vertical
+					%li{ :class => posts_page ? 'active' : nil }
+						= link_to posts_path do
+							%i.icon-reorder
+					- unless posts_page || conversations_page
+						%li.divider-vertical
+				- if user_signed_in?
 					%li{ :class => conversations_page ? 'active' : nil }
 						= link_to conversations_path do
 							%i.icon-envelope-alt{ :class => current_user.has_unread? ? 'has_unread' : nil }
