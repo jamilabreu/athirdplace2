@@ -67,6 +67,7 @@ class PostsController < ApplicationController
         @end_time = DateTime.parse response.parsed_response["end_time"]
       end
     elsif url.present?
+=begin
       begin
         page = Nokogiri::HTML(open(url))
         @url = url
@@ -80,6 +81,8 @@ class PostsController < ApplicationController
       rescue
         nil
       end
+=end
+      nil
     end
   end
 end

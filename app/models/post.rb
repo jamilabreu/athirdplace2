@@ -14,7 +14,7 @@ class Post
                   :state_ids, :country_ids, :profession_ids, :company_ids, :relationship_ids, :orientation_ids, 
                   :religion_ids, :ethnicity_ids
   
-  validates :body, :presence => { :message => "is blank" }
+  validates :body, :presence => { :message => "is blank" }, :unless => Proc.new { |a| a._type == "Link" }
 
   after_save :add_geo_from_user_city
   

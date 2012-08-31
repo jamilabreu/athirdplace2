@@ -20,21 +20,7 @@ jQuery ->
 				type: "POST"
 				url: '/posts/new/preview'
 				data: { q : input }
-				success: () ->
-					$('.post-activity-indicator').activity(false)
-				#complete:function(request){},
-				#data:'person_one='+ $(this).val(),
-				#dataType:'script',
-				#type:'get',		
-	
-	###
-	$('#post_body').bind 'input paste', ->
-		input = $('#post_body')
-		if !input.length
-			$('.post_body').html("Begin typing...")
-		else
-			$('.post_body').html(input)
-	###
+
 	$('.school-select2').select2
 		placeholder: 'Select School(s)'
 		multiple: true

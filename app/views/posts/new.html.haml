@@ -12,7 +12,7 @@
 						- @post.errors.full_messages.each do |msg|
 							%li= msg
 			= form_for @post, :html => { :class => "form-horizontal" } do |f|
-				= text_area_tag "body", nil, {:id => "post_input", :size => "40x20", :placeholder => "Paste link or Facebook event URL (http://...)" }
+				= text_area_tag "body", nil, {:id => "post_input", :size => "40x20", :placeholder => "Paste your Facebook event URL (http://...)" }
 				= f.hidden_field :_type
 				= f.hidden_field :image
 				= f.hidden_field :normal_image
@@ -31,7 +31,7 @@
 					.div{style:"clear:both"}
 
 				.form-divider 
-					%span= link_to "Add networks [+]", show_tags_path, remote: true
+					%span= link_to "Add more networks [+]", show_tags_path, remote: true
 
 				#optional_fields
 					.control-group

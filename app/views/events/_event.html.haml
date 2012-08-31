@@ -4,12 +4,14 @@
 		.post_title= link_to event.title, event.url, target: "_blank"
 		.event_start= link_to event.start_time.strftime("%A, %B %e, %Y - %l:%M%p"), event.url, target: "_blank" if event.start_time
 		.post_body.hidden-phone= truncate_html(event.body_html, length: 140)
+		.post_communities
+			- event.communities.each do |community|
+				.post_community= link_to community.name, posts_path(ids: set_params!(community))
 		.post_actions
 			= link_to comment_path(event), remote: true do
 				= pluralize(event.comments.length, 'comment')
 				%i.icon-caret-down
 			- if current_user == event.user || current_user == User.find_by(email: "abreu.jamil@gmail.com")
-				= link_to " | edit", edit_post_path(event)
-				= event.communities.map(&:name)				
+				= link_to " | edit", edit_post_path(event)		
 		.comments{id:"#{event.id}_comments"}		
-	.div{style:"clear:both"}
+	%div{style:"clear:both"}

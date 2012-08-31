@@ -1,5 +1,6 @@
-$('#preview_post').show();
 <% if @name %>
+	$('.post-activity-indicator').activity(false);
+	$('#preview_post').show();
 	$('#post__type').val("Event");
 	$('#preview_post_url').hide();
 	$('#post_url').val('<%= j @url %>');
@@ -11,15 +12,18 @@ $('#preview_post').show();
 	$('#preview_post_image').html('<%= j image_tag @large_image %>');
 	$('#post_title').val('<%= j @name.html_safe %>').trigger('autosize');
 	$('#post_body').val('<%= j @body.html_safe %>').trigger('autosize');
-<% elsif @title %>
+<% end %>
+/*
+<%# elsif @title %>
 	$('#post__type').val("Link");
 	$('#preview_post_url').show();
 	$('#post_url').val('<%= j @url %>');
 	$('#post_url_host').val('<%= j @host %>').trigger('autosize');
 	$('#post_title').val('<%= j @title %>').trigger('autosize');
 	$('#post_body').val('<%= j @description %>').trigger('autosize');	
-<% else %>
+<%# else %>
 	$('#preview_post_url').hide();
 	$('#post_title').val('<%= j current_user.name %>').trigger('autosize');
 	$('#post_body').val('<%= j params[:q] %>').trigger('autosize');
-<% end %>
+<%# end %>
+*/
