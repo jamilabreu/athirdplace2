@@ -10,14 +10,13 @@ class Post
   has_and_belongs_to_many :communities
 
   attr_accessible :_type, :image, :normal_image, :large_image, :start_time, :end_time, :title, :body, :url, :url_host,
-                  :user_id, 
-                  :community_ids, :gender_ids, :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids,
+                  :user_id, :community_ids, :gender_ids, :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids,
                   :state_ids, :country_ids, :profession_ids, :company_ids, :relationship_ids, :orientation_ids, 
                   :religion_ids, :ethnicity_ids
   
   validates :body, :presence => { :message => "is blank" }
 
-  after_create :add_geo_from_user_city
+  after_save :add_geo_from_user_city
   
   def add_geo_from_user_city
     if city_ids.present?
