@@ -1,0 +1,6 @@
+if ( $('#<%= @post.id %>_comment_body').length ) {
+	$('#<%= @post.id %>_comments').toggle();
+} else {
+	$('#<%= @post.id %>_comments').html('<%= j render partial: "comments/form", locals: { post: @post } %>');
+	$('#<%= @post.id %>_comment_body').autosize();
+}

@@ -114,24 +114,23 @@ CSV.foreach('db/data/colleges.csv', {encoding: "ISO-8859-1:UTF-8", headers: true
   puts row[0]
 end
 
+
+ 
+
+          
+=begin
 company = %W[ #{'New York Yankees'} #{'Teach For America'} Facebook #{'Random House'} #{'City University of New York'} #{'Lilla G. Frederick Pilot Middle School'} ]
 company.each do |company|
   Community.create(name: company, subdomain: company.delete(" ").parameterize, display_name: "#{company} Network", nickname: company, community_type: "Company")
 end
 
-company = %W[ Teacher #{'Project Analyst'} Historian Sales #{'Advertising Sales'} Entreprenuer ]
-company.each do |company|
+profession = %W[ Teacher #{'Project Analyst'} Historian Sales #{'Advertising Sales'} Entreprenuer ]
+profession.each do |company|
   Community.create(name: company, subdomain: company.delete(" ").parameterize, display_name: "#{company} Network", nickname: company, community_type: "Profession")
 end
-
-
-Community.create!(name: id, subdomain: id.to_s.delete(" ").delete("-").parameterize, display_name: "#{id} Network", display_name: "#{id} Network", nickname: val, community_type: community_type.titleize)
-     
 20.times do
   Post.create!(body: Faker::Lorem.paragraph, user_id: User.all.sample.id, community_ids: [ Community.find_by(name: "Dominican").id.to_s, Community.all.sample.id.to_s, Community.all.sample.id.to_s, Community.all.sample.id.to_s ])
 end
-          
-=begin
 puts 'Cities...'
 CSV.foreach('db/data/world_cities_MASTER.csv', {encoding: "ISO-8859-1:UTF-8", headers: true}) do |row| 
   if row[2] == "United States"

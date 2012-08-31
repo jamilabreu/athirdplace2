@@ -1,0 +1,9 @@
+//Layout
+
+<% current_user.community_ids.length.downto(1) do |i| %>
+$('#posts-inner').html('<%= j render @posts %>');
+<% end %>
+					- 
+						= render @posts[i] if @posts[i].present?
+//Filters
+$('#filters').html('<%= j render :partial => "users/filters", :locals => { :filters => @filters } %>');

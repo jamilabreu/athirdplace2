@@ -1,10 +1,8 @@
 .post
-	.post_image= image_tag post.user.large_image
+	.post_image= link_to image_tag(post.user.large_image), users_path(id: post.user)
 	.post_contents
-		.post_title= post.user.name
+		.post_title= link_to post.user.name, users_path(id: post.user)
 		.post_body= truncate_html(post.body_html, length: 280)
-		/.post_actions
-		/= link_to "Comment", "#"
-		/= post.communities.map(&:name)
-		/= post.relevance(current_user)
+		.post_actions= link_to pluralize(post.comments.length, 'comment'), comment_path(post), remote: true
+		.comments{id:"#{post.id}_comments"}
 	.div{style:"clear:both"}

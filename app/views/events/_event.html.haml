@@ -1,7 +1,9 @@
-.event
-	.event_image= image_tag event.large_image
-	.event_contents
-		.event_title= event.title
-		.event_start= event.start_time.strftime("%A, %B %e, %Y - %l:%M%p") if event.start_time
-		.event_body.hidden-phone= truncate_html(event.body_html, length: 210)
+.post
+	.post_image= link_to image_tag(event.large_image), event.url, target: "_blank"
+	.post_contents
+		.post_title= link_to event.title, event.url, target: "_blank"
+		.event_start= link_to event.start_time.strftime("%A, %B %e, %Y - %l:%M%p"), event.url, target: "_blank" if event.start_time
+		.post_body.hidden-phone= truncate_html(event.body_html, length: 140)
+		.post_actions= link_to pluralize(event.comments.length, 'comment'), comment_path(event), remote: true
+		.comments{id:"#{event.id}_comments"}		
 	.div{style:"clear:both"}

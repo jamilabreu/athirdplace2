@@ -1,0 +1,9 @@
+.post
+	.post_image= link_to image_tag(link.user.large_image), users_path(id: link.user)
+	.post_contents
+		.post_title= link_to link.title, link.url, target: "_blank"
+		.link_host= link_to link.url_host, link.url, target: "_blank"
+		.post_body.hidden-phone= truncate_html(link.body_html, length: 140)
+		.post_actions= link_to pluralize(link.comments.length, 'comment'), comment_path(link), remote: true
+		.comments{id:"#{link.id}_comments"}
+	.div{style:"clear:both"}

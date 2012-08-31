@@ -1,0 +1,6 @@
+.comment
+	.comment_image= link_to image_tag(comment.user.image), users_path(id: comment.user)
+	.comment_contents
+		.comment_name= link_to comment.user.first_name, users_path(id: comment.user)
+		.comment_body= comment.body_html
+	.div{style:"clear:both"}

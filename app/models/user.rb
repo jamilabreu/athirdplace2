@@ -216,4 +216,37 @@ class User
       super
     end
   end
+  
+  def relevant_posts
+    map = %Q{ function() { emit(this.body, { body: this.body }); } }
+    reduce = %Q{ 
+      function(key, values) {
+        var result = { body: "string" };
+        values.forEach(function(value) {
+          result.body += value.body;
+        });
+        return result;
+      }
+    }    
+    Post.in(communities: self.communities).map_reduce(map, reduce).out("relevance_#{self.id}")
+  end
+  
+=begin  
+  # Relevance
+  def generate_game_stats
+    map = "function () { 
+      emit(this.user_id, {'points' : this.points, 'moves' : 1});
+    }"
+
+    reduce = "function (key, emits) {
+      var total = {'points' : 0, 'moves' : 0};
+      for (var i in emits) {
+        total.points += emits[i].points;
+        total.moves  += emits[i].moves;
+      }
+      return total;
+    }"
+    db.collection('moves').map_reduce(map, reduce, {:out => "game_stats_#{self.id}", :query => {:game_id => self.id}})
+  end
+=end 
 end

@@ -1,15 +1,19 @@
 class PostsController < ApplicationController
+  require 'open-uri'
   def index
     # Posts
-    @posts = {}
     user_posts = Post.in(community_ids: current_user.community_ids).all(community_ids: params[:ids])
-    
-    current_user.community_ids.length.downto(1).each do |i|
-      user_posts.each do |post|
-        if post.relevance(current_user) == i
-          @posts[i].present? ? @posts[i] << post : @posts[i] = post.to_a
+    if params[:relevance]
+      @posts = {}
+      current_user.community_ids.length.downto(1).each do |i|
+        user_posts.each do |post|
+          if post.relevance(current_user) == i
+            @posts[i].present? ? @posts[i] << post : @posts[i] = post.to_a
+          end
         end
       end
+    else
+      @posts = user_posts.desc(:created_at)
     end
     
     # Filters
@@ -32,11 +36,12 @@ class PostsController < ApplicationController
   end
   
   def preview
-    event_url = URI.extract(params[:q]).join
-    if event_url.present? && event_url.include?("facebook.com/events/")
-      event_id = event_url.split("/events/").last.split("/").first
+    url = URI.extract(params[:q]).join
+    if url.present? && url.include?("facebook.com/events/")
+      event_id = url.split("/events/").last.split("/").first
       response = HTTParty.get("https://graph.facebook.com/#{event_id}/", :query => {:access_token => current_user.oauth_token} )
       unless response.parsed_response["error"].present?
+        @url = url
         @name = response.parsed_response["name"]
         @body = response.parsed_response["description"]
         
@@ -46,6 +51,19 @@ class PostsController < ApplicationController
         
         @start_time = DateTime.parse response.parsed_response["start_time"]
         @end_time = DateTime.parse response.parsed_response["end_time"]
+      end
+    elsif url.present?
+      begin
+        page = Nokogiri::HTML(open(url))
+        @url = url
+        @host = URI.parse(url).host.gsub("www.", "")
+        @title = page.title.strip
+        # Description
+        input = params[:q].gsub(url, "")
+        meta_description = page.css("meta[name='description']").first["content"]
+        @description = input.blank? && meta_description.present? ? meta_description : input
+      rescue
+        nil
       end
     end
   end

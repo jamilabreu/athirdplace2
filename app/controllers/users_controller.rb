@@ -5,13 +5,16 @@ class UsersController < ApplicationController
   end
   
   def index
-    # Pagination
+    # Randomness
     params[:seed] ||= Random.new_seed
     srand params[:seed].to_i
     
     # Users
-    community_users = @community.users.all(community_ids: params[:ids])
-    @users = Kaminari.paginate_array(community_users.shuffle).page(params[:page]).per(15)
+    community_users = @community.users.all(community_ids: params[:ids]).shuffle
+    # Show particular user first
+    community_users.unshift User.find_by(id: params[:id]) if params[:id] && params[:ids].blank?
+    # Paginate
+    @users = Kaminari.paginate_array(community_users).page(params[:page]).per(15)
     
     # Filters
     @filters = Community.in(id: community_users.flat_map(&:community_ids).uniq - [@community.id]).asc(:name)

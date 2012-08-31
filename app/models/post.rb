@@ -6,9 +6,11 @@ class Post
   include AutoHtmlFor
   
   belongs_to :user
+  has_many :comments
   has_and_belongs_to_many :communities
 
-  attr_accessible :_type, :image, :normal_image, :large_image, :start_time, :end_time, :title, :body, 
+  attr_accessible :_type, :image, :normal_image, :large_image, :start_time, :end_time, :title, :body, :url, :url_host,
+                  :user_id, 
                   :community_ids, :gender_ids, :standing_ids, :degree_ids, :field_ids, :school_ids, :city_ids,
                   :state_ids, :country_ids, :profession_ids, :company_ids, :relationship_ids, :orientation_ids, 
                   :religion_ids, :ethnicity_ids
@@ -38,6 +40,8 @@ class Post
   
   field :title, type: String
   field :body, type: String
+  field :url, type: String
+  field :url_host, type: String
   field :image, type: String
   field :normal_image, type: String
   field :large_image, type: String
@@ -90,6 +94,7 @@ class Post
     end
   end
 
+  # Relevance
   def relevance(user)
     (self.communities & user.communities).length
   end

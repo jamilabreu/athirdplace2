@@ -1,0 +1,6 @@
+= form_for Comment.new, remote: true do |f|
+	= f.text_area :body, :class => "new_comment_body", :id => "#{post.id}_comment_body"
+	= f.hidden_field :post_id, { value: post.id }
+	.comments_actions
+		= f.submit "Send", id: "submit-comment", :class => "btn"
+= render post.comments

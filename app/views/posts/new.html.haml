@@ -12,23 +12,24 @@
 						- @post.errors.full_messages.each do |msg|
 							%li= msg
 			= form_for @post, :html => { :class => "form-horizontal" } do |f|
-				= text_area_tag "body", nil, {:id => "post_input", :size => "40x20", :placeholder => "Type announcement or paste Facebook event URL (https://...)" }
+				= text_area_tag "body", nil, {:id => "post_input", :size => "40x20", :placeholder => "Paste link or Facebook event URL (http://...)" }
 				= f.hidden_field :_type
 				= f.hidden_field :image
 				= f.hidden_field :normal_image
 				= f.hidden_field :large_image
 				= f.hidden_field :start_time
 				= f.hidden_field :end_time
-
+				= f.hidden_field :url
 				.post-activity-indicator
 				
 				#preview_post
-					#preview_post_image= image_tag current_user.image
+					#preview_post_image= image_tag current_user.large_image
 					#preview_post_contents
 						#preview_post_title= f.text_area :title
+						#preview_post_url= f.text_area :url_host
 						#preview_post_body= f.text_area :body
-						#preview_post_actions
-							= link_to "Comment", "#"		
+						/#preview_post_actions
+						/= link_to "Comment", "#"		
 					.div{style:"clear:both"}
 
 				.form-divider 
