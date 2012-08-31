@@ -37,8 +37,9 @@ class PostsController < ApplicationController
   
   def edit
     @post = Post.find_by(id: params[:id])
-    redirect_to posts_path unless @post.user == current_user || @post.user == User.find_by(email: "abreu.jamil@gmail.com")
+    redirect_to posts_path unless @post.user == current_user || current_user == User.find_by(email: "abreu.jamil@gmail.com")
   end
+  
   def update  
     @post = Post.find_by(id: params[:id])  
     if @post.update_attributes(params[:post])  

@@ -6,7 +6,9 @@ Athirdplace::Application.routes.draw do
   end  
   resources :users, only: [:index, :show]
   resources :communities, only: [:index]
-  resources :posts, only: [:index, :new, :create, :edit, :update]
+  resources :posts
+  resources :links
+  resources :events
   match 'posts/new/preview', to: 'posts#preview', as: "preview_post"
   match 'posts/new/show_tags', to: 'posts#show_tags', as: "show_tags"
   resources :comments, only: [:new, :create, :show]

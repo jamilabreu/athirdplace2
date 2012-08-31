@@ -159,6 +159,19 @@ footer a:hover { color: $blue; }
 #post_title:hover, #post_body:hover, #post_url_host:hover { background: #ff9; }
 #post_title { font-weight: bold; }
 #post_url_host { color: #BBB; }
+
+#link_title, #link_body, #link_url_host { width: 100%; border: 1px solid #FFF; padding: 0 4px; @include box-shadow(0 0 0 0 #000); }
+#link_title:focus, #link_body:focus, #link_url_host:focus { background: #FFF; border: 1px solid $green; }
+#link_title:hover, #link_body:hover, #link_url_host:hover { background: #ff9; }
+#link_title { font-weight: bold; }
+#link_url_host { color: #BBB; }
+
+#event_title, #event_body, #event_url_host { width: 100%; border: 1px solid #FFF; padding: 0 4px; @include box-shadow(0 0 0 0 #000); }
+#event_title:focus, #event_body:focus, #event_url_host:focus { background: #FFF; border: 1px solid $green; }
+#event_title:hover, #event_body:hover, #event_url_host:hover { background: #ff9; }
+#event_title { font-weight: bold; }
+#event_url_host { color: #BBB; }
+
 #preview_post_url { display: none; color: #BBB; font-weight: bold; }
 #preview_post_actions a { color: #BBB; font-size: 12px; padding-left: 5px; }
 

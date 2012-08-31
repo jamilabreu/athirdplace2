@@ -30,6 +30,6 @@
 						#preview_post_body= f.text_area :body	
 					.div{style:"clear:both"}
 
-				= render partial: "form"
+				= render partial: "form", locals: { f: f }
 								
 				= f.submit "Submit Post", :class => "btn btn-primary", :id => "submit-button"
