@@ -57,11 +57,12 @@ class PostsController < ApplicationController
         page = Nokogiri::HTML(open(url))
         @url = url
         @host = URI.parse(url).host.gsub("www.", "")
-        @title = page.title.strip
+        @title = page.title.split.join(" ")
         # Description
         input = params[:q].gsub(url, "")
         meta_description = page.css("meta[name='description']").first["content"]
-        @description = input.blank? && meta_description.present? ? meta_description : input
+        description = input.blank? && meta_description.present? ? meta_description : input
+        @description = description.html_safe
       rescue
         nil
       end

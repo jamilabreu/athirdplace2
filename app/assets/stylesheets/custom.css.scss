@@ -149,9 +149,9 @@ footer a:hover { color: $blue; }
 
 .post-activity-indicator { color: grey; width: 100%; padding: 10px 0 0; position: relative; top: 14px; display: none; }
 
-#preview_post { display: none; padding: 18px 0 0 0; }
+#preview_post { @extend .post; display: none; padding: 18px 0 0 0; border: 0; }
 #preview_post_image { @extend .post_image; }
-#preview_post_contents { margin-left: 100px; }
+#preview_post_contents { @extend .post_contents; margin-left: 110px; }
 
 #post_title, #post_body, #post_url_host { width: 100%; border: 1px solid #FFF; padding: 0 4px; @include box-shadow(0 0 0 0 #000); }
 #post_title:focus, #post_body:focus, #post_url_host:focus { background: #FFF; border: 1px solid $green; }
