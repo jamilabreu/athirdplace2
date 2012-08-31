@@ -8,7 +8,7 @@
 			= link_to comment_path(link), remote: true do
 				= pluralize(link.comments.length, 'comment')
 				%i.icon-caret-down
-			- if current_user == post.user || current_user == User.find_by(email: "abreu.jamil@gmail.com")
-				= link_to " | edit", edit_post_path(post)				
+			- if current_user == link.user || current_user == User.find_by(email: "abreu.jamil@gmail.com")
+				= link_to " | edit", edit_post_path(link)				
 		.comments{id:"#{link.id}_comments"}
 	.div{style:"clear:both"}
