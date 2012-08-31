@@ -4,6 +4,9 @@
 		.post_title= link_to event.title, event.url, target: "_blank"
 		.event_start= link_to event.start_time.strftime("%A, %B %e, %Y - %l:%M%p"), event.url, target: "_blank" if event.start_time
 		.post_body.hidden-phone= truncate_html(event.body_html, length: 140)
-		.post_actions= link_to pluralize(event.comments.length, 'comment'), comment_path(event), remote: true
+		.post_actions
+			= link_to comment_path(event), remote: true do
+				= pluralize(event.comments.length, 'comment')
+				%i.icon-caret-down
 		.comments{id:"#{event.id}_comments"}		
 	.div{style:"clear:both"}

@@ -118,7 +118,8 @@ footer a:hover { color: $blue; }
 .post_title i { float: right; color: #DDD; font-size: 16px; }
 .post_body { }
 .post_actions a { color: #AAA; font-size: 12px; &:hover { color: $blue; } }
-
+.post_actions i { margin-left: 2px; }
+	
 .empty_post { margin: 5px; padding: 10px; color: #3a87ad; font-weight: bold; background-color: #d9edf7; border-color: #bce8f1; @include border-radius(2px); }
 
 /* Event & Link */

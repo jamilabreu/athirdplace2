@@ -4,6 +4,9 @@
 		.post_title= link_to link.title, link.url, target: "_blank"
 		.link_host= link_to link.url_host, link.url, target: "_blank"
 		.post_body.hidden-phone= truncate_html(link.body_html, length: 140)
-		.post_actions= link_to pluralize(link.comments.length, 'comment'), comment_path(link), remote: true
+		.post_actions
+			= link_to comment_path(link), remote: true do
+				= pluralize(link.comments.length, 'comment')
+				%i.icon-caret-down
 		.comments{id:"#{link.id}_comments"}
 	.div{style:"clear:both"}

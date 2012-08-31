@@ -3,6 +3,9 @@
 	.post_contents
 		.post_title= link_to post.user.name, users_path(id: post.user)
 		.post_body= truncate_html(post.body_html, length: 280)
-		.post_actions= link_to pluralize(post.comments.length, 'comment'), comment_path(post), remote: true
+		.post_actions
+			= link_to comment_path(post), remote: true do
+				= pluralize(post.comments.length, 'comment')
+				%i.icon-caret-down
 		.comments{id:"#{post.id}_comments"}
 	.div{style:"clear:both"}
