@@ -39,7 +39,7 @@
 							%li
 								= link_to user_signed_in? && current_user.subscribed? ? subscriptions_path : new_subscription_path, "tabindex" => "-1"  do
 									%i.icon-heart
-									Support
+									Support							
 							%li.divider
 							%li
 								= link_to destroy_user_session_path, method: :delete do

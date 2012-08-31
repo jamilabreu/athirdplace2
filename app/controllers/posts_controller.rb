@@ -35,6 +35,19 @@ class PostsController < ApplicationController
     end
   end
   
+  def edit
+    @post = Post.find_by(id: params[:id])
+    redirect_to posts_path unless @post.user == current_user || @post.user == User.find_by(email: "abreu.jamil@gmail.com")
+  end
+  def update  
+    @post = Post.find_by(id: params[:id])  
+    if @post.update_attributes(params[:post])  
+      flash[:notice] = "Successfully updated post."  
+    end  
+    redirect_to posts_path  
+  end  
+ 
+  
   def preview
     url = URI.extract(params[:q]).join
     if url.present? && url.include?("facebook.com/events/")

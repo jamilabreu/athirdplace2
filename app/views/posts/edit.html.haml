@@ -11,8 +11,7 @@
 					%ul
 						- @post.errors.full_messages.each do |msg|
 							%li= msg
-			= form_for @post, :html => { :class => "form-horizontal" } do |f|
-				= text_area_tag "body", nil, {:id => "post_input", :size => "40x20", :placeholder => "Paste link or Facebook event URL (http://...)" }
+			= form_for @post, :html => { :class => "form-horizontal", :style => "background: #FFF" } do |f|
 				= f.hidden_field :_type
 				= f.hidden_field :image
 				= f.hidden_field :normal_image
@@ -22,14 +21,14 @@
 				= f.hidden_field :url
 				.post-activity-indicator
 				
-				#preview_post
+				#preview_post{:style => "display: block; padding-top: 2px; "}
 					#preview_post_image= image_tag current_user.large_image
 					#preview_post_contents
 						#preview_post_title= f.text_area :title
 						#preview_post_url= f.text_area :url_host
 						#preview_post_body= f.text_area :body	
 					.div{style:"clear:both"}
-
-				= render partial: "form"
-								
-				= f.submit "Submit Post", :class => "btn btn-primary", :id => "submit-button"
+				
+				= render partial: "form", locals: { f: f }
+				
+				= f.submit "Update Post", :class => "btn btn-primary", :id => "submit-button"
