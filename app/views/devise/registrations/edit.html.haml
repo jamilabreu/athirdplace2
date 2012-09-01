@@ -20,7 +20,7 @@
 				
 				#form-fields
 					- %W[ gender standing degree ].each do |type|
-						.control-group{:style => type == 'gender' && current_user.gender.present? || type == 'gender' && params[:user][:gender_ids].present? ? 'display: none' : nil}
+						.control-group{:style => type == 'standing' || type == 'gender' && current_user.gender.present? || type == 'gender' && params[:user][:gender_ids].present? ? 'display: none' : nil}
 							%label.control-label{:for => "user_#{type}"}
 								= type.titlecase
 							.controls
@@ -105,18 +105,16 @@
 			%div{:style => "clear:both"}
 
 :javascript
-	$('#user_standing').on('change', function() {
-		if ( $(this).val() === "#{Community.find_by(name: 'Alumni').id}" ) {
-			$('#user_degree').val("#{Community.find_by(name: 'Bachelor\'s').id}");
-			$('#alumni_fields').show();
-		} else if ( $(this).val() === "#{Community.find_by(name: 'Graduate Student').id}" ) {
-			$('#user_degree').val("#{Community.find_by(name: 'Pursuing Master\'s').id}");
-			$('#alumni_fields').show();
-		} else {
-			$('#user_degree').val("#{Community.find_by(name: 'Pursuing Bachelor\'s').id}");
-			$('#alumni_fields').hide();
-		}
-		$('#user_degree').trigger('liszt:updated');
-	});
-
+	$('#user_degree').on('change', function() {
+		if ( $(this).val() === "#{Community.find_by(name: 'Pursuing Bachelor\'s').id}" || 
+				 $(this).val() === "#{Community.find_by(name: 'Pursuing Associate\'s').id}") {
+			$('#user_standing').val("#{Community.find_by(name: 'Undergraduate').id}");
+		} else if ( $(this).val() === "#{Community.find_by(name: 'Pursuing Master\'s').id}" || 
+				 				$(this).val() === "#{Community.find_by(name: 'Pursuing Doctoral').id}" ) {
+			$('#user_standing').val("#{Community.find_by(name: 'Graduate Student').id}");		
+	} else {
+		$('#user_standing').val("#{Community.find_by(name: 'Alumni').id}");
+	}
+		$('#user_standing').trigger('liszt:updated');
+	});	
 =# link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete
