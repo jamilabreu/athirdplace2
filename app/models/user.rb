@@ -120,12 +120,28 @@ class User
         end
       
       elsif community_type == "profession" || community_type == "company"# Professions hack
-        val.split(",").each do |id|
-          if Community.where(id: id).exists?
-            self.communities << Community.find_by(id: id) if id.present?
+        if val.present?
+          if val.split(",").length == 1
+            community = Community.where(id: val)
+            new_community = Community.where(name: val, community_type: community_type)
+            if community.present?
+              self.communities << community.first
+            elsif new_community.present?
+              self.communities << new_community.first
+            else
+              self.communities << Community.create!(name: val, subdomain: val.to_s.delete(" ").delete("-").parameterize, display_name: "#{val} Network", display_name: "#{val} Network", nickname: val, community_type: community_type.titleize)             
+            end
           else
-            self.communities << Community.create!(name: id, subdomain: id.to_s.delete(" ").delete("-").parameterize, 
-                                display_name: "#{id} Network", display_name: "#{id} Network", nickname: val, community_type: community_type.titleize)
+            first_val = val.split(",").first
+            community = Community.where(id: first_val)
+            new_community = Community.where(name: first_val, community_type: community_type)
+            if community.present?
+              self.communities << community.first
+            elsif new_community.present?
+              self.communities << new_community.first
+            else
+              self.communities << Community.create!(name: first_val, subdomain: first_val.to_s.delete(" ").delete("-").parameterize, display_name: "#{first_val} Network", display_name: "#{first_val} Network", nickname: first_val, community_type: community_type.titleize)             
+            end
           end
         end
       else  

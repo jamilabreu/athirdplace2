@@ -38,6 +38,7 @@ jQuery ->
 	$('.profession-select2').select2
 		placeholder: 'Type or Select a Profession'
 		multiple: true
+		tokenSeparators: [",", " "]
 		ajax:
 			url: '/communities.json'
 			dataType: 'jsonp'
@@ -80,7 +81,7 @@ jQuery ->
 	$.ajax '/communities.json?profession=true',
 		dataType: 'jsonp'
 		success: (response) ->
-			if response.length
+			if response.length || response.name != "null"
 				$('.profession-select2').select2 'data', response
 				
 	$.ajax '/communities.json?company=true',
