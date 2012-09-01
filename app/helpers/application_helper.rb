@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include FacebookShare
   def community_name
     @community ? @community.display_name : "thirdplace"
   end

@@ -4,6 +4,8 @@
 .row
 	.span2
 		#filters
+			#fb-root
+			= facebook_share_once
 			= render "users/filters"
 	.span10
 		#users{ :class => @users.blank? ? 'hidden' : nil }
