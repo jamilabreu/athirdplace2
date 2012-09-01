@@ -5,6 +5,11 @@
 				select a network
 				%i.icon-caret-down
 			.home_communities
+				.home_communities_title
+					%span MY NETWORKS
+				%ul
+					- current_user.communities.any_in(community_type: ["School", "Ethnicity", "Field"]).asc(:name).each do |community|
+						%div= link_to community.name, root_url(subdomain: community.subdomain)				
 				- %W[ School Field Ethnicity ].each do |community_type|
 					.home_communities_title
 						%span= community_type.pluralize
