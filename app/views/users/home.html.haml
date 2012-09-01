@@ -5,18 +5,9 @@
 				select a network
 				%i.icon-caret-down
 			.home_communities
-				.home_communities_title
-					%span Schools
-				%ul
-					- @communities.where(community_type: "School").each do |community|
-						%div= link_to community.name, root_url(subdomain: community.subdomain)
-				.home_communities_title
-					%span Fields
-				%ul
-					- @communities.where(community_type: "Field").each do |community|
-						%div= link_to community.name, root_url(subdomain: community.subdomain)
-				.home_communities_title
-					%span Ethnicities
-				%ul
-					- @communities.where(community_type: "Ethnicity").each do |community|
-						%div= link_to community.name, root_url(subdomain: community.subdomain)
+				- %W[ School Field Ethnicity ].each do |community_type|
+					.home_communities_title
+						%span= community_type.pluralize
+					%ul
+						- @communities.where(community_type: community_type).each do |community|
+							%div= link_to community.name, root_url(subdomain: community.subdomain)
