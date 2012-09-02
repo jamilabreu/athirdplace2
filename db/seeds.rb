@@ -115,7 +115,10 @@ CSV.foreach('db/data/colleges.csv', {encoding: "ISO-8859-1:UTF-8", headers: true
 end
 
 
- 
+schools = %W[ #{'Pontificia Universidad Catolica Madre y Maestra'} #{'Instituto Tecnologico de Santo Domingo'} #{'Universidad Autonoma de Santo Domingo'} ]
+schools.each do |school|
+  Community.create!(name: school, subdomain: school.to_s.delete(" ").delete("-").parameterize, display_name: "#{school} Student + Alumni Network", nickname: school, community_type: "School")
+end 
 
           
 =begin

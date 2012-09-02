@@ -18,6 +18,7 @@ gem 'haml-rails'
 gem 'bourbon'
 gem 'faker'
 
+gem 'activeadmin-mongoid',  git: 'git://github.com/elia/activeadmin-mongoid.git'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'koala'

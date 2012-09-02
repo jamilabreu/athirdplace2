@@ -18,4 +18,7 @@ class ApplicationController < ActionController::Base
       redirect_to root_url(subdomain: false)
     end
   end
+  def authenticate_admin_user!
+    current_user.email == "abreu.jamil@gmail.com" if user_signed_in?
+  end    
 end
