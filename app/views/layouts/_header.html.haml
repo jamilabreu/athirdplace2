@@ -15,11 +15,11 @@
 					%li{ :class => users_page ? 'active' : nil }
 						= link_to root_url do
 							%i.icon-user		
-					- unless users_page || posts_page
-						%li.divider-vertical
-					%li{ :class => posts_page ? 'active' : nil }
-						= link_to posts_path do
-							%i.icon-reorder
+					/- unless users_page || posts_page
+					/%li.divider-vertical
+					/%li{ :class => posts_page ? 'active' : nil }
+					/= link_to posts_path do
+					/%i.icon-reorder
 					- unless posts_page || conversations_page
 						%li.divider-vertical
 				- if user_signed_in?
