@@ -232,7 +232,7 @@ class User
       super
     end
   end
-  
+=begin   
   def relevant_posts
     map = %Q{ function() { emit(this.body, { body: this.body }); } }
     reduce = %Q{ 
@@ -247,7 +247,7 @@ class User
     Post.in(communities: self.communities).map_reduce(map, reduce).out("relevance_#{self.id}")
   end
   
-=begin  
+ 
   # Relevance
   def generate_game_stats
     map = "function () { 

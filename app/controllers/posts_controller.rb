@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   def index
     # Posts
     user_posts = Post.in(community_ids: current_user.community_ids).all(community_ids: params[:ids])
+    
+    # FIXME: Calculate post relevance on the fly with MongoDB 'aggregate' method
     if params[:relevance]
       @posts = {}
       current_user.community_ids.length.downto(1).each do |i|
@@ -67,6 +69,8 @@ class PostsController < ApplicationController
         @end_time = DateTime.parse response.parsed_response["end_time"]
       end
     elsif url.present?
+      # Only allow facebook event URLs for now
+      nil
 =begin
       begin
         page = Nokogiri::HTML(open(url))
@@ -82,7 +86,6 @@ class PostsController < ApplicationController
         nil
       end
 =end
-      nil
     end
   end
 end
