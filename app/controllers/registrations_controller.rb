@@ -1,7 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   skip_before_filter :validate_user, :only => [:edit, :update]
   protected
-
     def after_update_path_for(resource)
       flash.delete(:notice) if flash.keys.include?(:notice)
       icon = %Q[<i class="icon-caret-right"></i>]

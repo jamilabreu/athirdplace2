@@ -1,7 +1,7 @@
 !!! 5
 %html
 	%head
-		%script{:type => "text/javascript", :src => "http://use.typekit.com/wbv3uxc.js"}
+		%script{:type => "text/javascript", :src => "http://use.typekit.com/tzo8lux.js"}
 		:javascript
 			try{Typekit.load();}catch(e){}
 		%meta{:charset => "utf-8"}/
@@ -23,10 +23,10 @@
 				<a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.
 		
 		= render "layouts/header"
-		= render "layouts/login" unless user_signed_in? || home_page
+		= render "layouts/login" unless user_signed_in? || home_page || registration_page
 				
 		.container
-			- unless user_signed_in? || home_page
+			- unless user_signed_in? || home_page || registration_page
 				#opaque
 			= render "layouts/flash_notice" unless edit_page
 			= yield

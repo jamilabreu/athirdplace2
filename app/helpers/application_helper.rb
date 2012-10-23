@@ -20,6 +20,12 @@ module ApplicationHelper
   def edit_page
     params[:controller] == "registrations" && params[:action] == "edit"
   end
+  def registration_page
+    params[:controller] == "registrations" && params[:action] == "new" || params[:controller] == "registrations" && params[:action] == "create"
+  end
+  def update_page
+    params[:controller] == "registrations" && params[:action] == "update"
+  end     
   def posts_page
     params[:controller] == "posts" && params[:action] == "index"
   end  

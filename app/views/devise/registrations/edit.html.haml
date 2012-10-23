@@ -20,7 +20,7 @@
 				
 				#form-fields
 					- %W[ gender standing degree ].each do |type|
-						.control-group{:style => type == 'standing' || type == 'gender' && current_user.gender.present? || type == 'gender' && params[:user][:gender_ids].present? ? 'display: none' : nil}
+						.control-group{:style => type == 'standing' || type == 'gender' && current_user.gender.present? || type == 'gender' && update_page && params[:user][:gender_ids].present? ? 'display: none' : nil}
 							%label.control-label{:for => "user_#{type}"}
 								= type.titlecase
 							.controls

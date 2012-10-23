@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 gem 'rails', '3.2.7'
-gem 'moped', git: 'git://github.com/mongoid/moped.git', branch: 'aggregation-support'
 gem 'mongoid'
 gem 'bson_ext'
 
