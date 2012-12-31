@@ -2,9 +2,7 @@
 	.container
 		.well
 			%p.muted= tagline
-			= link_to new_user_registration_path do
-				Register
 			= link_to "#{request.protocol + request.domain}/users/auth/facebook", id: "sign_in" do
 				%i.icon-facebook-sign
 				Sign In with Facebook
-			
+
